@@ -1,0 +1,79 @@
+    /*
+    Flaticon icon font: Flaticon
+    Creation date: 24/09/2017 11:37
+    */
+
+    @font-face {
+  font-family: "Flaticon";
+  src: url("./Flaticon.eot");
+  src: url("./Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("./Flaticon.woff") format("woff"),
+       url("./Flaticon.ttf") format("truetype"),
+       url("./Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("./Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+    .fi:before{
+        display: inline-block;
+  font-family: "Flaticon";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+    }
+
+    .flaticon-text-quotes:before { content: "\f100"; }
+.flaticon-briefcase:before { content: "\f101"; }
+.flaticon-stats-presentation:before { content: "\f102"; }
+.flaticon-play-button:before { content: "\f103"; }
+.flaticon-placeholder:before { content: "\f104"; }
+.flaticon-note:before { content: "\f105"; }
+.flaticon-phone-call:before { content: "\f106"; }
+.flaticon-networking:before { content: "\f107"; }
+.flaticon-trophy:before { content: "\f108"; }
+.flaticon-money:before { content: "\f109"; }
+.flaticon-donation:before { content: "\f10a"; }
+.flaticon-contract:before { content: "\f10b"; }
+.flaticon-graphic:before { content: "\f10c"; }
+.flaticon-worldwide:before { content: "\f10d"; }
+.flaticon-login:before { content: "\f10e"; }
+.flaticon-improve:before { content: "\f10f"; }
+.flaticon-line-chart:before { content: "\f110"; }
+.flaticon-target:before { content: "\f111"; }
+.flaticon-search:before { content: "\f112"; }
+.flaticon-shopping-bag:before { content: "\f113"; }
+    
+    $font-Flaticon-text-quotes: "\f100";
+    $font-Flaticon-briefcase: "\f101";
+    $font-Flaticon-stats-presentation: "\f102";
+    $font-Flaticon-play-button: "\f103";
+    $font-Flaticon-placeholder: "\f104";
+    $font-Flaticon-note: "\f105";
+    $font-Flaticon-phone-call: "\f106";
+    $font-Flaticon-networking: "\f107";
+    $font-Flaticon-trophy: "\f108";
+    $font-Flaticon-money: "\f109";
+    $font-Flaticon-donation: "\f10a";
+    $font-Flaticon-contract: "\f10b";
+    $font-Flaticon-graphic: "\f10c";
+    $font-Flaticon-worldwide: "\f10d";
+    $font-Flaticon-login: "\f10e";
+    $font-Flaticon-improve: "\f10f";
+    $font-Flaticon-line-chart: "\f110";
+    $font-Flaticon-target: "\f111";
+    $font-Flaticon-search: "\f112";
+    $font-Flaticon-shopping-bag: "\f113";
