@@ -898,7 +898,7 @@ a[href*='mailto'] {
 }
 
 #home_static {
-    background: url(../images/banner-5.jpg) no-repeat top;
+    background: url(../images/banner/banner-3.jpg) no-repeat top;
     background-size: cover;
     background-position: center center;
     display: -webkit-box;
@@ -7524,7 +7524,7 @@ textarea.textarea-lg {
     margin-left: auto;
     margin-right: auto;
     padding-top: 10px;
-    background-image: url(../images/quote-jean.png);
+    /* background-image: url(../images/quote-jean.png); */
     background-repeat: no-repeat;
     background-position: 50% 0;
 }
@@ -11666,7 +11666,7 @@ h2.title-modern>span {
 }
 
 html.boxed body {
-    background: #f2f2f2 url(../images/bg-pattern-boxed.png) repeat fixed;
+    /* background: #f2f2f2 url(../images/bg-pattern-boxed.png) repeat fixed; */
 }
 
 @media (min-width: 1630px) {
@@ -21568,13 +21568,14 @@ h1+.tabs-line {
     background-color: rgba(0, 0, 0, 0.45);
 }
 
-@font-face {
+
+/* @font-face {
     font-family: lg;
     src: url(../fonts/lg.eot?n1z373);
     src: url(../fonts/lg.eot?#iefixn1z373) format("embedded-opentype"), url(../fonts/lg.woff?n1z373) format("woff"), url(../fonts/lg.ttf?n1z373) format("truetype"), url(../fonts/lg.svg?n1z373#lg) format("svg");
     font-weight: 400;
     font-style: normal;
-}
+} */
 
 .lg-icon {
     font-family: lg;
@@ -21956,15 +21957,15 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 }
 
 .lg-outer .lg-has-vimeo .lg-video-play {
-    background: url(../images/vimeo-play.png) no-repeat;
+    /* background: url(../images/vimeo-play.png) no-repeat; */
 }
 
 .lg-outer .lg-has-vimeo:hover .lg-video-play {
-    background: url(../images/vimeo-play.png) 0 -58px no-repeat;
+    /* background: url(../images/vimeo-play.png) 0 -58px no-repeat; */
 }
 
 .lg-outer .lg-has-html5 .lg-video-play {
-    background: url(../images/video-play.png) no-repeat;
+    /* background: url(../images/video-play.png) no-repeat; */
     height: 64px;
     margin-left: -32px;
     margin-top: -32px;
@@ -21977,11 +21978,11 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 }
 
 .lg-outer .lg-has-youtube .lg-video-play {
-    background: url(../images/youtube-play.png) no-repeat;
+    /* background: url(../images/youtube-play.png) no-repeat; */
 }
 
 .lg-outer .lg-has-youtube:hover .lg-video-play {
-    background: url(../images/youtube-play.png) 0 -60px no-repeat;
+    /* background: url(../images/youtube-play.png) 0 -60px no-repeat; */
 }
 
 .lg-outer .lg-video-object {
@@ -22408,7 +22409,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 }
 
 .lg-outer .lg-item {
-    background: url(../images/loading.gif) center center no-repeat;
+    /* background: url(../images/loading.gif) center center no-repeat; */
     display: none !important;
 }
 
@@ -23291,7 +23292,7 @@ disabled look for disabled choices in the results dropdown
 }
 
 .slick-loading .slick-list {
-    background: #fff url("./../images/ajax-loader.gif") center center no-repeat;
+    /* background: #fff url("./../images/ajax-loader.gif") center center no-repeat; */
 }
 
 
