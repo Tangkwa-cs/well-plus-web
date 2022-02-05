@@ -11657,7 +11657,7 @@ h2.title-modern>span {
 .page {
     position: relative;
     overflow: hidden;
-    min-height: 100vh;
+    /* min-height: 100vh; */
     text-align: center;
 }
 
