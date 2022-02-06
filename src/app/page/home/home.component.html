@@ -71,7 +71,7 @@
             <div class="col-md-12 col-lg-7">
                 <div class="oh">
                     <article class="box-sportlight">
-                        <a class="box-sportlight-figure" href="#"><img src="../../../assets/interior/interior @ มัณฑนา ประชาอุทิศ/มัณ3.png" alt="" width="770" height="332" /></a>
+                        <a class="box-sportlight-figure" href="#"><img src="../../../assets/interior/interior_mantana/มัณ3.png" alt="" width="770" height="332" /></a>
                         <div class="box-sportlight-caption">
                             <h5 class="box-sportlight-title"><a href="#">INTERIOR ตกแต่งภายใน</a></h5>
                         </div>
@@ -101,12 +101,11 @@
             <div class="col-sm-6 col-lg-4">
                 <div class="oh">
                     <article class="box-sportlight">
-                        <a class="box-sportlight-figure" href="#"><img src="../../../assets/interior/interior @ มบ.The City/city10.png" alt="" width="370" height="332" /></a>
+                        <a class="box-sportlight-figure" href="#"><img src="../../../assets/interior/interior_thecity/city10.png" alt="" width="370" height="332" /></a>
                         <div class="box-sportlight-caption">
                             <h5 class="box-sportlight-title">
                                 <a href="#" class="p-1">FURNITURE เฟอร์นิเจอร์บิ้วอิน</a>
                             </h5>
-
                         </div>
                     </article>
                 </div>
@@ -114,7 +113,7 @@
             <div class="col-sm-6 col-lg-4">
                 <div class="oh-desktop">
                     <article class="box-sportlight box-sportlight-sm">
-                        <a class="box-sportlight-figure" href="#"><img src="../../../assets//interior/interior @ ผนังลอฟ-มบ.นิรันวิล/นิรัน3.png" alt="" width="370" height="332" /></a>
+                        <a class="box-sportlight-figure" href="#"><img src="../../../assets/interior/interior_wall_nirunville/นิรัน3.png" alt="" width="370" height="332" /></a>
                         <div class="box-sportlight-caption">
                             <h5 class="box-sportlight-title"><a href="#">DECORATION ผ้าม่าน ผนัง อื่นๆ</a></h5>
 
@@ -149,43 +148,55 @@
             </ul>
         </div>
         <div class="row row-50 isotope" data-lightgallery="group">
-            <div class="col-md-6 col-lg-4 isotope-item" data-filter="Type4">
+            <!-- DECORATION -->
+            <div class="col-md-6 col-lg-4 isotope-item" data-filter="Type4" *ngFor="let e of imagewall">
                 <!-- Thumbnail Modern-->
                 <article class="thumbnail thumbnail-modern thumbnail-sm">
-                    <a class="thumbnail-modern-figure" href="images/products/products-img-1.jpg" data-lightgallery="item"><img src="../../../assets/interior/interior @ มัณฑนา ประชาอุทิศ/มัณ1.png" alt="" width="370" height="303" /></a>
+                    <a class="thumbnail-modern-figure" href="../../../assets/interior/interior_wall_nirunville/{{e}}" data-lightgallery="item">
+                        <img src="../../../assets/interior/interior_wall_nirunville/{{e}}" class="sizeImg" alt="" width="370" height="303" />
+                    </a>
                     <div class="thumbnail-modern-caption">
-                        <h5 class="thumbnail-modern-title"><a href="single-project.html">iStep Ltd. Headquarters</a></h5>
-                        <p class="thumbnail-modern-subtitle">2020, Commercial Project</p>
+                        <h5 class="thumbnail-modern-title"><a href="single-project.html">Nirun Vill</a></h5>
+                        <p class="thumbnail-modern-subtitle">หมู่บ้านนิรันดร์ วิลล์</p>
                     </div>
                 </article>
             </div>
-            <div class="col-md-6 col-lg-4 isotope-item" data-filter="Type3">
+            <!-- restaurant -->
+            <div class="col-md-6 col-lg-4 isotope-item" data-filter="Type3" *ngFor="let e of imageRes">
                 <!-- Thumbnail Modern-->
                 <article class="thumbnail thumbnail-modern thumbnail-sm">
-                    <a class="thumbnail-modern-figure" href="images/products/products-img-4.jpg" data-lightgallery="item"><img src="images/products/products-img-4.jpg" alt="" width="370" height="303" /></a>
+                    <a class="thumbnail-modern-figure" href="../../../assets/interior/interior_asiatique/{{e}}" data-lightgallery="item">
+                        <img src="../../../assets/interior/interior_asiatique/{{e}}" class="sizeImg" alt="" width="370" height="303" />
+                    </a>
                     <div class="thumbnail-modern-caption">
-                        <h5 class="thumbnail-modern-title"><a href="single-project.html">McMillan’s House</a></h5>
-                        <p class="thumbnail-modern-subtitle">2020, Residential Project</p>
+                        <h5 class="thumbnail-modern-title"><a href="single-project.html">Asiatique</a></h5>
+                        <p class="thumbnail-modern-subtitle">ร้านสวัสดี เอเชียทีค</p>
                     </div>
                 </article>
             </div>
-            <div class="col-md-6 col-lg-4 isotope-item" data-filter="Type2">
+            <!-- building -->
+            <div class="col-md-6 col-lg-4 isotope-item" data-filter="Type2" *ngFor="let e of imageConstrution">
                 <!-- Thumbnail Modern-->
                 <article class="thumbnail thumbnail-modern thumbnail-sm">
-                    <a class="thumbnail-modern-figure" href="images/products/products-img-5.jpg" data-lightgallery="item"><img src="images/products/products-img-5.jpg" alt="" width="370" height="303" /></a>
+                    <a class="thumbnail-modern-figure" href="../../../assets/construction/โกดังปากน้ำ/{{e}}" data-lightgallery="item">
+                        <img src="../../../assets/construction/โกดังปากน้ำ/{{e}}" class="sizeImg" alt="" width="370" height="303" />
+                    </a>
                     <div class="thumbnail-modern-caption">
-                        <h5 class="thumbnail-modern-title"><a href="single-project.html">Weilround entertainment center</a></h5>
-                        <p class="thumbnail-modern-subtitle">2020, Custom Project</p>
+                        <h5 class="thumbnail-modern-title"><a href="single-project.html">Construction</a></h5>
+                        <p class="thumbnail-modern-subtitle">โกดังปากน้ำ</p>
                     </div>
                 </article>
             </div>
-            <div class="col-md-6 col-lg-4 isotope-item" data-filter="Type1">
+            <!-- house -->
+            <div class="col-md-6 col-lg-4 isotope-item" data-filter="Type1" *ngFor="let e of imageHouse">
                 <!-- Thumbnail Modern-->
                 <article class="thumbnail thumbnail-modern thumbnail-sm">
-                    <a class="thumbnail-modern-figure" href="images/products/products-img-6.jpg" data-lightgallery="item"><img src="images/products/products-img-6.jpg" alt="" width="370" height="303" /></a>
+                    <a class="thumbnail-modern-figure" href="../../../assets/interior/interior_mantana/{{e}}" data-lightgallery="item">
+                        <img src="../../../assets/interior/interior_mantana/{{e}}" class="sizeImg" alt="" width="370" height="303" />
+                    </a>
                     <div class="thumbnail-modern-caption">
-                        <h5 class="thumbnail-modern-title"><a href="single-project.html">Modern luxury hotel</a></h5>
-                        <p class="thumbnail-modern-subtitle">2020, Custom Project, Switzerland</p>
+                        <h5 class="thumbnail-modern-title"><a href="single-project.html">Mantana</a></h5>
+                        <p class="thumbnail-modern-subtitle">มัณฑนา ประชาอุทิศ</p>
                     </div>
                 </article>
             </div>
