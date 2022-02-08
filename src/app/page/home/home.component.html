@@ -1,209 +1,238 @@
-<!-- slider section start -->
-<app-nav></app-nav>
-<section class="section swiper-container swiper-slider swiper-slider-modern" data-loop="true" data-autoplay="5000" data-simulate-touch="true" data-nav="true" data-slide-effect="fade">
-    <div class="swiper-wrapper text-left">
-        <!-- slide 1 start -->
-        <div class="swiper-slide" data-slide-bg="/src/assets/images/banner/banner-1.jpg">
-            <div class="swiper-slide-caption">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-11 col-sm-9 col-md-8 col-lg-7 col-xl-6 col-xxl-5">
-                            <div class="slider-modern-box">
-                                <h4 class="oh slider-modern-title"><span data-caption-animate="slideInDown" data-caption-delay="0" class="text-dark">บริษัทเวลพลัส อินทิเรีย จำกัด</span><span data-caption-animate="slideInUp" data-caption-delay="0" class="text-dark">WELLPLUS INTERIOR CO.,LTD.</span></h4>
-                                <p data-caption-animate="fadeInRight" data-caption-delay="400" class="text-dark">ออกแบบตกแต่งภายใน และรับเหมาครบวงจรจบในที่เดียว</p>
-                                <div class="oh button-wrap"><a class="button button-default-outline-2 button-ujarak" href="shop.html" data-caption-animate="slideInLeft" data-caption-delay="400">Shop now</a></div>
+<div class="row">
+    <div class="row">
+        <div class="col-12">
+            <app-nav></app-nav>
+            <section class="section swiper-container swiper-slider swiper-slider-modern" data-loop="true" data-autoplay="5000" data-simulate-touch="true" data-nav="true" data-slide-effect="fade">
+                <div class="swiper-wrapper text-left">
+                    <!-- slide 1 start -->
+                    <div class="swiper-slide" data-slide-bg="../../../assets/swiperSlide/ร้านเสื้อผ้า3.png">
+                        <div class="swiper-slide-caption">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-11 col-sm-9 col-md-8 col-lg-7 col-xl-6 col-xxl-5">
+                                        <div class="slider-modern-box">
+                                            <h2 class="oh slider-modern-title"><span data-caption-animate="slideInDown" data-caption-delay="0">Interior</span><span data-caption-animate="slideInUp" data-caption-delay="0">Architecture</span></h2>
+                                            <p data-caption-animate="fadeInRight" data-caption-delay="400">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam faucibus porttitor bibendum. Aliquam ut mi augue.</p>
+                                            <div class="oh button-wrap"><a class="button button-default-outline-2 button-ujarak" href="shop.html" data-caption-animate="slideInLeft" data-caption-delay="400">Shop now</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- slide 2 start -->
+                    <div class="swiper-slide" data-slide-bg="../../../assets/swiperSlide/เอเชียทีค3.png">
+                        <div class="swiper-slide-caption">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-10 col-sm-8 col-md-7 col-lg-6 col-xl-5 col-xxl-4">
+                                        <div class="slider-modern-box">
+                                            <h2 class="oh slider-modern-title"><span data-caption-animate="slideInLeft" data-caption-delay="0">Professionals</span><span data-caption-animate="slideInUp" data-caption-delay="0">Architecture</span></h2>
+                                            <p data-caption-animate="fadeInRight" data-caption-delay="400">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam faucibus porttitor bibendum. Aliquam ut mi augue.</p>
+                                            <div class="oh button-wrap"><a class="button button-default-outline-2 button-ujarak" href="shop.html" data-caption-animate="slideInLeft" data-caption-delay="400">Shop now</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- slide 3 start -->
+                    <div class="swiper-slide" data-slide-bg="../../../assets/swiperSlide/มัณ3.png">
+                        <div class="swiper-slide-caption">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-11 col-sm-8 col-md-7 col-lg-5 col-xxl-4">
+                                        <div class="slider-modern-box">
+                                            <h2 class="oh slider-modern-title"><span data-caption-animate="slideInDown" data-caption-delay="0">Unique & Clean</span><span data-caption-animate="slideInLeft" data-caption-delay="0">Architecture</span></h2>
+                                            <p data-caption-animate="fadeInRight" data-caption-delay="400">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam faucibus porttitor bibendum. Aliquam ut mi augue.</p>
+                                            <div class="oh button-wrap"><a class="button button-default-outline-2 button-ujarak" href="shop.html" data-caption-animate="slideInUp" data-caption-delay="400">Shop now</a></div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+                <!-- Swiper Navigation-->
+                <div class="swiper-button-prev" (click)="slidePrev()"></div>
+                <div class="swiper-button-next" (click)="slideNext()"></div>
+                <!-- Swiper Pagination-->
+                <!-- <div class="swiper-pagination swiper-pagination-style-2"></div> -->
+            </section>
         </div>
-        <!-- slide 2 start -->
-        <div class="swiper-slide" data-slide-bg="assets/images/banner/banner-1.jpg">
-            <div class=" swiper-slide-caption ">
-                <div class="container ">
-                    <div class="row ">
-                        <div class="col-10 col-sm-8 col-md-7 col-lg-6 col-xl-5 col-xxl-4 ">
-                            <div class="slider-modern-box ">
-                                <h2 class="oh slider-modern-title "><span data-caption-animate="slideInLeft " data-caption-delay="0 ">Professionals</span><span data-caption-animate="slideInUp " data-caption-delay="0 ">Architecture</span></h2>
-                                <p data-caption-animate="fadeInRight " data-caption-delay="400 ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam faucibus porttitor bibendum. Aliquam ut mi augue.</p>
-                                <div class="oh button-wrap "><a class="button button-default-outline-2 button-ujarak " href="shop.html " data-caption-animate="slideInLeft " data-caption-delay="400 ">Shop now</a></div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 col-lg-2"></div>
+        <div class="col-sm-12 col-lg-8">
+            <!-- <div class="row">
+                <div class="col-12">
+                    <swiper #swiper [virtual]="true">
+                        <div class="centered">
+                            <h4 class="text_head">
+                                <span>บริษัทเวลพลัส จำกัด<br>
+                                 WELLPLUS INTERIOR CO.,LTD.</span>
+                            </h4>
+                            <h6 data-caption-animate="fadeInRight" data-caption-delay="400" class="text-white">ออกแบบตกแต่งภายใน และรับเหมาครบวงจรจบในที่เดียว</h6>
+                        </div>
+                        <ng-template swiperSlide *ngFor="let slide of imageSwiper">
+                            <img src=" ../../../assets/swiperSlide/{{slide}} " class="img_slide " alt=" " srcset=" ">
+                        </ng-template>
+                    </swiper><br>
+                    <button (click)="slideNext() ">Next slide</button>
+                    <button (click)="slidePrev() ">Prev slide</button>
+                </div>
+            </div> -->
+            <div class="row">
+                <div class="col-12">
+                    <!-- Offer section start -->
+                    <section class="section section-sm bg-default bg_second_cl ">
+                        <div class="container ">
+                            <div class="headingTitle ">
+                                <h1>What We <span>Do</span></h1>
+                                <hr>
+                            </div>
+                            <div class="row row-30 justify-content-center ">
+                                <div class="col-md-12 col-lg-7 ">
+                                    <div class="oh ">
+                                        <article class="box-sportlight ">
+                                            <a class="box-sportlight-figure " href="# "><img src="../../../assets/interior/interior_mantana/มัณ3.png " alt=" " width="770 " height="332 " /></a>
+                                            <div class="box-sportlight-caption ">
+                                                <h5 class="box-sportlight-title "><a href="# ">INTERIOR ตกแต่งภายใน</a></h5>
+                                            </div>
+                                        </article>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-lg-5 ">
+                                    <div class="oh-desktop ">
+                                        <article class="box-sportlight box-sportlight-sm ">
+                                            <a class="box-sportlight-figure " href="# "><img src="../../../assets/3D/3D_coffeeShop/กาฬสิน1-4.png " alt=" " width="370 " height="339 " /></a>
+                                            <div class="box-sportlight-caption ">
+                                                <h5 class="box-sportlight-title "><a href="# ">DESIGN & 3D ออกแบบ 3มิติ</a></h5>
+                                            </div>
+                                        </article>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-lg-4 ">
+                                    <div class="oh-desktop ">
+                                        <article class="box-sportlight box-sportlight-sm ">
+                                            <a class="box-sportlight-figure " href="# "><img src="../../../assets/construction/โกดังปากน้ำ/โกดัง3.png " alt=" " width="370 " height="332 " /></a>
+                                            <div class="box-sportlight-caption ">
+                                                <h5 class="box-sportlight-title "><a href="# ">CONSTRUCTION งานโครงสร้าง</a></h5>
+                                            </div>
+                                        </article>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-lg-4 ">
+                                    <div class="oh ">
+                                        <article class="box-sportlight ">
+                                            <a class="box-sportlight-figure " href="# "><img src="../../../assets/interior/interior_thecity/city10.png " alt=" " width="370 " height="332 " /></a>
+                                            <div class="box-sportlight-caption ">
+                                                <h5 class="box-sportlight-title ">
+                                                    <a href="# " class="p-1 ">FURNITURE เฟอร์นิเจอร์บิ้วอิน</a>
+                                                </h5>
+                                            </div>
+                                        </article>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-lg-4 ">
+                                    <div class="oh-desktop ">
+                                        <article class="box-sportlight box-sportlight-sm ">
+                                            <a class="box-sportlight-figure " href="# "><img src="../../../assets/interior/interior_wall_nirunville/นิรัน3.png " alt=" " width="370 " height="332 " /></a>
+                                            <div class="box-sportlight-caption ">
+                                                <h5 class="box-sportlight-title "><a href="# ">DECORATION ผ้าม่าน ผนัง อื่นๆ</a></h5>
+
+                                            </div>
+                                        </article>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- slide 3 start -->
-        <div class="swiper-slide " data-slide-bg="assets/images/banner/banner-1.jpg">
-            <div class="swiper-slide-caption ">
-                <div class="container ">
-                    <div class="row ">
-                        <div class="col-11 col-sm-8 col-md-7 col-lg-5 col-xxl-4 ">
-                            <div class="slider-modern-box ">
-                                <h2 class="oh slider-modern-title "><span data-caption-animate="slideInDown " data-caption-delay="0 ">Unique & Clean</span><span data-caption-animate="slideInLeft " data-caption-delay="0 ">Architecture</span></h2>
-                                <p data-caption-animate="fadeInRight " data-caption-delay="400 ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam faucibus porttitor bibendum. Aliquam ut mi augue.</p>
-                                <div class="oh button-wrap "><a class="button button-default-outline-2 button-ujarak " href="shop.html " data-caption-animate="slideInUp " data-caption-delay="400 ">Shop now</a></div>
+                    </section>
+                    <!-- Offer section end -->
+
+                    <!-- Breadcrumbs -->
+                    <section class="breadcrumbs-custom-inset ">
+                        <div class="breadcrumbs-custom context-dark ">
+                            <div class="container ">
+                                <h2 class="breadcrumbs-custom-title ">Service</h2>
+                            </div>
+                            <div class="box-position " style="background-image: url(../../../assets/interior/interior_pataya/ivy13.png); "></div>
+                        </div>
+                    </section>
+                    <section class="section section-sm bg-default text-center isotope-wrap ">
+                        <div class="container ">
+                            <div class="isotope-filters isotope-filters-horizontal ">
+                                <button class="isotope-filters-toggle button button-md button-icon button-icon-right button-default-outline button-wapasha " data-custom-toggle="#isotope-1 " data-custom-toggle-hide-on-blur="true "><span class="icon fa fa-caret-down "></span>Filter</button>
+                                <ul class="isotope-filters-list " id="isotope-1 ">
+                                    <li><a class="active " href="# " data-isotope-filter="* " data-isotope-group="gallery ">All project</a></li>
+                                    <li><a href="# " data-isotope-filter="Type1 " data-isotope-group="gallery ">house</a></li>
+                                    <li><a href="# " data-isotope-filter="Type2 " data-isotope-group="gallery ">building</a></li>
+                                    <li><a href="# " data-isotope-filter="Type3 " data-isotope-group="gallery ">restaurant</a></li>
+                                    <li><a href="# " data-isotope-filter="Type4 " data-isotope-group="gallery ">DECORATION</a></li>
+                                </ul>
+                            </div>
+                            <div class="row row-50 isotope " data-lightgallery="group ">
+                                <!-- DECORATION -->
+                                <div class="col-md-6 col-lg-4 isotope-item " data-filter="Type4 " *ngFor="let e of imagewall ">
+                                    <!-- Thumbnail Modern-->
+                                    <article class="thumbnail thumbnail-modern thumbnail-sm ">
+                                        <a class="thumbnail-modern-figure " href="../../../assets/interior/interior_wall_nirunville/{{e}} " data-lightgallery="item ">
+                                            <img src="../../../assets/interior/interior_wall_nirunville/{{e}} " class="sizeImg " alt=" " />
+                                        </a>
+                                        <div class="thumbnail-modern-caption ">
+                                            <h5 class="thumbnail-modern-title "><a href="single-project.html ">Nirun Vill</a></h5>
+                                            <p class="thumbnail-modern-subtitle ">หมู่บ้านนิรันดร์ วิลล์</p>
+                                        </div>
+                                    </article>
+                                </div>
+                                <!-- restaurant -->
+                                <div class="col-md-6 col-lg-4 isotope-item " data-filter="Type3 " *ngFor="let e of imageRes ">
+                                    <!-- Thumbnail Modern-->
+                                    <article class="thumbnail thumbnail-modern thumbnail-sm ">
+                                        <a class="thumbnail-modern-figure " href="../../../assets/interior/interior_asiatique/{{e}} " data-lightgallery="item ">
+                                            <img src="../../../assets/interior/interior_asiatique/{{e}} " class="sizeImg " alt=" " width="370 " height="303 " />
+                                        </a>
+                                        <div class="thumbnail-modern-caption ">
+                                            <h5 class="thumbnail-modern-title "><a href="single-project.html ">Asiatique</a></h5>
+                                            <p class="thumbnail-modern-subtitle ">ร้านสวัสดี เอเชียทีค</p>
+                                        </div>
+                                    </article>
+                                </div>
+                                <!-- building -->
+                                <div class="col-md-6 col-lg-4 isotope-item " data-filter="Type2 " *ngFor="let e of imageConstrution ">
+                                    <!-- Thumbnail Modern-->
+                                    <article class="thumbnail thumbnail-modern thumbnail-sm ">
+                                        <a class="thumbnail-modern-figure " href="../../../assets/construction/โกดังปากน้ำ/{{e}} " data-lightgallery="item ">
+                                            <img src="../../../assets/construction/โกดังปากน้ำ/{{e}} " class="sizeImg " alt=" " width="370 " height="303 " />
+                                        </a>
+                                        <div class="thumbnail-modern-caption ">
+                                            <h5 class="thumbnail-modern-title "><a href="single-project.html ">Construction</a></h5>
+                                            <p class="thumbnail-modern-subtitle ">โกดังปากน้ำ</p>
+                                        </div>
+                                    </article>
+                                </div>
+                                <!-- house -->
+                                <div class="col-md-6 col-lg-4 isotope-item " data-filter="Type1 " *ngFor="let e of imageHouse ">
+                                    <!-- Thumbnail Modern-->
+                                    <article class="thumbnail thumbnail-modern thumbnail-sm ">
+                                        <a class="thumbnail-modern-figure " href="../../../assets/interior/interior_mantana/{{e}} " data-lightgallery="item ">
+                                            <img src="../../../assets/interior/interior_mantana/{{e}} " class="sizeImg " alt=" " width="370 " height="303 " />
+                                        </a>
+                                        <div class="thumbnail-modern-caption ">
+                                            <h5 class="thumbnail-modern-title "><a href="single-project.html ">Mantana</a></h5>
+                                            <p class="thumbnail-modern-subtitle ">มัณฑนา ประชาอุทิศ</p>
+                                        </div>
+                                    </article>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </section>
                 </div>
             </div>
+
         </div>
+        <div class="col-sm-12 col-lg-2"></div>
     </div>
 
-    <!-- Swiper Navigation-->
-    <div class="swiper-button-prev "></div>
-    <div class="swiper-button-next "></div>
-    <!-- Swiper Pagination-->
-    <div class="swiper-pagination swiper-pagination-style-2 "></div>
-</section>
-<!-- slider section end -->
-
-<!-- Offer section start -->
-<section class="section section-sm bg-default bg_second_cl">
-    <div class="container">
-        <div class="headingTitle">
-            <h1>What We <span>Do</span></h1>
-            <hr>
-        </div>
-        <div class="row row-30 justify-content-center">
-            <div class="col-md-12 col-lg-7">
-                <div class="oh">
-                    <article class="box-sportlight">
-                        <a class="box-sportlight-figure" href="#"><img src="../../../assets/interior/interior_mantana/มัณ3.png" alt="" width="770" height="332" /></a>
-                        <div class="box-sportlight-caption">
-                            <h5 class="box-sportlight-title"><a href="#">INTERIOR ตกแต่งภายใน</a></h5>
-                        </div>
-                    </article>
-                </div>
-            </div>
-            <div class="col-sm-6 col-lg-5">
-                <div class="oh-desktop">
-                    <article class="box-sportlight box-sportlight-sm">
-                        <a class="box-sportlight-figure" href="#"><img src="../../../assets/3D/งานออกแบบร้านกาแฟ กาฬสินธุ์/กาฬสิน1-4.png" alt="" width="370" height="339" /></a>
-                        <div class="box-sportlight-caption">
-                            <h5 class="box-sportlight-title"><a href="#">DESIGN & 3D ออกแบบ 3มิติ</a></h5>
-                        </div>
-                    </article>
-                </div>
-            </div>
-            <div class="col-sm-6 col-lg-4">
-                <div class="oh-desktop">
-                    <article class="box-sportlight box-sportlight-sm">
-                        <a class="box-sportlight-figure" href="#"><img src="../../../assets/construction/โกดังปากน้ำ/โกดัง3.png" alt="" width="370" height="332" /></a>
-                        <div class="box-sportlight-caption">
-                            <h5 class="box-sportlight-title"><a href="#">CONSTRUCTION งานโครงสร้าง</a></h5>
-                        </div>
-                    </article>
-                </div>
-            </div>
-            <div class="col-sm-6 col-lg-4">
-                <div class="oh">
-                    <article class="box-sportlight">
-                        <a class="box-sportlight-figure" href="#"><img src="../../../assets/interior/interior_thecity/city10.png" alt="" width="370" height="332" /></a>
-                        <div class="box-sportlight-caption">
-                            <h5 class="box-sportlight-title">
-                                <a href="#" class="p-1">FURNITURE เฟอร์นิเจอร์บิ้วอิน</a>
-                            </h5>
-                        </div>
-                    </article>
-                </div>
-            </div>
-            <div class="col-sm-6 col-lg-4">
-                <div class="oh-desktop">
-                    <article class="box-sportlight box-sportlight-sm">
-                        <a class="box-sportlight-figure" href="#"><img src="../../../assets/interior/interior_wall_nirunville/นิรัน3.png" alt="" width="370" height="332" /></a>
-                        <div class="box-sportlight-caption">
-                            <h5 class="box-sportlight-title"><a href="#">DECORATION ผ้าม่าน ผนัง อื่นๆ</a></h5>
-
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Offer section end -->
-
-<!-- Breadcrumbs -->
-<section class="breadcrumbs-custom-inset">
-    <div class="breadcrumbs-custom context-dark">
-        <div class="container">
-            <h2 class="breadcrumbs-custom-title">Service</h2>
-        </div>
-        <div class="box-position" style="background-image: url(images/bg-breadcrumbs.jpg);"></div>
-    </div>
-</section>
-<section class="section section-sm bg-default text-center isotope-wrap">
-    <div class="container">
-        <div class="isotope-filters isotope-filters-horizontal">
-            <button class="isotope-filters-toggle button button-md button-icon button-icon-right button-default-outline button-wapasha" data-custom-toggle="#isotope-1" data-custom-toggle-hide-on-blur="true"><span class="icon fa fa-caret-down"></span>Filter</button>
-            <ul class="isotope-filters-list" id="isotope-1">
-                <li><a class="active" href="#" data-isotope-filter="*" data-isotope-group="gallery">All project</a></li>
-                <li><a href="#" data-isotope-filter="Type1" data-isotope-group="gallery">house</a></li>
-                <li><a href="#" data-isotope-filter="Type2" data-isotope-group="gallery">building</a></li>
-                <li><a href="#" data-isotope-filter="Type3" data-isotope-group="gallery">restaurant</a></li>
-                <li><a href="#" data-isotope-filter="Type4" data-isotope-group="gallery">DECORATION</a></li>
-            </ul>
-        </div>
-        <div class="row row-50 isotope" data-lightgallery="group">
-            <!-- DECORATION -->
-            <div class="col-md-6 col-lg-4 isotope-item" data-filter="Type4" *ngFor="let e of imagewall">
-                <!-- Thumbnail Modern-->
-                <article class="thumbnail thumbnail-modern thumbnail-sm">
-                    <a class="thumbnail-modern-figure" href="../../../assets/interior/interior_wall_nirunville/{{e}}" data-lightgallery="item">
-                        <img src="../../../assets/interior/interior_wall_nirunville/{{e}}" class="sizeImg" alt="" width="370" height="303" />
-                    </a>
-                    <div class="thumbnail-modern-caption">
-                        <h5 class="thumbnail-modern-title"><a href="single-project.html">Nirun Vill</a></h5>
-                        <p class="thumbnail-modern-subtitle">หมู่บ้านนิรันดร์ วิลล์</p>
-                    </div>
-                </article>
-            </div>
-            <!-- restaurant -->
-            <div class="col-md-6 col-lg-4 isotope-item" data-filter="Type3" *ngFor="let e of imageRes">
-                <!-- Thumbnail Modern-->
-                <article class="thumbnail thumbnail-modern thumbnail-sm">
-                    <a class="thumbnail-modern-figure" href="../../../assets/interior/interior_asiatique/{{e}}" data-lightgallery="item">
-                        <img src="../../../assets/interior/interior_asiatique/{{e}}" class="sizeImg" alt="" width="370" height="303" />
-                    </a>
-                    <div class="thumbnail-modern-caption">
-                        <h5 class="thumbnail-modern-title"><a href="single-project.html">Asiatique</a></h5>
-                        <p class="thumbnail-modern-subtitle">ร้านสวัสดี เอเชียทีค</p>
-                    </div>
-                </article>
-            </div>
-            <!-- building -->
-            <div class="col-md-6 col-lg-4 isotope-item" data-filter="Type2" *ngFor="let e of imageConstrution">
-                <!-- Thumbnail Modern-->
-                <article class="thumbnail thumbnail-modern thumbnail-sm">
-                    <a class="thumbnail-modern-figure" href="../../../assets/construction/โกดังปากน้ำ/{{e}}" data-lightgallery="item">
-                        <img src="../../../assets/construction/โกดังปากน้ำ/{{e}}" class="sizeImg" alt="" width="370" height="303" />
-                    </a>
-                    <div class="thumbnail-modern-caption">
-                        <h5 class="thumbnail-modern-title"><a href="single-project.html">Construction</a></h5>
-                        <p class="thumbnail-modern-subtitle">โกดังปากน้ำ</p>
-                    </div>
-                </article>
-            </div>
-            <!-- house -->
-            <div class="col-md-6 col-lg-4 isotope-item" data-filter="Type1" *ngFor="let e of imageHouse">
-                <!-- Thumbnail Modern-->
-                <article class="thumbnail thumbnail-modern thumbnail-sm">
-                    <a class="thumbnail-modern-figure" href="../../../assets/interior/interior_mantana/{{e}}" data-lightgallery="item">
-                        <img src="../../../assets/interior/interior_mantana/{{e}}" class="sizeImg" alt="" width="370" height="303" />
-                    </a>
-                    <div class="thumbnail-modern-caption">
-                        <h5 class="thumbnail-modern-title"><a href="single-project.html">Mantana</a></h5>
-                        <p class="thumbnail-modern-subtitle">มัณฑนา ประชาอุทิศ</p>
-                    </div>
-                </article>
-            </div>
-        </div>
-        <div class="button-wrap">
-            <button class="button button-md button-default-outline button-wapasha">Load More</button>
-        </div>
-    </div>
-</section>
+</div>
 <app-footer></app-footer>

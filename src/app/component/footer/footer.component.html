@@ -6,7 +6,7 @@
                 <div class="col-sm-6 col-lg-4 col-xl-3">
                     <div class="oh-desktop">
                         <div class="">
-                            <a href="index.html" class="mb-2"><img class="logo-footer" src="../../../assets/images/logos/footer-default.png" alt="Footer Logo" /></a>
+                            <a href="index.html" class="mb-2"><img class="logo-footer " src="../../../assets/Logo/LogoWell.png" alt="Footer Logo" /></a>
                             <p>WELLPLUS INTERIOR</p>
                             <p>บริษัทเวลพลัส อินทิเรีย จำกัด<br>เป็นการตกแต่งภายใน เฟอร์นิเจอร์บิ้วอิน ตลอดจน ผ้าม่าน วอลเปเปอร์</p>
                         </div>
@@ -71,65 +71,14 @@
                         <div class="inset-top-18">
                             <h5 class="text-spacing-75">Gallery interior & 3D</h5>
                             <div class="row row-10 gutters-10">
-                                <div class="col-4 col-sm-2 col-lg-4">
-                                    <article class="thumbnail thumbnail-mary">
-                                        <div class="thumbnail-mary-figure">
-                                            <!-- <button type="button" class="btn-close" aria-label="Close"></button> -->
-                                            <img src="../../../assets/3D/งานออกแบบ Moon Tower/MT1.png" alt="" width="128" height="120" />
+                                <div class="col-4 col-sm-2 col-lg-4" *ngFor="let item of imageFooter">
+                                    <article class="thumbnail thumbnail-mary" style="cursor: pointer;">
+                                        <div class="thumbnail-mary-figure ">
+                                            <img src="../../../assets/footer/{{item}} " alt=" " class="img_footer" />
                                         </div>
-                                        <div class="thumbnail-mary-caption">
-                                            <a class="icon fl-bigmug-line-zoom60 " href="../../../assets/3D/งานออกแบบ Moon Tower/MT1.png" data-lightgallery="item">
-                                                <img src="../../../assets/3D/งานออกแบบ Moon Tower/MT1.png" alt="" width="370" height="303">
-                                            </a>
-                                        </div>
-                                    </article>
-                                </div>
-                                <div class="col-4 col-sm-2 col-lg-4">
-                                    <article class="thumbnail thumbnail-mary">
-                                        <div class="thumbnail-mary-figure"><img src="../../../assets/3D/งานออกแบบ Moon Tower/MT2.png" alt="" width="128" height="120" /> </div>
-                                        <div class="thumbnail-mary-caption">
-                                            <a class="icon fl-bigmug-line-zoom60" href="../../../assets/3D/งานออกแบบ Moon Tower/MT2.png" data-lightgallery="item">
-                                                <img src="../../../assets/3D/งานออกแบบ Moon Tower/MT2.png" alt="" width="128" height="120" />
-                                            </a>
-                                        </div>
-                                    </article>
-                                </div>
-                                <div class="col-4 col-sm-2 col-lg-4">
-                                    <article class="thumbnail thumbnail-mary">
-                                        <div class="thumbnail-mary-figure"><img src="../../../assets/3D/งานออกแบบ Moon Tower/MT3.png" alt="" width="128" height="120" /> </div>
-                                        <div class="thumbnail-mary-caption">
-                                            <a class="icon fl-bigmug-line-zoom60" href="../../../assets/3D/งานออกแบบ Moon Tower/MT3.png" data-lightgallery="item">
-                                                <img src="../../../assets/3D/งานออกแบบ Moon Tower/MT3.png" alt="" width="128" height="120" />
-                                            </a>
-                                        </div>
-                                    </article>
-                                </div>
-                                <div class="col-4 col-sm-2 col-lg-4">
-                                    <article class="thumbnail thumbnail-mary">
-                                        <div class="thumbnail-mary-figure"><img src="../../../assets/interior/interior_nana/นานา1.png" alt="" width="128" height="120" /> </div>
-                                        <div class="thumbnail-mary-caption">
-                                            <a class="icon fl-bigmug-line-zoom60" href="../../../assets/interior/interior_nana/นานา1.png" data-lightgallery="item">
-                                                <img src="../../../assets/interior/interior_nana/นานา1.png" alt="" width="128" height="120" />
-                                            </a>
-                                        </div>
-                                    </article>
-                                </div>
-                                <div class="col-4 col-sm-2 col-lg-4">
-                                    <article class="thumbnail thumbnail-mary">
-                                        <div class="thumbnail-mary-figure"><img src="../../../assets/interior/interior_nana/นานา2.png" alt="" width="128" height="120" /> </div>
-                                        <div class="thumbnail-mary-caption">
-                                            <a class="icon fl-bigmug-line-zoom60" href="../../../assets/interior/interior_nana/นานา2.png" data-lightgallery="item">
-                                                <img src="../../../assets/interior/interior_nana/นานา2.png" alt="" width="128" height="120" />
-                                            </a>
-                                        </div>
-                                    </article>
-                                </div>
-                                <div class="col-4 col-sm-2 col-lg-4">
-                                    <article class="thumbnail thumbnail-mary">
-                                        <div class="thumbnail-mary-figure"><img src="../../../assets/interior/interior_nana/นานา4.png" alt="" width="128" height="120" /> </div>
-                                        <div class="thumbnail-mary-caption">
-                                            <a class="icon fl-bigmug-line-zoom60" href="../../../assets/interior/interior_nana/นานา4.png" data-lightgallery="item">
-                                                <img src="../../../assets/interior/interior_nana/นานา4.png" alt="" width="128" height="120" />
+                                        <div class="thumbnail-mary-caption ">
+                                            <a class="icon fl-bigmug-line-zoom60 " (click)="openImg(item)" data-lightgallery="item ">
+                                                <img src="../../../assets/footer/{{item}} " alt=" " width="370 " height="303 ">
                                             </a>
                                         </div>
                                     </article>
@@ -141,11 +90,11 @@
             </div>
         </div>
     </div>
-    <div class="footer-variant-2-bottom-panel">
-        <div class="container">
+    <div class="footer-variant-2-bottom-panel ">
+        <div class="container ">
             <!-- Rights-->
-            <div class="text-center">
-                <p class="rights"><span>&copy;&nbsp;</span><span class="copyright-year"></span> <span>Copyright 2022</span> -WELLPLUS INTERIOR</p>
+            <div class="text-center ">
+                <p class="rights "><span>&copy;&nbsp;</span><span class="copyright-year "></span> <span>Copyright 2022</span> -WELLPLUS INTERIOR</p>
             </div>
         </div>
     </div>

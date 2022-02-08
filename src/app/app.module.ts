@@ -8,7 +8,10 @@ import { FooterComponent } from './component/footer/footer.component';
 import { HomeComponent } from './page/home/home.component';
 import { AboutusComponent } from './page/aboutus/aboutus.component';
 import { ContactComponent } from './page/contact/contact.component';
-
+import { ServiceComponent } from './page/service/service.component';
+import { SwiperModule } from 'swiper/angular';
+import SwiperCore, { EffectFade, Swiper, SwiperOptions  } from 'swiper';
+SwiperCore.use([EffectFade]);
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,13 +19,17 @@ import { ContactComponent } from './page/contact/contact.component';
     FooterComponent,
     HomeComponent,
     AboutusComponent,
-    ContactComponent
+    ContactComponent,
+    ServiceComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    SwiperModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+ 
+}

@@ -8,160 +8,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Poppins:400,500%7CTeko:300,400,500%7CMaven+Pro:500">
     <link rel="stylesheet" href="./assets/css/fonts.css">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 
 </head>
 
 <body>
     <div class="page">
-        <header class="section page-header">
-            <!-- RD Navbar-->
+        <!-- <header class="section page-header">
             <div class="rd-navbar-wrap">
                 <nav class="rd-navbar rd-navbar-modern" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static" data-lg-device-layout="rd-navbar-fixed" data-xl-layout="rd-navbar-static"
                     data-xl-device-layout="rd-navbar-static" data-xxl-layout="rd-navbar-static" data-xxl-device-layout="rd-navbar-static" data-lg-stick-up-offset="46px" data-xl-stick-up-offset="46px" data-xxl-stick-up-offset="70px" data-lg-stick-up="true"
                     data-xl-stick-up="true" data-xxl-stick-up="true">
                     <div class="rd-navbar-main-outer">
                         <div class="rd-navbar-main">
-                            <!-- RD Navbar Panel-->
                             <div class="rd-navbar-panel">
-                                <!-- RD Navbar Toggle-->
                                 <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
-                                <!-- RD Navbar Brand-->
-                                <div class="rd-navbar-brand">
-                                    <a class="brand" href="index.html"><img src="./assets/images/logos/small-logo-default.png" class="logo-sticky" alt="" title=""></a>
+
+                                <div class="text-sm-right text-lg-left">
+                                    <a href="index.html">
+                                        <img src="./assets/Logo/LogoWell.png" class="logo" alt="" title="">
+                                    </a>
                                 </div>
                             </div>
                             <div class="rd-navbar-main-element">
                                 <div class="rd-navbar-nav-wrap">
-                                    <!-- RD Navbar Search-->
-                                    <div class="rd-navbar-search">
-                                        <button class="rd-navbar-search-toggle" data-rd-navbar-toggle=".rd-navbar-search"><span></span></button>
-                                        <form class="rd-search" action="search-results.html" data-search-live="rd-search-results-live" method="GET">
-                                            <div class="form-wrap">
-                                                <label class="form-label" for="rd-navbar-search-form-input">Search...</label>
-                                                <input class="rd-navbar-search-form-input form-input" id="rd-navbar-search-form-input" type="text" name="s" autocomplete="off" />
-                                                <div class="rd-search-results-live" id="rd-search-results-live"></div>
-                                                <button class="rd-search-form-submit fl-bigmug-line-search74" type="submit"></button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                    <!-- RD Navbar Nav-->
+
                                     <ul class="rd-navbar-nav">
                                         <li class="rd-nav-item active"><a class="rd-nav-link" href="#">Home</a>
                                         </li>
                                         <li class="rd-nav-item"><a class="rd-nav-link" href="./aboutus">About Us</a> </li>
-                                        <li class="rd-nav-item"><a class="rd-nav-link" href="grid-gallery.html">PROJECT</a>
-                                            <!-- RD Navbar Dropdown-->
+                                        <li class="rd-nav-item"><a class="rd-nav-link" href="./service">SERVICE</a>
+
                                             <ul class="rd-menu rd-navbar-dropdown">
-                                                <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="grid-gallery.html">Grid Gallery</a></li>
-                                                <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="full-width-gallery.html">Full width Gallery</a></li>
-                                                <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="masonry-gallery.html">Masonry Gallery</a></li>
-                                                <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="full-width-masonry-gallery.html">Full Width Masonry Gallery</a></li>
-                                                <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="single-project.html">Single Project</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="rd-nav-item"><a class="rd-nav-link" href="classic-blog.html">SERVICE</a>
-                                            <!-- RD Navbar Dropdown-->
-                                            <ul class="rd-menu rd-navbar-dropdown">
+                                                <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="./service">ALL SERVICE</a></li>
                                                 <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="classic-blog.html">INTERIOR</a></li>
                                                 <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="grid-blog.html">CONSTRUCTION</a></li>
+                                                <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="grid-blog.html">DECORATION</a></li>
                                             </ul>
                                         </li>
                                         <li class="rd-nav-item"><a class="rd-nav-link" href="./contact">Contact Us</a> </li>
-                                        <li class="rd-nav-item active"><a class="rd-nav-link" href="#">Pages</a>
-                                            <!-- RD Navbar Megamenu-->
-                                            <ul class="rd-menu rd-navbar-megamenu">
-                                                <li class="rd-megamenu-item">
-                                                    <div>
-                                                        <h5 class="rd-megamenu-title">Elements</h5>
-                                                        <ul class="rd-megamenu-list">
-                                                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="typography.html">Typography</a></li>
-                                                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="buttons.html">Buttons</a></li>
-                                                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="forms.html">Forms</a></li>
-                                                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="tabs-and-accordions.html">Tabs and Accordions</a></li>
-                                                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="counters.html">Counters</a></li>
-                                                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="icons-with-text.html">Icons with Text</a></li>
-                                                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="progress-bars.html">Progress Bars</a></li>
-                                                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="calls-to-action.html">Calls to Action</a></li>
-                                                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="grid-system.html">Grid System</a></li>
-                                                        </ul>
-                                                    </div>
-                                                </li>
-                                                <li class="rd-megamenu-item">
-                                                    <div>
-                                                        <h5 class="rd-megamenu-title">Additional pages</h5>
-                                                        <ul class="rd-megamenu-list">
-                                                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="services.html">Services</a></li>
-                                                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="single-service.html">Single Service</a></li>
-                                                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="our-team.html">Our Team</a></li>
-                                                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="testimonials.html">Testimonials</a></li>
-                                                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="404-page.html">404 Page</a></li>
-                                                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="503-page.html">503 Page</a></li>
-                                                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="pricing.html">Pricing</a></li>
-                                                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="coming-soon.html">Coming Soon</a></li>
-                                                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="contact-us-2.html">Contact Us 2</a></li>
-                                                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="faq.html">FAQ</a></li>
-                                                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="search-results.html">Search results</a></li>
-                                                        </ul>
-                                                    </div>
-                                                </li>
-                                                <li class="rd-megamenu-item rd-megamenu-carousel">
-                                                    <div>
-                                                        <h5 class="rd-megamenu-title">Recent projects</h5>
-                                                        <!-- Owl Carousel-->
-                                                        <div class="owl-carousel owl-navbar" data-loop="false" data-items="1" data-xl-items="2" data-xxl-items="2" data-margin="16" data-dots="true">
-                                                            <!-- Thumbnail Classic-->
-                                                            <article class="thumbnail thumbnail-mary thumbnail-xxs">
-                                                                <div class="thumbnail-mary-figure"><img src="images/products/products-img-1.jpg" alt="" width="272" height="288" /> </div>
-                                                                <div class="thumbnail-mary-caption">
-                                                                    <a class="icon fl-bigmug-line-zoom60" href="images/products/products-img-1.jpg" data-lightgallery="item"><img src="images/products/products-img-1.jpg" alt="" width="272" height="288" /></a>
-                                                                    <h6 class="thumbnail-mary-title"><a href="single-project.html">Interior Design</a></h6>
-                                                                </div>
-                                                            </article>
-                                                            <!-- Thumbnail Classic-->
-                                                            <article class="thumbnail thumbnail-mary thumbnail-xxs">
-                                                                <div class="thumbnail-mary-figure"><img src="images/products/products-img-2.jpg" alt="" width="272" height="288" /> </div>
-                                                                <div class="thumbnail-mary-caption">
-                                                                    <a class="icon fl-bigmug-line-zoom60" href="images/products/products-img-2.jpg" data-lightgallery="item"><img src="images/products/products-img-2.jpg" alt="" width="272" height="288" /></a>
-                                                                    <h6 class="thumbnail-mary-title"><a href="single-project.html">Interior Design</a></h6>
-                                                                </div>
-                                                            </article>
-                                                            <!-- Thumbnail Classic-->
-                                                            <article class="thumbnail thumbnail-mary thumbnail-xxs">
-                                                                <div class="thumbnail-mary-figure"><img src="images/products/products-img-3.jpg" alt="" width="272" height="288" /> </div>
-                                                                <div class="thumbnail-mary-caption">
-                                                                    <a class="icon fl-bigmug-line-zoom60" href="images/products/products-img-3.jpg" data-lightgallery="item"><img src="images/products/products-img-3.jpg" alt="" width="272" height="288" /></a>
-                                                                    <h6 class="thumbnail-mary-title"><a href="single-project.html">Interior Design</a></h6>
-                                                                </div>
-                                                            </article>
-                                                            <!-- Thumbnail Classic-->
-                                                            <article class="thumbnail thumbnail-mary thumbnail-xxs">
-                                                                <div class="thumbnail-mary-figure"><img src="images/products/products-img-4.jpg" alt="" width="272" height="288" /> </div>
-                                                                <div class="thumbnail-mary-caption">
-                                                                    <a class="icon fl-bigmug-line-zoom60" href="images/products/products-img-4.jpg" data-lightgallery="item"><img src="images/products/products-img-4.jpg" alt="" width="272" height="288" /></a>
-                                                                    <h6 class="thumbnail-mary-title"><a href="single-project.html">Interior Design</a></h6>
-                                                                </div>
-                                                            </article>
-                                                            <!-- Thumbnail Classic-->
-                                                            <article class="thumbnail thumbnail-mary thumbnail-xxs">
-                                                                <div class="thumbnail-mary-figure"><img src="images/products/products-img-5.jpg" alt="" width="272" height="288" /> </div>
-                                                                <div class="thumbnail-mary-caption">
-                                                                    <a class="icon fl-bigmug-line-zoom60" href="images/products/products-img-5.jpg" data-lightgallery="item"><img src="images/products/products-img-5.jpg" alt="" width="272" height="288" /></a>
-                                                                    <h6 class="thumbnail-mary-title"><a href="single-project.html">Interior Design</a></h6>
-                                                                </div>
-                                                            </article>
-                                                            <!-- Thumbnail Classic-->
-                                                            <article class="thumbnail thumbnail-mary thumbnail-xxs">
-                                                                <div class="thumbnail-mary-figure"><img src="images/products/products-img-6.jpg" alt="" width="272" height="288" /> </div>
-                                                                <div class="thumbnail-mary-caption">
-                                                                    <a class="icon fl-bigmug-line-zoom60" href="images/products/products-img-6.jpg" data-lightgallery="item"><img src="images/products/products-img-6.jpg" alt="" width="272" height="288" /></a>
-                                                                    <h6 class="thumbnail-mary-title"><a href="single-project.html">Interior Design</a></h6>
-                                                                </div>
-                                                            </article>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </li>
                                     </ul>
                                 </div>
                             </div>
@@ -169,9 +55,8 @@
                     </div>
                 </nav>
             </div>
-        </header>
+        </header> -->
         <app-root></app-root>
-
     </div>
 
 </body>
