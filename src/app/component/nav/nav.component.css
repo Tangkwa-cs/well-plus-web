@@ -2,3 +2,24 @@
     width: auto;
     height: 60px;
 }
+
+#phone {
+    width: auto;
+    height: 2vw;
+}
+
+#phone:hover {
+    color: #A58838;
+    cursor: pointer;
+}
+
+@media (max-width: 575.98px) {
+    #phone {
+        width: auto;
+        height: 6vw;
+    }
+    .img_logo {
+        width: auto;
+        height: 40px;
+    }
+}

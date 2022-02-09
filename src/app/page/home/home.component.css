@@ -5,8 +5,20 @@
 }
 
 .img_slide {
-    width: 220vh;
-    height: 90vh;
+    background-size: 100% 100%;
+    background-image: url("../../../assets/swiperSlide/ร้านเสื้อผ้า3.png");
+    background-repeat: no-repeat;
+    /* backdrop-filter: brightness(50%); */
+}
+
+.font_gallery {
+    font-size: large;
+    color: black;
+    font-weight: 500;
+}
+
+.font_gallery:hover {
+    color: white;
 }
 
 .text_head {
@@ -15,34 +27,6 @@
     text-shadow: black 0.1em 0.1em 0.2em;
     transform: scale(0.94);
     animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
-}
-
-@keyframes scale {
-    100% {
-        transform: scale(1);
-    }
-}
-
-span {
-    opacity: 0;
-    filter: blur(4px);
-}
-
-span:nth-child(1) {
-    animation: fade-in 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
-}
-
-@keyframes fade-in {
-    100% {
-        opacity: 1;
-        filter: blur(0);
-    }
-}
-
-.centered {
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%, -50%);
 }
 
 @media (max-width: 575.98px) {

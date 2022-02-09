@@ -1,12 +1,12 @@
-<div class="row">
+<div class="row" style="background-color:#F5F5F5">
     <div class="row">
         <div class="col-12">
             <app-nav></app-nav>
         </div>
     </div>
     <div class="row">
-        <div class="col-2"></div>
-        <div class="col-8">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8">
             <!-- Breadcrumbs -->
             <section class="breadcrumbs-custom-inset">
                 <div class="breadcrumbs-custom context-dark">
@@ -23,10 +23,16 @@
             <!-- Why choose us-->
             <section class="section section-sm bg-default text-md-left bg_second_cl">
                 <div class="container">
-                    <div class="row row-50 justify-content-center align-items-xl-center">
-                        <div class="col-md-10 col-lg-5 col-xl-6"><img src="../../../assets/interior/interior_asiatique/เอเชียทีค4.png" alt="" width="519" height="564" /> </div>
-                        <div class="col-md-10 col-lg-7 col-xl-6">
+                    <div class="row  justify-content-end m-0 p-0">
+                        <div class="col-sm-6  m-0 p-0">
                             <h1 class="text-spacing-25 font-weight-normal title-opacity-9">About Us</h1>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center align-items-xl-center">
+                        <div class="col-sm-12 col-md-10 col-lg-6 col-xl-6">
+                            <img src="../../../assets/interior/interior_asiatique/เอเชียทีค4.png" alt="" width="519" height="564" />
+                        </div>
+                        <div class="col-sm-12 col-md-10 col-lg-6 col-xl-6">
                             <!-- Bootstrap tabs-->
                             <div class="tabs-custom tabs-horizontal tabs-line" id="tabs-3">
                                 <!-- Nav tabs-->
@@ -67,8 +73,20 @@
                     </div>
                 </div>
             </section>
+            <!-- Our clients-->
+            <section class="section section-sm bg-default">
+                <div class="container">
+                    <h3>Our clients</h3>
+                    <div class="row row-30 row-sm">
+                        <div class="col-sm-6 col-md-4 col-xl-3" *ngFor="let ref of imageRef">
+                            <a class="clients-classic"><img src="../../../assets/ref-Logo/{{ref}}" alt="" /></a>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
         </div>
-        <div class="col-2"></div>
+        <div class="col-sm-2"></div>
     </div>
 
 </div>

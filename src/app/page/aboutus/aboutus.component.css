@@ -3,6 +3,11 @@
     height: 300px;
 }
 
+.img_ref {
+    width: 100px;
+    height: 100px;
+}
+
 @media (max-width: 767px) {
     .img {
         max-width: 100%;

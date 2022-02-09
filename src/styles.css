@@ -1,9 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap');
-@import '../node_modules/swiper/swiper.less';
+
+/* @import '../node_modules/swiper/swiper.less';
 @import '../node_modules/swiper/modules/navigation/navigation.less';
-@import '../node_modules/swiper/modules/pagination/pagination.less';
+@import '../node_modules/swiper/modules/pagination/pagination.less'; */
+
 @font-face {
     font-family: "kanit";
     src: url(../src/assets/Kanit/Kanit-Regular.ttf);

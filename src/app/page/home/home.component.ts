@@ -1,9 +1,9 @@
-import { Component, OnInit,ViewChild } from '@angular/core';
-import { SwiperComponent } from "swiper/angular";
-import SwiperCore, { Swiper, Virtual } from 'swiper';
+import { Component, OnInit } from '@angular/core';
+// import { SwiperComponent } from "swiper/angular";
+// import SwiperCore, { Swiper, Virtual } from 'swiper';
 // import Swiper styles
-SwiperCore.use([Virtual]);
-import 'swiper/css';
+// SwiperCore.use([Virtual]);
+// import 'swiper/css';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -14,9 +14,9 @@ export class HomeComponent implements OnInit {
   imagewall = ["นิรัน1.png","นิรัน2.png","นิรัน3.png"];
   imageRes = ["เอเชียทีค1.png","เอเชียทีค2.png","เอเชียทีค3.png","เอเชียทีค4.png","เอเชียทีค5.png","เอเชียทีค6.png","เอเชียทีค7.png","เอเชียทีค8.png","เอเชียทีค9.png"];
   imageConstrution = ["โกดัง1.png","โกดัง2.png","โกดัง3.png"];
-  imageSwiper = ["ร้านเสื้อผ้า3.png","เอเชียทีค3.png","city1.png"];
+  imageSwiper = ["ร้านเสื้อผ้า3.png","เอเชียทีค3.png","มัณ3.png"];
   
-  @ViewChild('swiper', { static: false }) swiper:any;
+  // @ViewChild('swiper', { static: false }) swiper:any;
   
   constructor() { }
 
@@ -24,12 +24,12 @@ export class HomeComponent implements OnInit {
     this.loadScript();
   }
 
-  slideNext(){
-    this.swiper.swiperRef.slideNext(100);
-  }
-  slidePrev(){
-    this.swiper.swiperRef.slidePrev(100);
-  }
+  // slideNext(){
+  //   this.swiper.swiperRef.slideNext(100);
+  // }
+  // slidePrev(){
+  //   this.swiper.swiperRef.slidePrev(100);
+  // }
   public loadScript(){
     let body = <HTMLDivElement> document.body;
     let script = document.createElement('script');
@@ -46,7 +46,6 @@ export class HomeComponent implements OnInit {
     script.async = true;
     script.defer = true;
     body.appendChild(script);
-    
   }
 }
 
