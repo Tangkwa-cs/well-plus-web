@@ -65,7 +65,7 @@
             videoTriggers: $('[data-video-trigger][data-target]')
         };
 
- 
+
     /**
      * @desc Check the element whas been scrolled into the view
      * @param {object} elem - jQuery object
@@ -84,16 +84,16 @@
      * @param {object} element - jQuery object
      * @param {function} func - callback function
      */
-//    function lazyInit(element, func) {
-//        $document.on('scroll', function() {
-//            if ((!element.hasClass('lazy-loaded') && (isScrolledIntoView(element)))) {
-//                func.call();
-//                element.addClass('lazy-loaded');
-//            }
-//        }).trigger("scroll");
-//    }
-//
-// 
+    //    function lazyInit(element, func) {
+    //        $document.on('scroll', function() {
+    //            if ((!element.hasClass('lazy-loaded') && (isScrolledIntoView(element)))) {
+    //                func.call();
+    //                element.addClass('lazy-loaded');
+    //            }
+    //        }).trigger("scroll");
+    //    }
+    //
+    // 
     // Initialize scripts that require a loaded page
     $window.on('load', function() {
 
@@ -1675,7 +1675,7 @@
             for (var i = 0; i < plugins.customToggle.length; i++) {
                 var $this = $(plugins.customToggle[i]);
 
-                $this.on('click', $.proxy(function(event) {
+                $this.on('click', $.ready(function(event) {
                     event.preventDefault();
 
                     var $ctx = $(this);
@@ -1752,15 +1752,15 @@
             }
         }
         // jScrollPane
-      //  if (plugins.scroller.length) {
-       //     for (var i = 0; i < plugins.scroller.length; i++) {
+        //  if (plugins.scroller.length) {
+        //     for (var i = 0; i < plugins.scroller.length; i++) {
         //        var scrollerItem = $(plugins.scroller[i]);
 
-         //       scrollerItem.jScrollPane({
-         //           autoReinitialise: true
-          //      });
-         //   }
-      //  }
+        //       scrollerItem.jScrollPane({
+        //           autoReinitialise: true
+        //      });
+        //   }
+        //  }
 
         // Wide/Boxed Layout Toggle
         if (plugins.layoutToggle.length) {

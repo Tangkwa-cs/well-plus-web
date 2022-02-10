@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./service.component.css']
 })
 export class ServiceComponent implements OnInit {
+imageDetail = [history.state];
 
   constructor() { }
 
   ngOnInit(): void {
+    console.log(history.state)
   }
 
 }

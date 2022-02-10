@@ -148,17 +148,8 @@
                     </section>
                     <!-- Offer section end -->
 
-                    <!-- Breadcrumbs -->
-                    <!-- <section class="breadcrumbs-custom-inset ">
-                        <div class="breadcrumbs-custom context-dark ">
-                            <div class="container ">
-                                <h2 class="breadcrumbs-custom-title ">Service</h2>
-                            </div>
-                            <div class="box-position " style="background-image: url(../../../assets/interior/interior_pataya/ivy13.png); "></div>
-                        </div>
-                    </section> -->
                     <section class="section bg-default text-center">
-                        <div class="parallax-container" data-parallax-img="../../../assets/Decor-wallpeper/Decor-งานม่าน -วอล/วอล หัวเตียง-รอบห้อง @โรงแรมคาร์ลตัน กรุงเทพฯ สุขุมวิท/วอล-คาตัล1.png">
+                        <div class="parallax-container" data-parallax-img="../../../assets/Decor-wallpeper/วอล หัวเตียง-รอบห้อง @โรงแรมคาร์ลตัน กรุงเทพฯ สุขุมวิท/วอล-คาตัล1.png">
                             <div class="parallax-content section-sm context-dark">
                                 <div class="container">
                                     <div class="row justify-content-center">
@@ -171,75 +162,75 @@
                             </div>
                         </div>
                     </section>
-                    <section class="section section-sm bg-default text-center isotope-wrap ">
-                        <div class="container ">
-                            <div class="isotope-filters isotope-filters-horizontal ">
-                                <button class="isotope-filters-toggle button button-md button-icon button-icon-right button-default-outline button-wapasha " data-custom-toggle="#isotope-1 " data-custom-toggle-hide-on-blur="true "><span class="icon fa
-                                        fa-caret-down "></span>Filter</button>
-                                <ul class="isotope-filters-list " id="isotope-1 ">
-                                    <li><a class="active " href="# " data-isotope-filter="* " data-isotope-group="gallery ">All project</a></li>
-                                    <li><a href="# " data-isotope-filter="Type1 " data-isotope-group="gallery ">house</a></li>
-                                    <li><a href="# " data-isotope-filter="Type2 " data-isotope-group="gallery ">building</a></li>
-                                    <li><a href="# " data-isotope-filter="Type3 " data-isotope-group="gallery ">restaurant</a></li>
-                                    <li><a href="# " data-isotope-filter="Type4 " data-isotope-group="gallery ">DECORATION</a></li>
+                    <section class="section section-sm bg-default text-center isotope-wrap">
+                        <div class="container">
+                            <div class="isotope-filters isotope-filters-horizontal">
+                                <button class="isotope-filters-toggle button button-md button-icon button-icon-right button-default-outline button-wapasha" data-custom-toggle="#isotope-8" data-custom-toggle-hide-on-blur="true"><span class="icon fa fa-caret-down"></span>Filter</button>
+                                <ul class="isotope-filters-list" id="isotope-8">
+                                    <li><a class="active" href="#" data-isotope-filter="*" data-isotope-group="gallery">All</a></li>
+                                    <li><a href="#" data-isotope-filter="1" data-isotope-group="gallery">INTERIOR</a></li>
+                                    <li><a href="#" data-isotope-filter="2" data-isotope-group="gallery">3D</a></li>
+                                    <li><a href="#" data-isotope-filter="3" data-isotope-group="gallery">CONSTRUCTION</a></li>
+                                    <li><a href="#" data-isotope-filter="4" data-isotope-group="gallery">DECORATION</a></li>
                                 </ul>
                             </div>
-                            <div class="row row-50 isotope " data-lightgallery="group ">
-                                <!-- DECORATION -->
-                                <div class="col-md-6 col-lg-4 isotope-item " data-filter="Type4 " *ngFor="let e of imagewall ">
-                                    <!-- Thumbnail Modern-->
-                                    <div class="oh-desktop">
-                                        <article class="thumbnail thumbnail-mary thumbnail-sm">
-                                            <div class="thumbnail-mary-figure"><img src="../../../assets/interior/interior_wall_nirunville/{{e}} " alt="" class="sizeImg " width="370" height="303" /> </div>
-                                            <div class="thumbnail-mary-caption">
-                                                <a class="icon fl-bigmug-line-zoom60" href="../../../assets/interior/interior_wall_nirunville/{{e}} " data-lightgallery="item"><img src="../../../assets/interior/interior_wall_nirunville/{{e}}" alt="" width="370" height="303" /></a>
-                                                <h5 class="thumbnail-mary-title"><a href="single-project.html">Nirun Vill <span>หมู่บ้านนิรันดร์ วิลล์</span></a></h5>
-                                            </div>
-                                        </article>
-                                    </div>
+                            <div class="row row-30 isotope" data-lightgallery="group">
+                                <div class="col-sm-4 col-lg-4 isotope-item" *ngFor="let item of imageFilter" [attr.data-filter]="item.type">
+                                    <article class="thumbnail thumbnail-mary thumbnail-xs">
+                                        <div class="thumbnail-mary-figure"><img src="{{item.img}}" alt="" width="270px" height="300px" /> </div>
+                                        <div class="thumbnail-mary-caption">
+                                            <a class="icon fl-bigmug-line-zoom60" href="{{item.img}}" data-lightgallery="item"><img src="{{item.img}}" alt="" width="270" height="300" /></a>
+                                            <h5 class="thumbnail-mary-title"><a [routerLink]="['/service']" [state]="{ type:item.type , url:item.url, text:item.text}">{{item.text}}</a></h5>
+                                        </div>
+                                    </article>
                                 </div>
-                                <!-- restaurant -->
-                                <div class="col-md-6 col-lg-4 isotope-item " data-filter="Type3 " *ngFor="let e of imageRes ">
-                                    <!-- Thumbnail Modern-->
-                                    <div class="oh-desktop">
-                                        <article class="thumbnail thumbnail-mary thumbnail-sm">
-                                            <div class="thumbnail-mary-figure"><img src="../../../assets/interior/interior_asiatique/{{e}} " alt="" class="sizeImg " width="370" height="303" /> </div>
-                                            <div class="thumbnail-mary-caption">
-                                                <a class="icon fl-bigmug-line-zoom60" href="../../../assets/interior/interior_asiatique/{{e}} " data-lightgallery="item"><img src="../../../assets/interior/interior_asiatique/{{e}}" alt="" width="370" height="303" /></a>
-                                                <h5 class="thumbnail-mary-title"><a href="single-project.html">Asiatique <span>ร้านสวัสดี เอเชียทีค</span></a></h5>
-                                            </div>
-                                        </article>
-                                    </div>
-                                </div>
-                                <!-- building -->
-                                <div class="col-md-6 col-lg-4 isotope-item " data-filter="Type2 " *ngFor="let e of imageConstrution ">
-                                    <!-- Thumbnail Modern-->
-                                    <div class="oh-desktop">
-                                        <article class="thumbnail thumbnail-mary thumbnail-sm">
-                                            <div class="thumbnail-mary-figure"><img src="../../../assets/construction/โกดังปากน้ำ/{{e}} " alt="" class="sizeImg " width="370" height="303" /> </div>
-                                            <div class="thumbnail-mary-caption">
-                                                <a class="icon fl-bigmug-line-zoom60" href="../../../assets/construction/โกดังปากน้ำ/{{e}} " data-lightgallery="item"><img src="../../../assets/construction/โกดังปากน้ำ/{{e}}" alt="" width="370" height="303" /></a>
-                                                <h5 class="thumbnail-mary-title"><a href="single-project.html">Construction <span>โกดังปากน้ำ</span></a></h5>
-                                            </div>
-                                        </article>
-                                    </div>
-                                </div>
-                                <!-- house -->
-                                <div class="col-md-6 col-lg-4 isotope-item " data-filter="Type1 " *ngFor="let e of imageHouse ">
-                                    <!-- Thumbnail Modern-->
-                                    <div class="oh-desktop">
-                                        <article class="thumbnail thumbnail-mary thumbnail-sm">
-                                            <div class="thumbnail-mary-figure"><img src="../../../assets/interior/interior_mantana/{{e}} " alt="" class="sizeImg " width="370" height="303" /> </div>
-                                            <div class="thumbnail-mary-caption">
-                                                <a class="icon fl-bigmug-line-zoom60" href="../../../assets/interior/interior_mantana/{{e}} " data-lightgallery="item"><img src="../../../assets/interior/interior_mantana/{{e}}" alt="" width="370" height="303" /></a>
-                                                <h5 class="thumbnail-mary-title"><a href="single-project.html">Mantana <span>มัณฑนา ประชาอุทิศ</span></a></h5>
-                                            </div>
-                                        </article>
-                                    </div>
-                                </div>
+                            </div>
+                            <div class="button-wrap">
+                                <button class="button button-md button-default-outline button-wapasha">Load More</button>
                             </div>
                         </div>
                     </section>
+                    <!-- About us section start -->
+                    <div class="row p-0 m-0">
+                        <div class="col-12 p-0 m-0">
+                            <section class="section section-sm bg-default">
+                                <div class="container">
+                                    <div class="headingTitle">
+                                        <h1>About <span> us</span></h1>
+                                        <p>Duis ornare diam purus, ac malesuada ante congue in. Cras gravida ex elit, vel bibendum mauris efficitur non. Sed ut massa a dui iaculis pretium eu a nunc.</p>
+                                    </div>
+                                    <div class="row row-lg row-50 justify-content-center border-classic border-classic-2">
+                                        <div class="col-sm-6 col-md-3">
+                                            <div class="counter-creative">
+                                                <div class="counter-creative-number"><span class="counter">12</span><span class="icon counter-creative-icon fl-bigmug-line-trophy55"></span> </div>
+                                                <h6 class="counter-creative-title">Awards</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 col-md-3">
+                                            <div class="counter-creative">
+                                                <div class="counter-creative-number"><span class="counter">2</span><span class="symbol">k</span><span class="icon counter-creative-icon fl-bigmug-line-cube29"></span> </div>
+                                                <h6 class="counter-creative-title">Projects</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 col-md-3">
+                                            <div class="counter-creative">
+                                                <div class="counter-creative-number"><span class="counter">679</span><span class="icon counter-creative-icon fl-bigmug-line-sun81"></span> </div>
+                                                <h6 class="counter-creative-title">Happy clients</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 col-md-3">
+                                            <div class="counter-creative">
+                                                <div class="counter-creative-number"><span class="counter">25</span><span class="icon counter-creative-icon fl-bigmug-line-user143"></span> </div>
+                                                <h6 class="counter-creative-title">Team members</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+
+                    <!-- About us section end -->
                 </div>
             </div>
 
