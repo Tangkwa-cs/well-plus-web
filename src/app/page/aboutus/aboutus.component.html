@@ -76,12 +76,12 @@
             <!-- Our clients-->
             <section class="section section-sm bg-default">
                 <div class="container">
+                    <!-- Owl Carousel-->
                     <h3>Our clients</h3>
-                    <div class="row row-30 row-sm">
-                        <div class="col-sm-6 col-md-4 col-xl-3" *ngFor="let ref of imageRef">
-                            <a class="clients-classic"><img src="../../../assets/ref-Logo/{{ref}}" alt="" /></a>
-                        </div>
-
+                    <div class="owl-carousel owl-clients" data-items="1" data-sm-items="2" data-md-items="3" data-lg-items="4" data-margin="30" data-dots="true" data-animation-in="fadeIn" data-animation-out="fadeOut" data-autoplay="true">
+                        <a class="clients-modern" href="#" *ngFor="let ref of imageRef">
+                            <img src="../../../assets/ref-Logo/{{ref}}" alt="" class="img_ref" />
+                        </a>
                     </div>
                 </div>
             </section>
