@@ -2796,6 +2796,10 @@ html .list-inline-md>* {
     border-color: transparent transparent transparent rgba(21, 21, 21, 0.5);
 }
 
+.a_click {
+    cursor: pointer;
+}
+
 .list-marked-2>li+li {
     margin-top: 12px;
 }

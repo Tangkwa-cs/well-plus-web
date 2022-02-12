@@ -25,16 +25,16 @@
                             </a>
                             <!-- RD Navbar Nav-->
                             <ul class="rd-navbar-nav">
-                                <li class="rd-nav-item active"><a class="rd-nav-link" href="index.html">Home</a></li>
+                                <li class="rd-nav-item active"><a class="rd-nav-link" [routerLink]="['']">Home</a></li>
                                 <li class="rd-nav-item"><a class="rd-nav-link" [routerLink]="['/aboutus']">About Us</a></li>
-                                <li class="rd-nav-item"><a class="rd-nav-link" [routerLink]="['/service']">Service</a>
+                                <li class="rd-nav-item"><a class="rd-nav-link a_nav" (click)="clickRoute('/service','All project')">Service</a>
                                     <!-- RD Navbar Dropdown-->
                                     <ul class="rd-menu rd-navbar-dropdown">
-                                        <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="index.html">All Project</a></li>
-                                        <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="index-1.html">INTERIOR</a></li>
-                                        <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="index-2.html">3D</a></li>
-                                        <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="index-3.html">CONSTRUCTION</a></li>
-                                        <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="index-4.html">DECORATION</a></li>
+                                        <li class="rd-dropdown-item"><a class="rd-dropdown-link a_nav" (click)="clickRoute('/service','All project')">All Project</a></li>
+                                        <li class="rd-dropdown-item"><a class="rd-dropdown-link a_nav" (click)="clickRoute('/service','INTERIOR')">INTERIOR</a></li>
+                                        <li class="rd-dropdown-item"><a class="rd-dropdown-link a_nav" (click)="clickRoute('/service','3D')">3D</a></li>
+                                        <li class="rd-dropdown-item"><a class="rd-dropdown-link a_nav" (click)="clickRoute('/service','CONSTRUCTION')">CONSTRUCTION</a></li>
+                                        <li class="rd-dropdown-item"><a class="rd-dropdown-link a_nav" (click)="clickRoute('/service','DECORATION')">DECORATION</a></li>
                                     </ul>
                                 </li>
                                 <li class="rd-nav-item"><a class="rd-nav-link" [routerLink]="['/contact']">Contact Us</a> </li>

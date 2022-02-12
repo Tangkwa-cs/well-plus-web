@@ -91,9 +91,9 @@
                         <div class="col-md-12 col-lg-7 ">
                             <div class="oh ">
                                 <article class="box-sportlight ">
-                                    <a class="box-sportlight-figure " href="# "><img src="../../../assets/interior/interior_mantana/มัณ3.png " alt=" " width="770 " height="332 " /></a>
+                                    <a class="box-sportlight-figure "><img src="../../../assets/interior/interior_mantana/มัณ3.png " alt=" " width="770 " height="332 " /></a>
                                     <div class="box-sportlight-caption ">
-                                        <h5 class="box-sportlight-title "><a href="# ">INTERIOR ตกแต่งภายใน</a></h5>
+                                        <h5 class="box-sportlight-title "><a class="a_click" (click)="clickRoute('/service','INTERIOR')">INTERIOR ตกแต่งภายใน</a></h5>
                                     </div>
                                 </article>
                             </div>
@@ -101,9 +101,9 @@
                         <div class="col-sm-6 col-lg-5 ">
                             <div class="oh-desktop ">
                                 <article class="box-sportlight box-sportlight-sm ">
-                                    <a class="box-sportlight-figure " href="# "><img src="../../../assets/3D/3D_coffeeShop/กาฬสิน1-4.png " alt=" " width="370 " height="339 " /></a>
+                                    <a class="box-sportlight-figure "><img src="../../../assets/3D/3D_coffeeShop/กาฬสิน1-4.png " alt=" " width="370 " height="339 " /></a>
                                     <div class="box-sportlight-caption ">
-                                        <h5 class="box-sportlight-title "><a href="# ">DESIGN & 3D ออกแบบ 3มิติ</a></h5>
+                                        <h5 class="box-sportlight-title "><a class="a_click" (click)="clickRoute('/service','3D')">DESIGN & 3D ออกแบบ 3มิติ</a></h5>
                                     </div>
                                 </article>
                             </div>
@@ -111,9 +111,9 @@
                         <div class="col-sm-6 col-lg-4 ">
                             <div class="oh-desktop ">
                                 <article class="box-sportlight box-sportlight-sm ">
-                                    <a class="box-sportlight-figure " href="# "><img src="../../../assets/construction/โกดังปากน้ำ/โกดัง3.png " alt=" " width="370 " height="332 " /></a>
+                                    <a class="box-sportlight-figure "><img src="../../../assets/construction/โกดังปากน้ำ/โกดัง3.png " alt=" " width="370 " height="332 " /></a>
                                     <div class="box-sportlight-caption ">
-                                        <h5 class="box-sportlight-title "><a href="# ">CONSTRUCTION <br>งานโครงสร้าง</a></h5>
+                                        <h5 class="box-sportlight-title "><a class="a_click" (click)="clickRoute('/service','CONSTRUCTION')">CONSTRUCTION <br>งานโครงสร้าง</a></h5>
                                     </div>
                                 </article>
                             </div>
@@ -121,10 +121,10 @@
                         <div class="col-sm-6 col-lg-4 ">
                             <div class="oh ">
                                 <article class="box-sportlight ">
-                                    <a class="box-sportlight-figure " href="# "><img src="../../../assets/interior/interior_thecity/city10.png " alt=" " width="370 " height="332 " /></a>
+                                    <a class="box-sportlight-figure"><img src="../../../assets/interior/interior_thecity/city10.png " alt=" " width="370 " height="332 " /></a>
                                     <div class="box-sportlight-caption ">
                                         <h5 class="box-sportlight-title ">
-                                            <a href="# " class="p-1 ">FURNITURE <br>เฟอร์นิเจอร์บิ้วอิน</a>
+                                            <a class="a_click p-1" (click)="clickRoute('/service','INTERIOR')">INTERIOR + FURNITURE <br>เฟอร์นิเจอร์บิ้วอิน</a>
                                         </h5>
                                     </div>
                                 </article>
@@ -133,9 +133,9 @@
                         <div class="col-sm-6 col-lg-4 ">
                             <div class="oh-desktop ">
                                 <article class="box-sportlight box-sportlight-sm ">
-                                    <a class="box-sportlight-figure " href="# "><img src="../../../assets/interior/interior_wall_nirunville/นิรัน3.png " alt=" " width="370 " height="332 " /></a>
+                                    <a class="box-sportlight-figure"><img src="../../../assets/interior/interior_wall_nirunville/นิรัน3.png " alt=" " width="370 " height="332 " /></a>
                                     <div class="box-sportlight-caption ">
-                                        <h5 class="box-sportlight-title "><a href="# ">DECORATION <br>ผ้าม่าน ผนัง อื่นๆ</a></h5>
+                                        <h5 class="box-sportlight-title "><a class="a_click" (click)="clickRoute('/service','DECORATION')">DECORATION <br>ผ้าม่าน ผนัง อื่นๆ</a></h5>
 
                                     </div>
                                 </article>
@@ -173,9 +173,11 @@
                         </ul>
                     </div>
                     <div class="row row-30 isotope" data-lightgallery="group">
-                        <div class="col-sm-4 col-lg-4 isotope-item" *ngFor="let item of imageFilter" [attr.data-filter]="item.type">
+                        <div class="col-sm-4 col-lg-4 col-xxl-3 isotope-item" *ngFor="let item of imageFilter" [attr.data-filter]="item.type">
                             <article class="thumbnail thumbnail-mary thumbnail-xs">
-                                <div class="thumbnail-mary-figure"><img src="{{item.img}}" alt="" width="270px" height="300px" /> </div>
+                                <div class="thumbnail-mary-figure">
+                                    <img src="{{item.img}}" alt="" width="auto" height="300px" />
+                                </div>
                                 <div class="thumbnail-mary-caption">
                                     <a class="icon fl-bigmug-line-zoom60" href="{{item.img}}" data-lightgallery="item"><img src="{{item.img}}" alt="" width="270" height="300" /></a>
                                     <h5 class="thumbnail-mary-title">
@@ -233,7 +235,7 @@
             <section class="section section-sm bg-default">
                 <div class="container">
                     <!-- Owl Carousel-->
-                    <h3>Our clients</h3>
+                    <h3>Our clients ({{countImg}})</h3>
                     <div class="owl-carousel owl-clients" data-items="1" data-sm-items="2" data-md-items="3" data-lg-items="4" data-margin="30" data-dots="true" data-animation-in="fadeIn" data-animation-out="fadeOut" data-autoplay="true">
                         <a class="clients-modern" href="#" *ngFor="let ref of imageRef">
                             <img src="../../../assets/ref-Logo/{{ref}}" alt="" class="img_ref" />

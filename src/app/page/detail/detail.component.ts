@@ -11,8 +11,31 @@ export class DetailComponent implements OnInit {
 
   ngOnInit(): void {
     console.log(history.state)
-    this.imageDetail = history.state;
-
+    console.log(history.state.navigationId);
+    
+    if(history.state.navigationId != 1){
+      this.imageDetail = history.state;
+      localStorage.setItem("dataDetail",JSON.stringify(this.imageDetail))
+    }else{
+      this.imageDetail = JSON.parse(localStorage["dataDetail"]);
+    }
+    this.loadScript();
   }
-
+  public loadScript(){
+    let body = <HTMLDivElement> document.body;
+    let script = document.createElement('script');
+    script.innerHTML = '';
+    script.src = '../../../assets/js/core.min.js';
+    script.async = true;
+    script.defer = true;
+    body.appendChild(script);
+    
+    body = <HTMLDivElement> document.body;
+    script = document.createElement('script');
+    script.innerHTML = '';
+    script.src = '../../../assets/js/script.js';
+    script.async = true;
+    script.defer = true;
+    body.appendChild(script);
+  }
 }

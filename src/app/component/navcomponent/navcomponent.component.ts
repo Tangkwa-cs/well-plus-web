@@ -1,12 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-
 @Component({
-  selector: 'app-nav',
-  templateUrl: './nav.component.html',
-  styleUrls: ['./nav.component.css']
+  selector: 'app-navcomponent',
+  templateUrl: './navcomponent.component.html',
+  styleUrls: ['./navcomponent.component.css']
 })
-export class NavComponent implements OnInit {
+export class NavcomponentComponent implements OnInit {
   imageProject1 = ['นิรัน1.png','นิรัน2.png','นิรัน3.png'];  
   imageProject2 = ['city1.png','city2.png','city3.png','city4.png','city5.png','city6.png','city7.png','city8.png','city9.png','city10.png','city11.png','city12.png']; 
   imageProject3 = ['สมคิด1.png','สมคิด2.png','สมคิด3.png','สมคิด4.png','สมคิด5.png','สมคิด6.png','สมคิด7.png','สมคิด8.png','สมคิด9.png','สมคิด10.png','สมคิด11.png','สมคิด12.png']; 
@@ -114,6 +113,7 @@ export class NavComponent implements OnInit {
     {"id":51,"type":"DECORATION","img":"../../../assets/Decor-wallpeper/วอล@สำนักงานให้เช่า @กิ่งแก้ว/วอล สนง.3.png","text":"วอล สำนักงานให้เช่า กิ่งแก้ว","url":"../../../assets/Decor-wallpeper/วอล@สำนักงานให้เช่า @กิ่งแก้ว/"},
     {"id":52,"type":"DECORATION","img":"../../../assets/Decor-wallpeper/วอล@หอพระ ศูนย์ราชการ/วอล หอพระ1.png","text":"วอล หอพระ ศูนย์ราชการ","url":"../../../assets/Decor-wallpeper/วอล@หอพระ ศูนย์ราชการ/"},
   ];
+  
   constructor(
     private router:Router
   ) { }
@@ -139,7 +139,6 @@ export class NavComponent implements OnInit {
     body.appendChild(script);
   }
   clickRoute(url:any,title:any){
-
-     this.router.navigate([url], { queryParams: { title} });
+    this.router.navigate([url], { queryParams: { title} });
   }
 }

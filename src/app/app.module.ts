@@ -11,6 +11,7 @@ import { ContactComponent } from './page/contact/contact.component';
 import { ServiceComponent } from './page/service/service.component';
 import { HttpClientModule } from '@angular/common/http';
 import { DetailComponent } from './page/detail/detail.component';
+import { NavcomponentComponent } from './component/navcomponent/navcomponent.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { DetailComponent } from './page/detail/detail.component';
     AboutusComponent,
     ContactComponent,
     ServiceComponent,
-    DetailComponent
+    DetailComponent,
+    NavcomponentComponent
   ],
   imports: [
     BrowserModule,
