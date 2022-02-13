@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit {
   showLoadMore = true;
   typeNow = "";
   tempImageFilter:any;
-
+  setClassForIsotope=false;
   imageProject1 = ['นิรัน1.png','นิรัน2.png','นิรัน3.png'];  
   imageProject2 = ['city1.png','city2.png','city3.png','city4.png','city5.png','city6.png','city7.png','city8.png','city9.png','city10.png','city11.png','city12.png']; 
   imageProject3 = ['สมคิด1.png','สมคิด2.png','สมคิด3.png','สมคิด4.png','สมคิด5.png','สมคิด6.png','สมคิด7.png','สมคิด8.png','สมคิด9.png','สมคิด10.png','สมคิด11.png','สมคิด12.png']; 
@@ -136,6 +136,7 @@ export class HomeComponent implements OnInit {
               "หมู่บ้าน เครือ AP.png","หมู่บ้าน เครือ SCแอสเชส.png","หมู่บ้าน-พร็อพเพอตี้.jfif","หมู่บ้าน มัฑณนา.png","ห้างเชนจูรี่.jfif","ห้างเชนทรัล-ลาดพร้าว.jfif",
               "ห้างเชนทรัลเวิล.png","ห้างทอง ตำหนักทอง5.jfif"
             ];
+
   constructor(
     private router:Router,
     private changeRef:ChangeDetectorRef
@@ -145,12 +146,18 @@ export class HomeComponent implements OnInit {
     this.loadScript();
     this.countImg = this.imageRef.length; 
     this.tempImageFilter = this.imageFilter;
+    setTimeout(() => {
+      this.changeRef.detectChanges();
+    }, 2000);
+    this.changeRef.detectChanges();
     this.router.routeReuseStrategy.shouldReuseRoute = () => {
       return false
     }
   }
   ngOnChanges(): void {
       this.changeRef.detectChanges(); // typeScricp โหลดไม่ทัน html
+  }
+  ngAfterViewInit() {
   }
   loadImage(){
     this.id = this.imageFilter.length;
@@ -162,17 +169,18 @@ export class HomeComponent implements OnInit {
     this.typeNow = type;
     this.showLoadMore = true;
     this.tempImageFilter = this.imageFilter; 
-    setTimeout(() => {     
-      this.changeRef.detectChanges();
-    }, 2000);
+    this.changeRef.detectChanges();
   }
-  loadImage3(type:any){
+  loadImage3(type:any,setClass:any){
+    this.setClassForIsotope = setClass;
+    this.id = 9;
     this.typeNow = type;
     this.showLoadMore = true; 
     this.tempImageFilter = this.imageFilter.filter(x => x.type === type)
-    setTimeout(() => {     
+    setInterval(()=>{
       this.changeRef.detectChanges();
-    }, 2000);
+    },2000)
+    
   }
   changeRoute(url:any,idProject:any,path:any,text:any,type:any){
     var temp = this.imageFilter.filter(x =>x.id === idProject) //วิธีฟิลเตอร์
