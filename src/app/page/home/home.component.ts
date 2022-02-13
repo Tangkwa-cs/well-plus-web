@@ -1,11 +1,16 @@
-import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
-
+import SwiperCore, { Swiper, Virtual } from 'swiper';
+import { SwiperComponent } from "swiper/angular";
+// import { SwiperComponent } from 'swiper/angular';
+// install Swiper modules
+SwiperCore.use([Virtual]);
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
+
 export class HomeComponent implements OnInit {
   imageHouse = ["มัณ1.png","มัณ2.png","มัณ3.png","มัณ4.png","มัณ5.png","มัณ6.png","มัณ7.png","มัณ8.png","มัณ9.png","มัณ10.png","มัณ11.png","มัณ13.png","มัณ14.png","มัณ15.png","มัณ16.png"];
   imagewall = ["นิรัน1.png","นิรัน2.png","นิรัน3.png"];
@@ -18,6 +23,15 @@ export class HomeComponent implements OnInit {
   typeNow = "";
   tempImageFilter:any;
   setClassForIsotope=false;
+  
+  // @ViewChild('swiper', { static: false }) swiper?: SwiperComponent;
+  // slideNext(){
+  //   this.swiper.swiperRef.slideNext(100);
+  // }
+  // slidePrev(){
+  //   this.swiper.swiperRef.slidePrev(100);
+  // }
+
   imageProject1 = ['นิรัน1.png','นิรัน2.png','นิรัน3.png'];  
   imageProject2 = ['city1.png','city2.png','city3.png','city4.png','city5.png','city6.png','city7.png','city8.png','city9.png','city10.png','city11.png','city12.png']; 
   imageProject3 = ['สมคิด1.png','สมคิด2.png','สมคิด3.png','สมคิด4.png','สมคิด5.png','สมคิด6.png','สมคิด7.png','สมคิด8.png','สมคิด9.png','สมคิด10.png','สมคิด11.png','สมคิด12.png']; 

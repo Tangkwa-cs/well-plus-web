@@ -2,9 +2,43 @@
     <div class="row p-0 m-0">
         <div class="col-12">
             <app-nav></app-nav>
-            <section class="section swiper-container swiper-slider swiper-slider-modern" data-loop="true" data-autoplay="5000" data-simulate-touch="true" data-nav="true" data-slide-effect="fade">
+            <!-- <swiper #swiper [virtual]="true">
+                <ng-template swiperSlide>Slide 1</ng-template>
+                <ng-template swiperSlide>Slide 2</ng-template>
+                <ng-template swiperSlide>Slide 3</ng-template>
+                <ng-template swiperSlide>Slide 4</ng-template>
+                <ng-template swiperSlide>Slide 5</ng-template>
+                <ng-template swiperSlide>Slide 6</ng-template>
+                <ng-template swiperSlide>Slide 7</ng-template>
+            </swiper>
+            <button (click)="slideNext()">Next slide</button>
+            <button (click)="slidePrev()">Prev slide</button> -->
+            <section class="section swiper-container ">
                 <div class="swiper-wrapper text-left">
-                    <!-- slide 1 start -->
+                    <swiper class="swiper-slide">
+                        <ng-template swiperSlide *ngFor="let slide of imageSwiper">
+                            <img src="../../../assets/swiperSlide/{{slide}}" class="img_swiper" alt="" srcset="">
+                            <div class="centered">
+                                <h3 class="a_click oh slider-modern-title text-white text-start head"><span data-caption-animate="slideInLeft " data-caption-delay="0 ">บริษัทเวลพลัส จำกัด</span></h3>
+                                <h5 class="box-sportlight-title  text-start">
+                                    <p class="a_click font_swiper">
+                                        ดำเนินธุรกิจมายาวนาน เกี่ยวกับการออกแบบตกแต่งภายใน<br>และรับเหมาครบวงจร จบในที่เดียว รับให้บริการตั้งแต่ <br>การออกแบบ การประเมินราคา งานก่อสร้าง ต่อเติม <br>งานตกแต่งภายใน เฟอร์นิเจอร์บิ้วอิน ตลอดจน ผ้าม่าน วอลเปเปอร์<br>"
+                                        ดีลที่เดียวจบ ครบ ไม่ปวดหัว"
+                                    </p>
+                                </h5>
+                                <!-- <p data-caption-animate="fadeInRight" class="text-white text-start font_swiper" data-caption-delay="400 ">ดำเนินธุรกิจมายาวนาน เกี่ยวกับการออกแบบตกแต่งภายใน<br>และรับเหมาครบวงจร จบในที่เดียว รับให้บริการตั้งแต่ <br>การออกแบบ การประเมินราคา งานก่อสร้าง ต่อเติม <br>งานตกแต่งภายใน เฟอร์นิเจอร์บิ้วอิน ตลอดจน ผ้าม่าน วอลเปเปอร์
+                                    <br>" ดีลที่เดียวจบ ครบ ไม่ปวดหัว"</p> -->
+                            </div>
+                        </ng-template>
+                    </swiper>
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-pagination swiper-pagination-style-2 "></div>
+            </section>
+            <!-- <section class="section swiper-container swiper-slider swiper-slider-modern" data-loop="true" data-autoplay="5000" data-simulate-touch="true" data-nav="true" data-slide-effect="fade">
+                <div class="swiper-wrapper text-left">
+                
                     <div class="swiper-slide img_slide">
                         <div class="swiper-slide-caption">
                             <div class="container">
@@ -21,7 +55,7 @@
                             </div>
                         </div>
                     </div>
-                    <!-- slide 2 start -->
+                    
                     <div class="swiper-slide " data-slide-bg="../../../assets/swiperSlide/มัณ3.png ">
                         <div class="swiper-slide-caption ">
                             <div class="container ">
@@ -35,7 +69,7 @@
                             </div>
                         </div>
                     </div>
-                    <!-- slide 3 start -->
+                  
                     <div class="swiper-slide " data-slide-bg="../../../assets/swiperSlide/เอเชียทีค3.png ">
                         <div class="swiper-slide-caption ">
                             <div class="container ">
@@ -52,12 +86,10 @@
                         </div>
                     </div>
                 </div>
-                <!-- Swiper Navigation-->
                 <div class="swiper-button-prev "></div>
                 <div class="swiper-button-next "></div>
-                <!-- Swiper Pagination-->
                 <div class="swiper-pagination swiper-pagination-style-2 "></div>
-            </section>
+            </section> -->
             <!-- <section class="section swiper-container swiper-slider swiper-slider-modern " data-loop="true " data-autoplay="5000 " data-simulate-touch="true " data-nav="true " data-slide-effect="fade ">
                 <swiper #swiper [virtual]="true ">
                     <ng-template swiperSlide *ngFor="let slide of imageSwiper ">
@@ -79,7 +111,6 @@
     <div class="row m-0 p-0">
         <div class="col-sm-12 col-lg-2"></div>
         <div class="col-sm-12 col-lg-8">
-
             <!-- Offer section start -->
             <section class="section section-sm bg-default bg_second_cl ">
                 <div class="container ">
@@ -124,7 +155,7 @@
                                     <a class="box-sportlight-figure"><img src="../../../assets/interior/interior_thecity/city10.png " alt=" " width="370 " height="332 " /></a>
                                     <div class="box-sportlight-caption ">
                                         <h5 class="box-sportlight-title ">
-                                            <a class="a_click p-1" (click)="clickRoute('/service','INTERIOR')">INTERIOR + FURNITURE <br>เฟอร์นิเจอร์บิ้วอิน</a>
+                                            <a class="a_click p-1" (click)="clickRoute('/service','INTERIOR')">INTERIOR+FURNITURE<br>เฟอร์นิเจอร์บิ้วอิน</a>
                                         </h5>
                                     </div>
                                 </article>
@@ -145,7 +176,6 @@
                 </div>
             </section>
             <!-- Offer section end -->
-
             <section class="section bg-default text-center">
                 <div class="parallax-container" data-parallax-img="../../../assets/Decor-wallpeper/วอล หัวเตียง-รอบห้อง @โรงแรมคาร์ลตัน กรุงเทพฯ สุขุมวิท/วอล-คาตัล1.png">
                     <div class="parallax-content section-sm context-dark">
@@ -160,7 +190,7 @@
                     </div>
                 </div>
             </section>
-            <section class="section section-sm bg-default text-center isotope-wrap">
+            <section class="section section-sm bg-default text-center isotope-wrap m-0 pt-5 pb-0">
                 <div class="container">
                     <div class="isotope-filters isotope-filters-horizontal">
                         <button class="isotope-filters-toggle button button-md button-icon button-icon-right button-default-outline button-wapasha" data-custom-toggle="#isotope-8" data-custom-toggle-hide-on-blur="true"><span class="icon fa fa-caret-down"></span>Filter</button>
@@ -173,8 +203,8 @@
                         </ul>
                     </div>
                     <div class="row isotope" [ngClass]="{'isotope2': setClassForIsotope}" data-lightgallery="group">
-                        <div class="col-sm-4 col-lg-4 col-xxl-3 isotope-item" *ngFor="let item of tempImageFilter; index as i" [attr.data-filter]="item.type">
-                            <ng-container  *ngIf="typeNow == '' && i < id">
+                        <div class="col-sm-4 col-lg-4 col-xxl-3 isotope-item mb-4" *ngFor="let item of tempImageFilter; index as i" [attr.data-filter]="item.type">
+                            <ng-container *ngIf="typeNow == '' && i < id">
                                 <article class="thumbnail thumbnail-mary thumbnail-xs">
                                     <div class="thumbnail-mary-figure">
                                         <img src="{{item.img}}" alt="" width="auto" height="300px" />
@@ -202,7 +232,7 @@
                             </ng-container>
                         </div>
                     </div>
-                    <div class="button-wrap" *ngIf="showLoadMore">
+                    <div class="button-wrap p-0 m-0" *ngIf="showLoadMore">
                         <button class="button button-md button-default-outline button-wapasha" (click)="loadImage()">Load More</button>
                     </div>
                 </div>
@@ -212,7 +242,7 @@
                 <div class="col-12 p-0 m-0">
                     <section class="section section-sm bg-default">
                         <div class="container">
-                            <div class="headingTitle">
+                            <div class="headingTitle p-0 m-0">
                                 <h1>About <span> us</span></h1>
                                 <p>Duis ornare diam purus, ac malesuada ante congue in. Cras gravida ex elit, vel bibendum mauris efficitur non. Sed ut massa a dui iaculis pretium eu a nunc.</p>
                             </div>
@@ -247,7 +277,7 @@
                 </div>
             </div>
             <!-- About us section end -->
-            <section class="section section-sm bg-default">
+            <section class="section section-sm bg-default mt-3 pt-5">
                 <div class="container">
                     <!-- Owl Carousel-->
                     <h3>Our clients ({{countImg}})</h3>

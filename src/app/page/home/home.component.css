@@ -1,3 +1,36 @@
+.font_swiper {
+    font-size: medium;
+    color: white;
+    line-height: 28px;
+}
+
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+    margin: 0%;
+    padding: 0%;
+}
+
+.swiperSlide {
+    position: relative;
+    text-align: center;
+    color: white;
+    margin: 0%;
+    padding: 0%;
+}
+
+
+/* Centered text */
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-90%, -30%);
+    filter: brightness(100%);
+}
+
 .sizeImg {
     width: 100%;
     height: 250px;
@@ -8,7 +41,14 @@
     background-size: 100% 100%;
     background-image: url("../../../assets/swiperSlide/ร้านเสื้อผ้า3.png");
     background-repeat: no-repeat;
-    /* backdrop-filter: brightness(50%); */
+}
+
+.img_swiper {
+    width: 100% !important;
+    height: 100vh;
+    filter: brightness(65%);
+    margin: 0%;
+    padding: 0%;
 }
 
 .img_ref {
@@ -38,12 +78,13 @@
     animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
 }
 
+.isotope2 {
+    height: auto!important;
+}
+
 @media (max-width: 575.98px) {
     .img_slide {
         width: auto;
         height: 300px;
     }
-}
-.isotope2{
-    height: auto!important;
 }

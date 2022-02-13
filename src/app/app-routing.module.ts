@@ -6,6 +6,11 @@ import { ContactComponent } from './page/contact/contact.component';
 import {ServiceComponent } from './page/service/service.component';
 import {DetailComponent} from './page/detail/detail.component'
 
+
+import 'swiper/scss';
+import 'swiper/scss/navigation';
+import 'swiper/scss/pagination';
+
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'aboutus', component: AboutusComponent },

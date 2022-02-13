@@ -22,15 +22,19 @@
                 <div class="row row-30">
                     <div class="col-sm-6 col-lg-4" *ngFor="let image of project;let i = index">
                         <!-- Post Modern-->
-                        <article class="post post-modern">
-                            <a class="post-modern-figure a_click" (click)="changeRoute('/detail',image.id,image.url,image.text,image.type)"><img src="{{image.img}}" alt="" width="370" height="307" />
+                        <article class="post post-modern text-center">
+                            <a class="post-modern-figure a_click" (click)="changeRoute('/detail',image.id,image.url,image.text,image.type)"><img src="{{image.img}}" alt="" class="img_service" width="370" height="307" />
                                 <div class="post-modern-time">
                                     <time datetime="2018-07-04"><span class="post-modern-time-number">{{i+1}}</span></time>
                                 </div>
                             </a>
-                            <h5 class="post-modern-title"><a class="a_click" (click)="changeRoute('/detail',image.id,image.url,image.text,image.type)">{{image.text}}</a></h5>
-                            <p class="post-modern-text">Ubi est fidelis scutum? Hippotoxotas sunt speciess de secundus luba. Cur nuclear vexatum iacere congregabo? Azureus, domesticus...</p>
                         </article>
+                        <div class="row text-start">
+                            <div class="col-12">
+                                <h5 class="post-modern-title"><a class="a_click" (click)="changeRoute('/detail',image.id,image.url,image.text,image.type)">{{image.text}}</a></h5>
+                                <p class="post-modern-text">Ubi est fidelis scutum? Hippotoxotas sunt speciess de secundus luba. Cur nuclear vexatum iacere congregabo? Azureus, domesticus...</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="pagination-wrap">

@@ -12,7 +12,7 @@ import { ServiceComponent } from './page/service/service.component';
 import { HttpClientModule } from '@angular/common/http';
 import { DetailComponent } from './page/detail/detail.component';
 import { NavcomponentComponent } from './component/navcomponent/navcomponent.component';
-
+import { SwiperModule } from 'swiper/angular';
 
 @NgModule({
   declarations: [
@@ -24,13 +24,14 @@ import { NavcomponentComponent } from './component/navcomponent/navcomponent.com
     ContactComponent,
     ServiceComponent,
     DetailComponent,
-    NavcomponentComponent
+    NavcomponentComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule,
-    HttpClientModule
+    HttpClientModule,
+    SwiperModule
   ],
   providers: [],
   bootstrap: [AppComponent]
