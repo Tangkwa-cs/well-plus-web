@@ -23,7 +23,6 @@ export class AboutusComponent implements OnInit {
   ngOnInit(): void {
     this.loadScript();
     this.countImg = this.imageRef.length;
-    console.log(this.countImg);
     
   }
   public loadScript(){

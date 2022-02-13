@@ -165,30 +165,45 @@
                     <div class="isotope-filters isotope-filters-horizontal">
                         <button class="isotope-filters-toggle button button-md button-icon button-icon-right button-default-outline button-wapasha" data-custom-toggle="#isotope-8" data-custom-toggle-hide-on-blur="true"><span class="icon fa fa-caret-down"></span>Filter</button>
                         <ul class="isotope-filters-list" id="isotope-8">
-                            <li><a class="active" href="#" data-isotope-filter="*" data-isotope-group="gallery">All</a></li>
-                            <li><a href="#" data-isotope-filter="INTERIOR" data-isotope-group="gallery">INTERIOR</a></li>
-                            <li><a href="#" data-isotope-filter="3D" data-isotope-group="gallery">3D</a></li>
-                            <li><a href="#" data-isotope-filter="CONSTRUCTION" data-isotope-group="gallery">CONSTRUCTION</a></li>
-                            <li><a href="#" data-isotope-filter="DECORATION" data-isotope-group="gallery">DECORATION</a></li>
+                            <li><a class="active a_click" data-isotope-filter="*" data-isotope-group="gallery" (click)="loadImage2('')">All</a></li>
+                            <li><a class="a_click" data-isotope-filter="INTERIOR" data-isotope-group="gallery" (click)="loadImage3('INTERIOR')">INTERIOR</a></li>
+                            <li><a class="a_click" data-isotope-filter="3D" data-isotope-group="gallery" (click)="loadImage3('3D')">3D</a></li>
+                            <li><a class="a_click" data-isotope-filter="CONSTRUCTION" data-isotope-group="gallery" (click)="loadImage3('CONSTRUCTION')">CONSTRUCTION</a></li>
+                            <li><a class="a_click" data-isotope-filter="DECORATION" data-isotope-group="gallery" (click)="loadImage3('DECORATION')">DECORATION</a></li>
                         </ul>
                     </div>
                     <div class="row row-30 isotope" data-lightgallery="group">
-                        <div class="col-sm-4 col-lg-4 col-xxl-3 isotope-item" *ngFor="let item of imageFilter" [attr.data-filter]="item.type">
-                            <article class="thumbnail thumbnail-mary thumbnail-xs">
-                                <div class="thumbnail-mary-figure">
-                                    <img src="{{item.img}}" alt="" width="auto" height="300px" />
-                                </div>
-                                <div class="thumbnail-mary-caption">
-                                    <a class="icon fl-bigmug-line-zoom60" href="{{item.img}}" data-lightgallery="item"><img src="{{item.img}}" alt="" width="270" height="300" /></a>
-                                    <h5 class="thumbnail-mary-title">
-                                        <a class="a_click" (click)="changeRoute('/detail',item.id,item.url,item.text,item.type)">{{item.text}}</a>
-                                    </h5>
-                                </div>
-                            </article>
+                        <div class="col-sm-4 col-lg-4 col-xxl-3 isotope-item" *ngFor="let item of tempImageFilter; index as i" [attr.data-filter]="item.type">
+                            <div *ngIf="typeNow == '' && i < id">
+                                <article class="thumbnail thumbnail-mary thumbnail-xs">
+                                    <div class="thumbnail-mary-figure">
+                                        <img src="{{item.img}}" alt="" width="auto" height="300px" />
+                                    </div>
+                                    <div class="thumbnail-mary-caption">
+                                        <a class="icon fl-bigmug-line-zoom60" href="{{item.img}}" data-lightgallery="item"><img src="{{item.img}}" alt="" width="270" height="300" /></a>
+                                        <h5 class="thumbnail-mary-title">
+                                            <a class="a_click" (click)="changeRoute('/detail',item.id,item.url,item.text,item.type)">{{item.text}}</a>
+                                        </h5>
+                                    </div>
+                                </article>
+                            </div>
+                            <div *ngIf="typeNow == item.type && i < id">
+                                <article class="thumbnail thumbnail-mary thumbnail-xs">
+                                    <div class="thumbnail-mary-figure">
+                                        <img src="{{item.img}}" alt="" width="auto" height="300px" />
+                                    </div>
+                                    <div class="thumbnail-mary-caption">
+                                        <a class="icon fl-bigmug-line-zoom60" href="{{item.img}}" data-lightgallery="item"><img src="{{item.img}}" alt="" width="270" height="300" /></a>
+                                        <h5 class="thumbnail-mary-title">
+                                            <a class="a_click" (click)="changeRoute('/detail',item.id,item.url,item.text,item.type)">{{item.text}}</a>
+                                        </h5>
+                                    </div>
+                                </article>
+                            </div>
                         </div>
                     </div>
-                    <div class="button-wrap">
-                        <button class="button button-md button-default-outline button-wapasha">Load More</button>
+                    <div class="button-wrap" *ngIf="showLoadMore">
+                        <button class="button button-md button-default-outline button-wapasha" (click)="loadImage()">Load More</button>
                     </div>
                 </div>
             </section>

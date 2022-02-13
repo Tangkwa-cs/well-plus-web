@@ -13,6 +13,10 @@ export class HomeComponent implements OnInit {
   imageConstrution = ["โกดัง1.png","โกดัง2.png","โกดัง3.png"];
   imageSwiper = ["ร้านเสื้อผ้า3.png","เอเชียทีค3.png","มัณ3.png"];
   countImg:any;
+  id = 9;
+  showLoadMore = true;
+  typeNow = "";
+  tempImageFilter:any;
 
   imageProject1 = ['นิรัน1.png','นิรัน2.png','นิรัน3.png'];  
   imageProject2 = ['city1.png','city2.png','city3.png','city4.png','city5.png','city6.png','city7.png','city8.png','city9.png','city10.png','city11.png','city12.png']; 
@@ -139,9 +143,36 @@ export class HomeComponent implements OnInit {
   
   ngOnInit(): void {
     this.loadScript();
+    this.countImg = this.imageRef.length; 
+    this.tempImageFilter = this.imageFilter;
+    this.router.routeReuseStrategy.shouldReuseRoute = () => {
+      return false
+    }
+  }
+  ngOnChanges(): void {
+      this.changeRef.detectChanges(); // typeScricp โหลดไม่ทัน html
+  }
+  loadImage(){
+    this.id = this.imageFilter.length;
+    this.showLoadMore = false; 
     this.changeRef.detectChanges();
-    this.countImg = this.imageRef.length;
-    
+  }
+  loadImage2(type:any){
+    this.id = 9;
+    this.typeNow = type;
+    this.showLoadMore = true;
+    this.tempImageFilter = this.imageFilter; 
+    setTimeout(() => {     
+      this.changeRef.detectChanges();
+    }, 2000);
+  }
+  loadImage3(type:any){
+    this.typeNow = type;
+    this.showLoadMore = true; 
+    this.tempImageFilter = this.imageFilter.filter(x => x.type === type)
+    setTimeout(() => {     
+      this.changeRef.detectChanges();
+    }, 2000);
   }
   changeRoute(url:any,idProject:any,path:any,text:any,type:any){
     var temp = this.imageFilter.filter(x =>x.id === idProject) //วิธีฟิลเตอร์
