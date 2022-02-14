@@ -11,11 +11,11 @@
                                 <div class="effect">
                                     <h3 class="a_click oh slider-modern-title text-white text-start head"><span data-caption-animate="slideInLeft " data-caption-delay="0 ">บริษัทเวลพลัส จำกัด</span></h3>
                                     <h5 class="box-sportlight-title  text-start">
-                                        <p class="a_click font_swiper">
+                                        <span class="a_click font_swiper">
                                             ดำเนินธุรกิจมายาวนาน เกี่ยวกับการออกแบบตกแต่งภายใน<br>และรับเหมาครบวงจร จบในที่เดียว รับให้บริการตั้งแต่ <br>การออกแบบ การประเมินราคา งานก่อสร้าง ต่อเติม <br>งานตกแต่งภายใน เฟอร์นิเจอร์บิ้วอิน ตลอดจน ผ้าม่าน
                                             วอลเปเปอร์
                                             <br>" ดีลที่เดียวจบ ครบ ไม่ปวดหัว"
-                                        </p>
+                                        </span>
                                     </h5>
                                 </div>
                             </div>
@@ -99,8 +99,8 @@
         </div>
     </div>
     <div class="row m-0 p-0">
-        <div class="col-sm-12 col-lg-2"></div>
-        <div class="col-sm-12 col-lg-8">
+        <div class="col-2"></div>
+        <div class="col-lg-8">
             <!-- Offer section start -->
             <section class="section section-sm bg-default bg_second_cl ">
                 <div class="container ">
@@ -108,7 +108,7 @@
                         <h1>What We <span>Do</span></h1>
                         <hr>
                     </div>
-                    <div class="row row-30 justify-content-center ">
+                    <div class="row row-30 justify-content-center">
                         <div class="col-md-12 col-lg-7 ">
                             <div class="oh ">
                                 <article class="box-sportlight ">
@@ -186,14 +186,14 @@
                         <button class="isotope-filters-toggle button button-md button-icon button-icon-right button-default-outline button-wapasha" data-custom-toggle="#isotope-8" data-custom-toggle-hide-on-blur="true"><span class="icon fa fa-caret-down"></span>Filter</button>
                         <ul class="isotope-filters-list" id="isotope-8">
                             <li><a #click1 href="#" class="active a_click" data-isotope-filter="ALL" data-isotope-group="gallery">All</a></li>
-                            <li><a href="#" class="a_click" data-isotope-filter="INTERIOR" data-isotope-group="gallery" >INTERIOR</a></li>
-                            <li><a href="#" class="a_click" data-isotope-filter="3D" data-isotope-group="gallery" >3D</a></li>
-                            <li><a href="#" class="a_click" data-isotope-filter="CONSTRUCTION" data-isotope-group="gallery" >CONSTRUCTION</a></li>
-                            <li><a href="#" class="a_click" data-isotope-filter="DECORATION" data-isotope-group="gallery" >DECORATION</a></li>
+                            <li><a href="#" class="a_click" data-isotope-filter="INTERIOR" data-isotope-group="gallery">INTERIOR</a></li>
+                            <li><a href="#" class="a_click" data-isotope-filter="3D" data-isotope-group="gallery">3D</a></li>
+                            <li><a href="#" class="a_click" data-isotope-filter="CONSTRUCTION" data-isotope-group="gallery">CONSTRUCTION</a></li>
+                            <li><a href="#" class="a_click" data-isotope-filter="DECORATION" data-isotope-group="gallery">DECORATION</a></li>
                         </ul>
                     </div>
-                    <div class="row row-30 row-isotope isotope" data-lightgallery="group">
-                        <div  class="col-sm-4 col-lg-4 col-xxl-3 isotope-item mb-4" *ngFor="let item of tempImageFilter1; index as i" data-filter='ALL'>
+                    <div class="row row-isotope isotope" data-lightgallery="group">
+                        <div class="col-sm-4 col-lg-4 col-xxl-3 isotope-item mb-4" *ngFor="let item of tempImageFilter1; index as i" data-filter='ALL'>
                             <article *ngIf="i < id" class="thumbnail thumbnail-mary thumbnail-xs">
                                 <div class="thumbnail-mary-figure">
                                     <img src="{{item.img}}" alt="" width="auto" height="300px" />
@@ -204,10 +204,10 @@
                                         <a class="a_click" (click)="changeRoute('/detail',item.id,item.url,item.text,item.type)">{{item.text}}</a>
                                     </h5>
                                 </div>
-                            </article>     
+                            </article>
                         </div>
                         <div class="col-sm-4 col-lg-4 col-xxl-3 isotope-item mb-4" *ngFor="let item of tempImageFilter2; index as i" data-filter='INTERIOR'>
-                            <article  *ngIf="i < id" class="thumbnail thumbnail-mary thumbnail-xs">
+                            <article *ngIf="i < id" class="thumbnail thumbnail-mary thumbnail-xs">
                                 <div class="thumbnail-mary-figure">
                                     <img src="{{item.img}}" alt="" width="auto" height="300px" />
                                 </div>
@@ -217,10 +217,10 @@
                                         <a class="a_click" (click)="changeRoute('/detail',item.id,item.url,item.text,item.type)">{{item.text}}</a>
                                     </h5>
                                 </div>
-                            </article>     
+                            </article>
                         </div>
                         <div class="col-sm-4 col-lg-4 col-xxl-3 isotope-item mb-4" *ngFor="let item of tempImageFilter3; index as i" data-filter='3D'>
-                            <article  *ngIf="i < id" class="thumbnail thumbnail-mary thumbnail-xs">
+                            <article *ngIf="i < id" class="thumbnail thumbnail-mary thumbnail-xs">
                                 <div class="thumbnail-mary-figure">
                                     <img src="{{item.img}}" alt="" width="auto" height="300px" />
                                 </div>
@@ -230,10 +230,10 @@
                                         <a class="a_click" (click)="changeRoute('/detail',item.id,item.url,item.text,item.type)">{{item.text}}</a>
                                     </h5>
                                 </div>
-                            </article>     
+                            </article>
                         </div>
                         <div class="col-sm-4 col-lg-4 col-xxl-3 isotope-item mb-4" *ngFor="let item of tempImageFilter4; index as i" data-filter='CONSTRUCTION'>
-                            <article  *ngIf="i < id" class="thumbnail thumbnail-mary thumbnail-xs">
+                            <article *ngIf="i < id" class="thumbnail thumbnail-mary thumbnail-xs">
                                 <div class="thumbnail-mary-figure">
                                     <img src="{{item.img}}" alt="" width="auto" height="300px" />
                                 </div>
@@ -243,10 +243,10 @@
                                         <a class="a_click" (click)="changeRoute('/detail',item.id,item.url,item.text,item.type)">{{item.text}}</a>
                                     </h5>
                                 </div>
-                            </article>     
+                            </article>
                         </div>
                         <div class="col-sm-4 col-lg-4 col-xxl-3 isotope-item mb-4" *ngFor="let item of tempImageFilter5; index as i" data-filter='DECORATION'>
-                            <article  *ngIf="i < id" class="thumbnail thumbnail-mary thumbnail-xs">
+                            <article *ngIf="i < id" class="thumbnail thumbnail-mary thumbnail-xs">
                                 <div class="thumbnail-mary-figure">
                                     <img src="{{item.img}}" alt="" width="auto" height="300px" />
                                 </div>
@@ -256,54 +256,53 @@
                                         <a class="a_click" (click)="changeRoute('/detail',item.id,item.url,item.text,item.type)">{{item.text}}</a>
                                     </h5>
                                 </div>
-                            </article>     
+                            </article>
                         </div>
                     </div>
                     <div class="button-wrap p-0 m-0" *ngIf="showLoadMore">
                         <button class="button button-md button-default-outline button-wapasha" (click)="loadImage()">Load More</button>
                     </div>
+                    <div class="button-wrap p-0 m-0" *ngIf="hideLoadMore">
+                        <button class="button button-md button-default-outline button-wapasha" (click)="hideImage()">Hide</button>
+                    </div>
                 </div>
             </section>
-            
+
             <!-- About us section start -->
-            <div class="row p-0 m-0">
-                <div class="col-12 p-0 m-0">
-                    <section class="section section-sm bg-default">
-                        <div class="container">
-                            <div class="headingTitle p-0 m-0">
-                                <h1>About <span> us</span></h1>
-                                <p>Duis ornare diam purus, ac malesuada ante congue in. Cras gravida ex elit, vel bibendum mauris efficitur non. Sed ut massa a dui iaculis pretium eu a nunc.</p>
-                            </div>
-                            <div class="row row-lg row-50 justify-content-center border-classic border-classic-2">
-                                <div class="col-sm-6 col-md-3">
-                                    <div class="counter-creative">
-                                        <div class="counter-creative-number"><span class="counter">12</span><span class="icon counter-creative-icon fl-bigmug-line-trophy55"></span> </div>
-                                        <h6 class="counter-creative-title">Awards</h6>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3">
-                                    <div class="counter-creative">
-                                        <div class="counter-creative-number"><span class="counter">2</span><span class="symbol">k</span><span class="icon counter-creative-icon fl-bigmug-line-cube29"></span> </div>
-                                        <h6 class="counter-creative-title">Projects</h6>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3">
-                                    <div class="counter-creative">
-                                        <div class="counter-creative-number"><span class="counter">679</span><span class="icon counter-creative-icon fl-bigmug-line-sun81"></span> </div>
-                                        <h6 class="counter-creative-title">Happy clients</h6>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3">
-                                    <div class="counter-creative">
-                                        <div class="counter-creative-number"><span class="counter">25</span><span class="icon counter-creative-icon fl-bigmug-line-user143"></span> </div>
-                                        <h6 class="counter-creative-title">Team members</h6>
-                                    </div>
-                                </div>
+            <section class="section section-sm bg-default">
+                <div class="container">
+                    <div class="headingTitle">
+                        <h1>About <span> us</span></h1>
+                        <p>Duis ornare diam purus, ac malesuada ante congue in. Cras gravida ex elit, vel bibendum mauris efficitur non. Sed ut massa a dui iaculis pretium eu a nunc.</p>
+                    </div>
+                    <div class="row row-lg row-50 justify-content-center border-classic border-classic-2">
+                        <div class="col-sm-6 col-md-3">
+                            <div class="counter-creative">
+                                <div class="counter-creative-number"><span class="counter text-dark">12</span><span class="icon counter-creative-icon fl-bigmug-line-trophy55"></span> </div>
+                                <h6 class="counter-creative-title text-dark">Awards</h6>
                             </div>
                         </div>
-                    </section>
+                        <div class="col-sm-6 col-md-3">
+                            <div class="counter-creative">
+                                <div class="counter-creative-number"><span class="counter text-dark">2</span><span class="symbol">k</span><span class="icon counter-creative-icon fl-bigmug-line-cube29"></span> </div>
+                                <h6 class="counter-creative-title">Projects</h6>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-3">
+                            <div class="counter-creative">
+                                <div class="counter-creative-number"><span class="counter text-dark">679</span><span class="icon counter-creative-icon fl-bigmug-line-sun81"></span> </div>
+                                <h6 class="counter-creative-title">Happy clients</h6>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-3">
+                            <div class="counter-creative">
+                                <div class="counter-creative-number"><span class="counter text-dark">25</span><span class="icon counter-creative-icon fl-bigmug-line-user143"></span> </div>
+                                <h6 class="counter-creative-title">Team members</h6>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
+            </section>
             <!-- About us section end -->
             <section class="section section-sm bg-default mt-3 pt-5">
                 <div class="container">
@@ -318,7 +317,7 @@
             </section>
 
         </div>
-        <div class="col-sm-12 col-lg-2"></div>
+        <div class="col-2"></div>
     </div>
 
 </div>

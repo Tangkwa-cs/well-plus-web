@@ -24,6 +24,7 @@ export class HomeComponent implements OnInit {
   countImg:any;
   id = 9;
   showLoadMore = true;
+  hideLoadMore = false;
   typeNow = "";
   tempImageFilter1:any;
   tempImageFilter2:any;
@@ -188,11 +189,22 @@ export class HomeComponent implements OnInit {
     
   }
   loadImage(){
-    this.id =9999
-    this.showLoadMore = false; 
-    this.changeRef.detectChanges();
+     this.id =9999
+    setTimeout(() => {
+       this.showLoadMore = false; 
+       this.hideLoadMore = true;
+      this.changeRef.detectChanges();
+    }, 2000);
+    
   }
- 
+  hideImage(){
+    this.id =9
+    setTimeout(() => {
+      this.showLoadMore = true; 
+      this.hideLoadMore = false;
+      this.changeRef.detectChanges();
+   }, 2000);
+  }
   changeRoute(url:any,idProject:any,path:any,text:any,type:any){
     var temp = this.imageFilter.filter(x =>x.id === idProject) //วิธีฟิลเตอร์
     var imageProject

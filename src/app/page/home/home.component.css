@@ -58,23 +58,22 @@
     display: inline-block;
     overflow: hidden;
     white-space: nowrap;
-    width: auto;
 }
 
-.effect:first-of-type {
+.effect :first-of-type {
     /* For increasing performance 
-    ID/Class should've been used. 
-    For a small demo 
-    it's okaish for now */
+                         ID/Class should've been used. 
+                         For a small demo 
+                         it's okaish for now */
     animation: showup 7s infinite;
 }
 
-.effect:last-of-type {
+.effect :last-of-type {
     width: 0px;
     animation: reveal 7s infinite;
 }
 
-.effect:last-of-type span {
+.effect :last-of-type span {
     margin-left: -355px;
     animation: slidein 7s infinite;
 }
@@ -119,14 +118,14 @@
         width: 0px;
     }
     30% {
-        width: 355px;
+        width: 500px;
     }
     80% {
         opacity: 1;
     }
     100% {
         opacity: 0;
-        width: 355px;
+        width: 500px;
     }
 }
 
@@ -180,5 +179,116 @@
     .img_slide {
         width: auto;
         height: 300px;
+    }
+    .centered {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        filter: brightness(100%);
+    }
+    @keyframes slidein {
+        0% {
+            margin-left: -500px;
+        }
+        20% {
+            margin-left: -500px;
+        }
+        35% {
+            margin-left: 0px;
+        }
+        100% {
+            margin-left: 0px;
+        }
+    }
+    @keyframes reveal {
+        0% {
+            opacity: 0;
+            width: 0px;
+        }
+        20% {
+            opacity: 1;
+            width: 0px;
+        }
+        30% {
+            width: 350px;
+        }
+        80% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+            width: 350px;
+        }
+    }
+    .img_swiper {
+        width: 100% !important;
+        height: 50vh;
+        filter: brightness(65%);
+        padding: 0%;
+    }
+    .text_head {
+        font-size: 4vh;
+        color: white;
+        text-shadow: black 0.1em 0.1em 0.2em;
+        transform: scale(0.94);
+        animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1199.98px) {
+    .centered {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-90%, -30%);
+        filter: brightness(100%);
+    }
+    @keyframes slidein {
+        0% {
+            margin-left: -500px;
+        }
+        20% {
+            margin-left: -500px;
+        }
+        35% {
+            margin-left: 0px;
+        }
+        100% {
+            margin-left: 0px;
+        }
+    }
+    @keyframes reveal {
+        0% {
+            opacity: 0;
+            width: 0px;
+        }
+        20% {
+            opacity: 1;
+            width: 0px;
+        }
+        30% {
+            width: 350px;
+        }
+        80% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+            width: 350px;
+        }
+    }
+    .img_swiper {
+        width: 100% !important;
+        height: 50vh;
+        filter: brightness(65%);
+        padding: 0%;
+    }
+    .text_head {
+        font-size: 4vh;
+        color: white;
+        text-shadow: black 0.1em 0.1em 0.2em;
+        transform: scale(0.94);
+        animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
     }
 }
