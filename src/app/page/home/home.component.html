@@ -185,41 +185,78 @@
                     <div class="isotope-filters isotope-filters-horizontal">
                         <button class="isotope-filters-toggle button button-md button-icon button-icon-right button-default-outline button-wapasha" data-custom-toggle="#isotope-8" data-custom-toggle-hide-on-blur="true"><span class="icon fa fa-caret-down"></span>Filter</button>
                         <ul class="isotope-filters-list" id="isotope-8">
-                            <li><a href="#" class="active a_click" data-isotope-filter="*" data-isotope-group="gallery" (click)="loadImage2('')">All</a></li>
-                            <li><a href="#" class="a_click" data-isotope-filter="INTERIOR" data-isotope-group="gallery" (click)="loadImage3('INTERIOR',true)">INTERIOR</a></li>
-                            <li><a href="#" class="a_click" data-isotope-filter="3D" data-isotope-group="gallery" (click)="loadImage3('3D',true)">3D</a></li>
-                            <li><a href="#" class="a_click" data-isotope-filter="CONSTRUCTION" data-isotope-group="gallery" (click)="loadImage3('CONSTRUCTION',true)">CONSTRUCTION</a></li>
-                            <li><a href="#" class="a_click" data-isotope-filter="DECORATION" data-isotope-group="gallery" (click)="loadImage3('DECORATION',true)">DECORATION</a></li>
+                            <li><a #click1 href="#" class="active a_click" data-isotope-filter="ALL" data-isotope-group="gallery">All</a></li>
+                            <li><a href="#" class="a_click" data-isotope-filter="INTERIOR" data-isotope-group="gallery" >INTERIOR</a></li>
+                            <li><a href="#" class="a_click" data-isotope-filter="3D" data-isotope-group="gallery" >3D</a></li>
+                            <li><a href="#" class="a_click" data-isotope-filter="CONSTRUCTION" data-isotope-group="gallery" >CONSTRUCTION</a></li>
+                            <li><a href="#" class="a_click" data-isotope-filter="DECORATION" data-isotope-group="gallery" >DECORATION</a></li>
                         </ul>
                     </div>
-                    <div class="row row-30 row-isotope isotope" [ngClass]="{'isotope2': setClassForIsotope}" data-lightgallery="group">
-                        <div class="col-sm-4 col-lg-4 col-xxl-3 isotope-item mb-4" *ngFor="let item of tempImageFilter; index as i" [attr.data-filter]="item.type">
-                            <ng-container *ngIf="typeNow == '' && i < id">
-                                <article class="thumbnail thumbnail-mary thumbnail-xs">
-                                    <div class="thumbnail-mary-figure">
-                                        <img src="{{item.img}}" alt="" width="auto" height="300px" />
-                                    </div>
-                                    <div class="thumbnail-mary-caption">
-                                        <a class="icon fl-bigmug-line-zoom60" href="{{item.img}}" data-lightgallery="item"><img src="{{item.img}}" alt="" width="270" height="300" /></a>
-                                        <h5 class="thumbnail-mary-title">
-                                            <a class="a_click" (click)="changeRoute('/detail',item.id,item.url,item.text,item.type)">{{item.text}}</a>
-                                        </h5>
-                                    </div>
-                                </article>
-                            </ng-container>
-                            <ng-container *ngIf="typeNow == item.type && i < id">
-                                <article class="thumbnail thumbnail-mary thumbnail-xs">
-                                    <div class="thumbnail-mary-figure">
-                                        <img src="{{item.img}}" alt="" width="auto" height="300px" />
-                                    </div>
-                                    <div class="thumbnail-mary-caption">
-                                        <a class="icon fl-bigmug-line-zoom60" href="{{item.img}}" data-lightgallery="item"><img src="{{item.img}}" alt="" width="270" height="300" /></a>
-                                        <h5 class="thumbnail-mary-title">
-                                            <a class="a_click" (click)="changeRoute('/detail',item.id,item.url,item.text,item.type)">{{item.text}}</a>
-                                        </h5>
-                                    </div>
-                                </article>
-                            </ng-container>
+                    <div class="row row-30 row-isotope isotope" data-lightgallery="group">
+                        <div  class="col-sm-4 col-lg-4 col-xxl-3 isotope-item mb-4" *ngFor="let item of tempImageFilter1; index as i" data-filter='ALL'>
+                            <article *ngIf="i < id" class="thumbnail thumbnail-mary thumbnail-xs">
+                                <div class="thumbnail-mary-figure">
+                                    <img src="{{item.img}}" alt="" width="auto" height="300px" />
+                                </div>
+                                <div class="thumbnail-mary-caption">
+                                    <a class="icon fl-bigmug-line-zoom60" href="{{item.img}}" data-lightgallery="item"><img src="{{item.img}}" alt="" width="270" height="300" /></a>
+                                    <h5 class="thumbnail-mary-title">
+                                        <a class="a_click" (click)="changeRoute('/detail',item.id,item.url,item.text,item.type)">{{item.text}}</a>
+                                    </h5>
+                                </div>
+                            </article>     
+                        </div>
+                        <div class="col-sm-4 col-lg-4 col-xxl-3 isotope-item mb-4" *ngFor="let item of tempImageFilter2; index as i" data-filter='INTERIOR'>
+                            <article  *ngIf="i < id" class="thumbnail thumbnail-mary thumbnail-xs">
+                                <div class="thumbnail-mary-figure">
+                                    <img src="{{item.img}}" alt="" width="auto" height="300px" />
+                                </div>
+                                <div class="thumbnail-mary-caption">
+                                    <a class="icon fl-bigmug-line-zoom60" href="{{item.img}}" data-lightgallery="item"><img src="{{item.img}}" alt="" width="270" height="300" /></a>
+                                    <h5 class="thumbnail-mary-title">
+                                        <a class="a_click" (click)="changeRoute('/detail',item.id,item.url,item.text,item.type)">{{item.text}}</a>
+                                    </h5>
+                                </div>
+                            </article>     
+                        </div>
+                        <div class="col-sm-4 col-lg-4 col-xxl-3 isotope-item mb-4" *ngFor="let item of tempImageFilter3; index as i" data-filter='3D'>
+                            <article  *ngIf="i < id" class="thumbnail thumbnail-mary thumbnail-xs">
+                                <div class="thumbnail-mary-figure">
+                                    <img src="{{item.img}}" alt="" width="auto" height="300px" />
+                                </div>
+                                <div class="thumbnail-mary-caption">
+                                    <a class="icon fl-bigmug-line-zoom60" href="{{item.img}}" data-lightgallery="item"><img src="{{item.img}}" alt="" width="270" height="300" /></a>
+                                    <h5 class="thumbnail-mary-title">
+                                        <a class="a_click" (click)="changeRoute('/detail',item.id,item.url,item.text,item.type)">{{item.text}}</a>
+                                    </h5>
+                                </div>
+                            </article>     
+                        </div>
+                        <div class="col-sm-4 col-lg-4 col-xxl-3 isotope-item mb-4" *ngFor="let item of tempImageFilter4; index as i" data-filter='CONSTRUCTION'>
+                            <article  *ngIf="i < id" class="thumbnail thumbnail-mary thumbnail-xs">
+                                <div class="thumbnail-mary-figure">
+                                    <img src="{{item.img}}" alt="" width="auto" height="300px" />
+                                </div>
+                                <div class="thumbnail-mary-caption">
+                                    <a class="icon fl-bigmug-line-zoom60" href="{{item.img}}" data-lightgallery="item"><img src="{{item.img}}" alt="" width="270" height="300" /></a>
+                                    <h5 class="thumbnail-mary-title">
+                                        <a class="a_click" (click)="changeRoute('/detail',item.id,item.url,item.text,item.type)">{{item.text}}</a>
+                                    </h5>
+                                </div>
+                            </article>     
+                        </div>
+                        <div class="col-sm-4 col-lg-4 col-xxl-3 isotope-item mb-4" *ngFor="let item of tempImageFilter5; index as i" data-filter='DECORATION'>
+                            <article  *ngIf="i < id" class="thumbnail thumbnail-mary thumbnail-xs">
+                                <div class="thumbnail-mary-figure">
+                                    <img src="{{item.img}}" alt="" width="auto" height="300px" />
+                                </div>
+                                <div class="thumbnail-mary-caption">
+                                    <a class="icon fl-bigmug-line-zoom60" href="{{item.img}}" data-lightgallery="item"><img src="{{item.img}}" alt="" width="270" height="300" /></a>
+                                    <h5 class="thumbnail-mary-title">
+                                        <a class="a_click" (click)="changeRoute('/detail',item.id,item.url,item.text,item.type)">{{item.text}}</a>
+                                    </h5>
+                                </div>
+                            </article>     
                         </div>
                     </div>
                     <div class="button-wrap p-0 m-0" *ngIf="showLoadMore">
@@ -227,6 +264,7 @@
                     </div>
                 </div>
             </section>
+            
             <!-- About us section start -->
             <div class="row p-0 m-0">
                 <div class="col-12 p-0 m-0">

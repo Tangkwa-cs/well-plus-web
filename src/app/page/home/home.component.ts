@@ -1,4 +1,4 @@
-import { ChangeDetectorRef, Component, OnInit, ViewChild } from '@angular/core';
+import { ChangeDetectorRef, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import SwiperCore, { Swiper, Virtual, EffectFade} from 'swiper';
 import { SwiperComponent } from "swiper/angular";
@@ -25,9 +25,13 @@ export class HomeComponent implements OnInit {
   id = 9;
   showLoadMore = true;
   typeNow = "";
-  tempImageFilter:any;
+  tempImageFilter1:any;
+  tempImageFilter2:any;
+  tempImageFilter3:any;
+  tempImageFilter4:any;
+  tempImageFilter5:any;
   setClassForIsotope=false;
-  
+  @ViewChild('click1') click1?:ElementRef
   @ViewChild('swiper', { static: false }) swiper: any;
   slideNext(){
     this.swiper.swiperRef.slideNext(100);
@@ -163,10 +167,11 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.loadScript();
     this.countImg = this.imageRef.length; 
-    this.tempImageFilter = this.imageFilter;
-    setTimeout(() => {
-      this.changeRef.detectChanges();
-    }, 2000);
+    this.tempImageFilter1 = this.imageFilter
+    this.tempImageFilter2 = this.imageFilter.filter(x => x.type === 'INTERIOR');
+    this.tempImageFilter3 = this.imageFilter.filter(x => x.type === '3D');
+    this.tempImageFilter4 = this.imageFilter.filter(x => x.type === 'CONSTRUCTION');
+    this.tempImageFilter5 = this.imageFilter.filter(x => x.type === 'DECORATION');
     this.changeRef.detectChanges();
     this.router.routeReuseStrategy.shouldReuseRoute = () => {
       return false
@@ -176,30 +181,18 @@ export class HomeComponent implements OnInit {
       this.changeRef.detectChanges(); // typeScricp โหลดไม่ทัน html
   }
   ngAfterViewInit() {
+    console.log(this.click1)
+    setTimeout(() => {
+      this.click1?.nativeElement.click()
+    }, 2000);
+    
   }
   loadImage(){
-    this.id = this.imageFilter.length;
+    this.id =9999
     this.showLoadMore = false; 
     this.changeRef.detectChanges();
   }
-  loadImage2(type:any){
-    this.id = 9;
-    this.typeNow = type;
-    this.showLoadMore = true;
-    this.tempImageFilter = this.imageFilter; 
-    this.changeRef.detectChanges();
-  }
-  loadImage3(type:any,setClass:any){
-    this.setClassForIsotope = setClass;
-    this.id = 9;
-    this.typeNow = type;
-    this.showLoadMore = true; 
-    this.tempImageFilter = this.imageFilter.filter(x => x.type === type)
-    setInterval(()=>{
-      this.changeRef.detectChanges();
-    },2000)
-    
-  }
+ 
   changeRoute(url:any,idProject:any,path:any,text:any,type:any){
     var temp = this.imageFilter.filter(x =>x.id === idProject) //วิธีฟิลเตอร์
     var imageProject
