@@ -2,38 +2,28 @@
     <div class="row p-0 m-0">
         <div class="col-12">
             <app-nav></app-nav>
-            <!-- <swiper #swiper [virtual]="true">
-                <ng-template swiperSlide>Slide 1</ng-template>
-                <ng-template swiperSlide>Slide 2</ng-template>
-                <ng-template swiperSlide>Slide 3</ng-template>
-                <ng-template swiperSlide>Slide 4</ng-template>
-                <ng-template swiperSlide>Slide 5</ng-template>
-                <ng-template swiperSlide>Slide 6</ng-template>
-                <ng-template swiperSlide>Slide 7</ng-template>
-            </swiper>
-            <button (click)="slideNext()">Next slide</button>
-            <button (click)="slidePrev()">Prev slide</button> -->
             <section class="section swiper-container ">
                 <div class="swiper-wrapper text-left">
-                    <swiper class="swiper-slide">
-                        <ng-template swiperSlide *ngFor="let slide of imageSwiper">
+                    <swiper #swiper [virtual]="true" class="swiper-slide">
+                        <ng-template swiperSlide *ngFor="let slide of imageSwiper" class="text-start">
                             <img src="../../../assets/swiperSlide/{{slide}}" class="img_swiper" alt="" srcset="">
                             <div class="centered">
-                                <h3 class="a_click oh slider-modern-title text-white text-start head"><span data-caption-animate="slideInLeft " data-caption-delay="0 ">บริษัทเวลพลัส จำกัด</span></h3>
-                                <h5 class="box-sportlight-title  text-start">
-                                    <p class="a_click font_swiper">
-                                        ดำเนินธุรกิจมายาวนาน เกี่ยวกับการออกแบบตกแต่งภายใน<br>และรับเหมาครบวงจร จบในที่เดียว รับให้บริการตั้งแต่ <br>การออกแบบ การประเมินราคา งานก่อสร้าง ต่อเติม <br>งานตกแต่งภายใน เฟอร์นิเจอร์บิ้วอิน ตลอดจน ผ้าม่าน วอลเปเปอร์<br>"
-                                        ดีลที่เดียวจบ ครบ ไม่ปวดหัว"
-                                    </p>
-                                </h5>
-                                <!-- <p data-caption-animate="fadeInRight" class="text-white text-start font_swiper" data-caption-delay="400 ">ดำเนินธุรกิจมายาวนาน เกี่ยวกับการออกแบบตกแต่งภายใน<br>และรับเหมาครบวงจร จบในที่เดียว รับให้บริการตั้งแต่ <br>การออกแบบ การประเมินราคา งานก่อสร้าง ต่อเติม <br>งานตกแต่งภายใน เฟอร์นิเจอร์บิ้วอิน ตลอดจน ผ้าม่าน วอลเปเปอร์
-                                    <br>" ดีลที่เดียวจบ ครบ ไม่ปวดหัว"</p> -->
+                                <div class="effect">
+                                    <h3 class="a_click oh slider-modern-title text-white text-start head"><span data-caption-animate="slideInLeft " data-caption-delay="0 ">บริษัทเวลพลัส จำกัด</span></h3>
+                                    <h5 class="box-sportlight-title  text-start">
+                                        <p class="a_click font_swiper">
+                                            ดำเนินธุรกิจมายาวนาน เกี่ยวกับการออกแบบตกแต่งภายใน<br>และรับเหมาครบวงจร จบในที่เดียว รับให้บริการตั้งแต่ <br>การออกแบบ การประเมินราคา งานก่อสร้าง ต่อเติม <br>งานตกแต่งภายใน เฟอร์นิเจอร์บิ้วอิน ตลอดจน ผ้าม่าน
+                                            วอลเปเปอร์
+                                            <br>" ดีลที่เดียวจบ ครบ ไม่ปวดหัว"
+                                        </p>
+                                    </h5>
+                                </div>
                             </div>
                         </ng-template>
                     </swiper>
                 </div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev" (click)="slidePrev()"></div>
+                <div class="swiper-button-next" (click)="slideNext()"></div>
                 <div class="swiper-pagination swiper-pagination-style-2 "></div>
             </section>
             <!-- <section class="section swiper-container swiper-slider swiper-slider-modern" data-loop="true" data-autoplay="5000" data-simulate-touch="true" data-nav="true" data-slide-effect="fade">
@@ -196,13 +186,13 @@
                         <button class="isotope-filters-toggle button button-md button-icon button-icon-right button-default-outline button-wapasha" data-custom-toggle="#isotope-8" data-custom-toggle-hide-on-blur="true"><span class="icon fa fa-caret-down"></span>Filter</button>
                         <ul class="isotope-filters-list" id="isotope-8">
                             <li><a href="#" class="active a_click" data-isotope-filter="*" data-isotope-group="gallery" (click)="loadImage2('')">All</a></li>
-                            <li><a href="#" class="a_click" data-isotope-filter="INTERIOR" data-isotope-group="gallery" (click)="loadImage3('INTERIOR',false)">INTERIOR</a></li>
+                            <li><a href="#" class="a_click" data-isotope-filter="INTERIOR" data-isotope-group="gallery" (click)="loadImage3('INTERIOR',true)">INTERIOR</a></li>
                             <li><a href="#" class="a_click" data-isotope-filter="3D" data-isotope-group="gallery" (click)="loadImage3('3D',true)">3D</a></li>
                             <li><a href="#" class="a_click" data-isotope-filter="CONSTRUCTION" data-isotope-group="gallery" (click)="loadImage3('CONSTRUCTION',true)">CONSTRUCTION</a></li>
                             <li><a href="#" class="a_click" data-isotope-filter="DECORATION" data-isotope-group="gallery" (click)="loadImage3('DECORATION',true)">DECORATION</a></li>
                         </ul>
                     </div>
-                    <div class="row isotope" [ngClass]="{'isotope2': setClassForIsotope}" data-lightgallery="group">
+                    <div class="row row-30 row-isotope isotope" [ngClass]="{'isotope2': setClassForIsotope}" data-lightgallery="group">
                         <div class="col-sm-4 col-lg-4 col-xxl-3 isotope-item mb-4" *ngFor="let item of tempImageFilter; index as i" [attr.data-filter]="item.type">
                             <ng-container *ngIf="typeNow == '' && i < id">
                                 <article class="thumbnail thumbnail-mary thumbnail-xs">

@@ -1,10 +1,14 @@
 import { ChangeDetectorRef, Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
-import SwiperCore, { Swiper, Virtual } from 'swiper';
+import SwiperCore, { Swiper, Virtual, EffectFade} from 'swiper';
 import { SwiperComponent } from "swiper/angular";
+import 'swiper/css';
+import 'swiper/less/pagination';
+
 // import { SwiperComponent } from 'swiper/angular';
 // install Swiper modules
 SwiperCore.use([Virtual]);
+SwiperCore.use([EffectFade]);
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -24,13 +28,13 @@ export class HomeComponent implements OnInit {
   tempImageFilter:any;
   setClassForIsotope=false;
   
-  // @ViewChild('swiper', { static: false }) swiper?: SwiperComponent;
-  // slideNext(){
-  //   this.swiper.swiperRef.slideNext(100);
-  // }
-  // slidePrev(){
-  //   this.swiper.swiperRef.slidePrev(100);
-  // }
+  @ViewChild('swiper', { static: false }) swiper: any;
+  slideNext(){
+    this.swiper.swiperRef.slideNext(100);
+  }
+  slidePrev(){
+    this.swiper.swiperRef.slidePrev(100);
+  }
 
   imageProject1 = ['นิรัน1.png','นิรัน2.png','นิรัน3.png'];  
   imageProject2 = ['city1.png','city2.png','city3.png','city4.png','city5.png','city6.png','city7.png','city8.png','city9.png','city10.png','city11.png','city12.png']; 
