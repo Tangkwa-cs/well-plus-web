@@ -1,6 +1,6 @@
 import { ChangeDetectorRef, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
-import SwiperCore, { Swiper, Virtual, EffectFade} from 'swiper';
+import SwiperCore, { Swiper, Virtual, EffectFade ,loop} from 'swiper';
 import { SwiperComponent } from "swiper/angular";
 import 'swiper/css';
 import 'swiper/less/pagination';

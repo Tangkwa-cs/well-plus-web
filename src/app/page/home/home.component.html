@@ -4,7 +4,7 @@
             <app-nav></app-nav>
             <section class="section swiper-container ">
                 <div class="swiper-wrapper text-left">
-                    <swiper #swiper [virtual]="true" class="swiper-slide">
+                    <swiper #swiper [virtual]="true" [loop]="true" class="swiper-slide">
                         <ng-template swiperSlide *ngFor="let slide of imageSwiper" class="text-start">
                             <img src="../../../assets/swiperSlide/{{slide}}" class="img_swiper" alt="" srcset="">
                             <div class="centered">
