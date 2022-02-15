@@ -188,7 +188,7 @@ export class HomeComponent implements OnInit {
     console.log(this.click1)
     setTimeout(() => {
       this.click1?.nativeElement.click()
-    }, 2000);
+    }, 1000);
     
   }
   loadImage(){
