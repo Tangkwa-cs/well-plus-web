@@ -20,7 +20,7 @@
         <section class="section section-sm bg-default text-md-left m-0">
             <div class="container">
                 <div class="row row-30">
-                    <div class="col-sm-6 col-lg-4" *ngFor="let image of project;let i = index">
+                    <div class="col-sm-6 col-lg-4 col-xxl-4" *ngFor="let image of project;let i = index">
                         <!-- Post Modern-->
                         <article class="post post-modern text-center">
                             <a class="post-modern-figure a_click" (click)="changeRoute('/detail',image.id,image.url,image.text,image.type)"><img src="{{image.img}}" alt="" class="img_service" width="370" height="307" />
