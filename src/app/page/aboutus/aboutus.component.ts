@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { NavigationEnd, Router } from '@angular/router';
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 
 @Component({
   selector: 'app-aboutus',
@@ -18,13 +19,20 @@ export class AboutusComponent implements OnInit {
     "ห้างเชนทรัลเวิล.png","ห้างทอง ตำหนักทอง5.jfif"
   ];
   countImg:any;
-  constructor() { }
+  
+  constructor(
+    private detecChange:ChangeDetectorRef,
+    private router:Router
+  ) { }
 
   ngOnInit(): void {
-    this.loadScript();
+    // this.loadScript();
     this.countImg = this.imageRef.length;
-    
+    this.router.navigateByUrl('/aboutus', { skipLocationChange: false }).then(() => {
+      this.router.navigate(['/aboutus']);
+  }); 
   }
+ 
   public loadScript(){
     let body = <HTMLDivElement> document.body;
     let script = document.createElement('script');
@@ -41,5 +49,6 @@ export class AboutusComponent implements OnInit {
     script.async = true;
     script.defer = true;
     body.appendChild(script);
+    this.detecChange.detectChanges();
   }
 }
