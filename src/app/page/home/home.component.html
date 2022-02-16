@@ -188,11 +188,11 @@
                     <div class="isotope-filters isotope-filters-horizontal">
                         <button class="isotope-filters-toggle button button-md button-icon button-icon-right button-default-outline button-wapasha" data-custom-toggle="#isotope-8" data-custom-toggle-hide-on-blur="true"><span class="icon fa fa-caret-down"></span>Filter</button>
                         <ul class="isotope-filters-list" id="isotope-8">
-                            <li><a #click1 href="#" class="active a_click" data-isotope-filter="ALL" data-isotope-group="gallery">All</a></li>
-                            <li><a href="#" class="a_click" data-isotope-filter="INTERIOR" data-isotope-group="gallery">INTERIOR</a></li>
-                            <li><a href="#" class="a_click" data-isotope-filter="3D" data-isotope-group="gallery">3D</a></li>
-                            <li><a href="#" class="a_click" data-isotope-filter="CONSTRUCTION" data-isotope-group="gallery">CONSTRUCTION</a></li>
-                            <li><a href="#" class="a_click" data-isotope-filter="DECORATION" data-isotope-group="gallery">DECORATION</a></li>
+                            <li><a #click1 href="#" class="active a_click" data-isotope-filter="ALL" data-isotope-group="gallery" (click)="test(1)" >All</a></li>
+                            <li><a #click2 href="#" class="a_click" data-isotope-filter="INTERIOR" data-isotope-group="gallery"  (click)="test(2)">INTERIOR</a></li>
+                            <li><a #click3 href="#" class="a_click" data-isotope-filter="3D" data-isotope-group="gallery"  (click)="test(3)">3D</a></li>
+                            <li><a #click4 href="#" class="a_click" data-isotope-filter="CONSTRUCTION" data-isotope-group="gallery"  (click)="test(4)">CONSTRUCTION</a></li>
+                            <li><a #click5 href="#" class="a_click" data-isotope-filter="DECORATION" data-isotope-group="gallery"  (click)="test(5)">DECORATION</a></li>
                         </ul>
                     </div>
                     <div class="row row-isotope isotope" data-lightgallery="group">
