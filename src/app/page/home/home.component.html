@@ -11,14 +11,12 @@
                                 <div class="effect">
                                     <h3 class="a_click oh slider-modern-title text-white text-start head">
                                         <span data-caption-animate="slideInLeft " data-caption-delay="0 ">
-                                            บริษัทเวลพลัส จำกัด
+                                            บริษัท เวลพลัส จำกัด
                                         </span>
                                     </h3>
                                     <p class="box-sportlight-title  text-start a_click font_swiper">
-                                        <!-- <span class=""> -->
                                         ดำเนินธุรกิจมายาวนาน เกี่ยวกับการออกแบบตกแต่งภายใน<br>และรับเหมาครบวงจร จบในที่เดียว รับให้บริการตั้งแต่ <br>การออกแบบ การประเมินราคา งานก่อสร้าง ต่อเติม <br>งานตกแต่งภายใน เฟอร์นิเจอร์บิ้วอิน ตลอดจน ผ้าม่าน วอลเปเปอร์
                                         <br>" ดีลที่เดียวจบ ครบ ไม่ปวดหัว"
-                                        <!-- </span> -->
                                     </p>
                                 </div>
                             </div>
@@ -188,14 +186,14 @@
                     <div class="isotope-filters isotope-filters-horizontal">
                         <button class="isotope-filters-toggle button button-md button-icon button-icon-right button-default-outline button-wapasha" data-custom-toggle="#isotope-8" data-custom-toggle-hide-on-blur="true"><span class="icon fa fa-caret-down"></span>Filter</button>
                         <ul class="isotope-filters-list" id="isotope-8">
-                            <li><a #click1 href="#" class="active a_click" data-isotope-filter="ALL" data-isotope-group="gallery" (click)="test(1)" >All</a></li>
-                            <li><a #click2 href="#" class="a_click" data-isotope-filter="INTERIOR" data-isotope-group="gallery"  (click)="test(2)">INTERIOR</a></li>
-                            <li><a #click3 href="#" class="a_click" data-isotope-filter="3D" data-isotope-group="gallery"  (click)="test(3)">3D</a></li>
-                            <li><a #click4 href="#" class="a_click" data-isotope-filter="CONSTRUCTION" data-isotope-group="gallery"  (click)="test(4)">CONSTRUCTION</a></li>
-                            <li><a #click5 href="#" class="a_click" data-isotope-filter="DECORATION" data-isotope-group="gallery"  (click)="test(5)">DECORATION</a></li>
+                            <li><a #click1 href="#" class="active a_click" data-isotope-filter="ALL" data-isotope-group="gallery" (click)="test(1)">All</a></li>
+                            <li><a #click2 href="#" class="a_click" data-isotope-filter="INTERIOR" data-isotope-group="gallery" (click)="test(2)">INTERIOR</a></li>
+                            <li><a #click3 href="#" class="a_click" data-isotope-filter="3D" data-isotope-group="gallery" (click)="test(3)">3D</a></li>
+                            <li><a #click4 href="#" class="a_click" data-isotope-filter="CONSTRUCTION" data-isotope-group="gallery" (click)="test(4)">CONSTRUCTION</a></li>
+                            <li><a #click5 href="#" class="a_click" data-isotope-filter="DECORATION" data-isotope-group="gallery" (click)="test(5)">DECORATION</a></li>
                         </ul>
                     </div>
-                    <div class="row row-isotope isotope" data-lightgallery="group">
+                    <div class="row row-isotope isotope" style="height:750px" data-lightgallery="group">
                         <div class="col-sm-4 col-lg-4 col-xxl-3 isotope-item mb-4" *ngFor="let item of tempImageFilter1; index as i" data-filter='ALL'>
                             <article *ngIf="i < id" class="thumbnail thumbnail-mary thumbnail-xs">
                                 <div class="thumbnail-mary-figure">
@@ -203,9 +201,9 @@
                                 </div>
                                 <div class="thumbnail-mary-caption">
                                     <a class="icon fl-bigmug-line-zoom60" href="{{item.img}}" data-lightgallery="item"><img src="{{item.img}}" alt="" width="270" height="300" /></a>
-                                    <h5 class="thumbnail-mary-title">
+                                    <h6 class="thumbnail-mary-title">
                                         <a class="a_click" (click)="changeRoute('/detail',item.id,item.url,item.text,item.type)">{{item.text}}</a>
-                                    </h5>
+                                    </h6>
                                 </div>
                             </article>
                         </div>
@@ -312,7 +310,7 @@
                     <!-- Owl Carousel-->
                     <h3>Our clients ({{countImg}})</h3>
                     <div class="owl-carousel owl-clients" data-items="1" data-sm-items="2" data-md-items="3" data-lg-items="4" data-margin="30" data-dots="true" data-animation-in="fadeIn" data-animation-out="fadeOut" data-autoplay="true">
-                        <a class="clients-modern" href="#" *ngFor="let ref of imageRef">
+                        <a class="clients-modern a_click" *ngFor="let ref of imageRef">
                             <img src="../../../assets/ref-Logo/{{ref}}" alt="" class="img_ref" />
                         </a>
                     </div>
