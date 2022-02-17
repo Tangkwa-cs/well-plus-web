@@ -187,6 +187,14 @@
 /* phone */
 
 @media (max-width: 575.98px) {
+    .imageModal {
+        width: auto;
+        height: 40vh;
+    }
+    .imageSlideModal {
+        height: 8vh;
+        width: auto;
+    }
     .img_slide {
         width: auto;
         height: 300px;
@@ -310,15 +318,13 @@
     z-index: 1000;
 }
 
-.parallax-container{
+.parallax-container {
     background-image: url("../../../assets/Decor-wallpeper/วอล หัวเตียง-รอบห้อง @โรงแรมคาร์ลตัน กรุงเทพฯ สุขุมวิท/วอล-คาตัล1.png");
-
-  /* Set a specific height */
-  min-height: 10vh; 
-
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+    /* Set a specific height */
+    min-height: 10vh;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
