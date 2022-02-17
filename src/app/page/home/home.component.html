@@ -170,7 +170,7 @@
             <section class="section bg-default text-center">
                 <div class="parallax-container" data-parallax-img="../../../assets/Decor-wallpeper/วอล หัวเตียง-รอบห้อง @โรงแรมคาร์ลตัน กรุงเทพฯ สุขุมวิท/วอล-คาตัล1.png">
                     <div class="parallax-content section-sm context-dark">
-                        <div class="container">
+                       <div class="container">
                             <div class="row justify-content-center">
                                 <div class="col-md-9 col-lg-7 col-xl-6">
                                     <h3 class="oh"><span class="d-inline-block">SERVICE</span></h3>
@@ -184,8 +184,8 @@
             <section class="section section-sm bg-default text-center isotope-wrap m-0 pt-5 pb-0">
                 <div class="container  justify-content-center m-auto">
                     <div class="isotope-filters isotope-filters-horizontal">
-                        <button class="isotope-filters-toggle button button-md button-icon button-icon-right button-default-outline button-wapasha" data-custom-toggle="#isotope-8" data-custom-toggle-hide-on-blur="true"><span class="icon fa fa-caret-down"></span>Filter</button>
-                        <ul class="isotope-filters-list" id="isotope-8">
+                        <button class="isotope-filters-toggle button button-md button-icon button-icon-right button-default-outline button-wapasha {{getActive()}}" data-custom-toggle="#isotope-8" data-custom-toggle-hide-on-blur="true" (click)="setActive = !setActive"><span class="icon fa fa-caret-down"></span>Filter</button>
+                        <ul class="isotope-filters-list {{getActive()}}" id="isotope-8">
                             <li><a #click1 href="#" class="active a_click" data-isotope-filter="ALL" data-isotope-group="gallery" (click)="test(1)">All</a></li>
                             <li><a #click2 href="#" class="a_click" data-isotope-filter="INTERIOR" data-isotope-group="gallery" (click)="test(2)">INTERIOR</a></li>
                             <li><a #click3 href="#" class="a_click" data-isotope-filter="3D" data-isotope-group="gallery" (click)="test(3)">3D</a></li>

@@ -303,3 +303,22 @@
         animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
     }
 }
+
+[class*='isotope-filters-list'].active {
+    opacity: 1;
+    visibility: visible;
+    z-index: 1000;
+}
+
+.parallax-container{
+    background-image: url("../../../assets/Decor-wallpeper/วอล หัวเตียง-รอบห้อง @โรงแรมคาร์ลตัน กรุงเทพฯ สุขุมวิท/วอล-คาตัล1.png");
+
+  /* Set a specific height */
+  min-height: 10vh; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

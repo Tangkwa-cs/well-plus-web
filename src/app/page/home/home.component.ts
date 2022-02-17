@@ -40,6 +40,7 @@ export class HomeComponent implements OnInit {
   arrImageModal: any;
   imageModal:any;
   setClassForIsotope = false;
+  setActive = false;
   @ViewChild('click1') click1?: ElementRef
   @ViewChild('click2') click2?: ElementRef
   @ViewChild('click3') click3?: ElementRef
@@ -395,6 +396,13 @@ export class HomeComponent implements OnInit {
       }, 1000);
     }
   }
+  getActive(){
+    if(this.setActive){
+      return 'active'
+    }else{
+      return ''
+    }
+  }
   hideImage() {
     this.id = 9
     this.showLoadMore = true;
@@ -555,6 +563,7 @@ export class HomeComponent implements OnInit {
     this.router.navigate([url], { queryParams: { title } });
   }
   test(number: any) {
+    // this.setActive = !this.setActive
     this.btnNow = number;
   }
   clickFilterAgain(){
