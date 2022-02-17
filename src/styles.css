@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap');
+@import '../node_modules/bootstrap-icons/font/bootstrap-icons.css';
 
 /* @import '../node_modules/swiper/swiper.less';
 @import '../node_modules/swiper/modules/navigation/navigation.less';
@@ -36,4 +37,4 @@ html * {
 
 .sortable-handler {
     touch-action: none;
-  }
+}

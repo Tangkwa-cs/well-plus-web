@@ -1,7 +1,8 @@
 import { ChangeDetectorRef, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
-import SwiperCore, { Swiper, Virtual, EffectFade, SwiperOptions } from 'swiper';
+import SwiperCore, { Swiper, Virtual, EffectFade, SwiperOptions,FreeMode,Navigation,Thumbs } from 'swiper';
 import { SwiperComponent } from "swiper/angular";
+SwiperCore.use([FreeMode, Navigation, Thumbs]);
 import 'swiper/css';
 import 'swiper/less/pagination';
 
@@ -16,6 +17,7 @@ SwiperCore.use([EffectFade]);
 })
 
 export class HomeComponent implements OnInit {
+  thumbsSwiper: any;
   config: SwiperOptions = {
     rewind: true
   };
@@ -34,6 +36,9 @@ export class HomeComponent implements OnInit {
   tempImageFilter3: any;
   tempImageFilter4: any;
   tempImageFilter5: any;
+  imageUrl:any;
+  arrImageModal: any;
+  imageModal:any;
   setClassForIsotope = false;
   @ViewChild('click1') click1?: ElementRef
   @ViewChild('click2') click2?: ElementRef
@@ -194,6 +199,173 @@ export class HomeComponent implements OnInit {
       this.click1?.nativeElement.click()
     }, 2000);
 
+  }
+  
+  modalImage(id:any,url:any){
+    this.arrImageModal = this.imageFilter.filter(x => x.id === id);
+    console.log(this.arrImageModal);
+    
+    if (id == 1) {
+      this.imageModal = this.imageProject1
+     
+    } else if (id == 2) {
+      this.imageModal = this.imageProject2
+     
+    } else if (id == 3) {
+      this.imageModal = this.imageProject3
+     
+    } else if (id == 4) {
+      this.imageModal = this.imageProject4
+     
+    } else if (id == 5) {
+      this.imageModal = this.imageProject5
+     
+    } else if (id == 6) {
+      this.imageModal = this.imageProject6
+     
+    } else if (id == 7) {
+      this.imageModal = this.imageProject7
+     
+    } else if (id == 8) {
+      this.imageModal = this.imageProject8
+     
+    } else if (id == 9) {
+      this.imageModal = this.imageProject9
+     
+    } else if (id == 10) {
+      this.imageModal = this.imageProject10
+     
+    } else if (id == 11) {
+      this.imageModal = this.imageProject11
+     
+    } else if (id == 12) {
+      this.imageModal = this.imageProject12
+     
+    } else if (id == 13) {
+      this.imageModal = this.imageProject13
+     
+    } else if (id == 14) {
+      this.imageModal = this.imageProject14
+     
+    } else if (id == 15) {
+      this.imageModal = this.imageProject15
+     
+    } else if (id == 16) {
+      this.imageModal = this.imageProject16
+     
+    } else if (id == 17) {
+      this.imageModal = this.imageProject17
+     
+    } else if (id == 18) {
+      this.imageModal = this.imageProject18
+     
+    } else if (id == 19) {
+      this.imageModal = this.imageProject19
+     
+    } else if (id == 20) {
+      this.imageModal = this.imageProject20
+     
+    } else if (id == 21) {
+      this.imageModal = this.imageProject21
+     
+    } else if (id == 22) {
+      this.imageModal = this.imageProject22
+     
+    } else if (id == 23) {
+      this.imageModal = this.imageProject23
+     
+    } else if (id == 24) {
+      this.imageModal = this.imageProject24
+     
+    } else if (id == 25) {
+      this.imageModal = this.imageProject25
+     
+    } else if (id == 26) {
+      this.imageModal = this.imageProject26
+     
+    } else if (id == 27) {
+      this.imageModal = this.imageProject27
+     
+    } else if (id == 28) {
+      this.imageModal = this.imageProject28
+     
+    } else if (id == 29) {
+      this.imageModal = this.imageProject29
+     
+    } else if (id == 30) {
+      this.imageModal = this.imageProject30
+     
+    } else if (id == 31) {
+      this.imageModal = this.imageProject31
+     
+    } else if (id == 32) {
+      this.imageModal = this.imageProject32
+     
+    } else if (id == 33) {
+      this.imageModal = this.imageProject33
+     
+    } else if (id == 34) {
+      this.imageModal = this.imageProject34
+     
+    } else if (id == 35) {
+      this.imageModal = this.imageProject35
+     
+    } else if (id == 36) {
+      this.imageModal = this.imageProject36
+     
+    } else if (id == 37) {
+      this.imageModal = this.imageProject37
+     
+    } else if (id == 38) {
+      this.imageModal = this.imageProject38
+     
+    } else if (id == 39) {
+      this.imageModal = this.imageProject39
+     
+    } else if (id == 40) {
+      this.imageModal = this.imageProject40
+     
+    } else if (id == 41) {
+      this.imageModal = this.imageProject41
+     
+    } else if (id == 42) {
+      this.imageModal = this.imageProject42
+     
+    } else if (id == 43) {
+      this.imageModal = this.imageProject43
+     
+    } else if (id == 44) {
+      this.imageModal = this.imageProject44
+     
+    } else if (id == 45) {
+      this.imageModal = this.imageProject45
+     
+    } else if (id == 46) {
+      this.imageModal = this.imageProject46
+     
+    } else if (id == 47) {
+      this.imageModal = this.imageProject47
+     
+    } else if (id == 48) {
+      this.imageModal = this.imageProject48
+     
+    } else if (id == 49) {
+      this.imageModal = this.imageProject49
+     
+    } else if (id == 50) {
+      this.imageModal = this.imageProject50
+     
+    } else if (id == 51) {
+      this.imageModal = this.imageProject51
+     
+    } else if (id == 52) {
+      this.imageModal = this.imageProject52
+     
+    } 
+    this.imageUrl = url;
+
+    
+    // arrImageModal
   }
   loadImage() {
     this.id = 9999

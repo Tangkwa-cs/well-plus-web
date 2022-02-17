@@ -11,7 +11,7 @@
                                 <div class="effect">
                                     <h3 class="a_click oh slider-modern-title text-white text-start head">
                                         <span data-caption-animate="slideInLeft " data-caption-delay="0 ">
-                                            บริษัท เวลพลัส จำกัด
+                                            บริษัทเวลพลัส อินทิเรีย จำกัด
                                         </span>
                                     </h3>
                                     <p class="box-sportlight-title  text-start a_click font_swiper">
@@ -146,7 +146,7 @@
                                     <a class="box-sportlight-figure"><img src="../../../assets/interior/interior_thecity/city10.png " alt=" " width="370 " height="332 " /></a>
                                     <div class="box-sportlight-caption ">
                                         <h5 class="box-sportlight-title ">
-                                            <a class="a_click p-1" (click)="clickRoute('/service','INTERIOR')">INTERIOR+FURNITURE<br>เฟอร์นิเจอร์บิ้วอิน</a>
+                                            <a class="a_click p-1" (click)="clickRoute('/service','INTERIOR')">INTERIOR & FURNITURE<br>เฟอร์นิเจอร์และบิ้วอิน</a>
                                         </h5>
                                     </div>
                                 </article>
@@ -157,7 +157,7 @@
                                 <article class="box-sportlight box-sportlight-sm ">
                                     <a class="box-sportlight-figure"><img src="../../../assets/interior/interior_wall_nirunville/นิรัน3.png " alt=" " width="370 " height="332 " /></a>
                                     <div class="box-sportlight-caption ">
-                                        <h5 class="box-sportlight-title "><a class="a_click" (click)="clickRoute('/service','DECORATION')">DECORATION <br>ผ้าม่าน ผนัง อื่นๆ</a></h5>
+                                        <h5 class="box-sportlight-title "><a class="a_click" (click)="clickRoute('/service','DECORATION')">DECORATION <br>ผ้าม่าน วอลเปเปอร์ ท็อปหิว กระเบื้องยาง</a></h5>
 
                                     </div>
                                 </article>
@@ -200,7 +200,9 @@
                                     <img src="{{item.img}}" alt="" width="auto" height="300px" />
                                 </div>
                                 <div class="thumbnail-mary-caption">
-                                    <a class="icon fl-bigmug-line-zoom60" href="{{item.img}}" data-lightgallery="item"><img src="{{item.img}}" alt="" width="270" height="300" /></a>
+                                    <a class="icon fl-bigmug-line-zoom60" data-bs-toggle="modal" (click)="modalImage(item.id,item.url)" href="#modalImageSwiper">
+                                        <img src="{{item.img}}" alt="" width="270" height="300" />
+                                    </a>
                                     <h6 class="thumbnail-mary-title">
                                         <a class="a_click" (click)="changeRoute('/detail',item.id,item.url,item.text,item.type)">{{item.text}}</a>
                                     </h6>
@@ -213,7 +215,9 @@
                                     <img src="{{item.img}}" alt="" width="auto" height="300px" />
                                 </div>
                                 <div class="thumbnail-mary-caption">
-                                    <a class="icon fl-bigmug-line-zoom60" href="{{item.img}}" data-lightgallery="item"><img src="{{item.img}}" alt="" width="270" height="300" /></a>
+                                    <a class="icon fl-bigmug-line-zoom60" data-bs-toggle="modal" (click)="modalImage(item.id,item.url)" href="#modalImageSwiper">
+                                        <img src="{{item.img}}" alt="" width="270" height="300" />
+                                    </a>
                                     <h5 class="thumbnail-mary-title">
                                         <a class="a_click" (click)="changeRoute('/detail',item.id,item.url,item.text,item.type)">{{item.text}}</a>
                                     </h5>
@@ -226,7 +230,9 @@
                                     <img src="{{item.img}}" alt="" width="auto" height="300px" />
                                 </div>
                                 <div class="thumbnail-mary-caption">
-                                    <a class="icon fl-bigmug-line-zoom60" href="{{item.img}}" data-lightgallery="item"><img src="{{item.img}}" alt="" width="270" height="300" /></a>
+                                    <a class="icon fl-bigmug-line-zoom60" data-bs-toggle="modal" (click)="modalImage(item.id,item.url)" href="#modalImageSwiper">
+                                        <img src="{{item.img}}" alt="" width="270" height="300" />
+                                    </a>
                                     <h5 class="thumbnail-mary-title">
                                         <a class="a_click" (click)="changeRoute('/detail',item.id,item.url,item.text,item.type)">{{item.text}}</a>
                                     </h5>
@@ -239,7 +245,9 @@
                                     <img src="{{item.img}}" alt="" width="auto" height="300px" />
                                 </div>
                                 <div class="thumbnail-mary-caption">
-                                    <a class="icon fl-bigmug-line-zoom60" href="{{item.img}}" data-lightgallery="item"><img src="{{item.img}}" alt="" width="270" height="300" /></a>
+                                    <a class="icon fl-bigmug-line-zoom60" data-bs-toggle="modal" (click)="modalImage(item.id,item.url)" href="#modalImageSwiper">
+                                        <img src="{{item.img}}" alt="" width="270" height="300" />
+                                    </a>
                                     <h5 class="thumbnail-mary-title">
                                         <a class="a_click" (click)="changeRoute('/detail',item.id,item.url,item.text,item.type)">{{item.text}}</a>
                                     </h5>
@@ -252,7 +260,9 @@
                                     <img src="{{item.img}}" alt="" width="auto" height="300px" />
                                 </div>
                                 <div class="thumbnail-mary-caption">
-                                    <a class="icon fl-bigmug-line-zoom60" href="{{item.img}}" data-lightgallery="item"><img src="{{item.img}}" alt="" width="270" height="300" /></a>
+                                    <a class="icon fl-bigmug-line-zoom60" data-bs-toggle="modal" (click)="modalImage(item.id,item.url)" href="#modalImageSwiper">
+                                        <img src="{{item.img}}" alt="" width="270" height="300" />
+                                    </a>
                                     <h5 class="thumbnail-mary-title">
                                         <a class="a_click" (click)="changeRoute('/detail',item.id,item.url,item.text,item.type)">{{item.text}}</a>
                                     </h5>
@@ -316,7 +326,34 @@
                     </div>
                 </div>
             </section>
-
+            <!-- Modal Image -->
+            <div class="modal fade" id="modalImageSwiper" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header" style="background-color:#A58838" *ngFor="let data of arrImageModal">
+                            <h5 class="modal-title text-white" id="exampleModalToggleLabel">{{data.type}} {{data.text}}</h5>
+                            <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">
+                                <i class="bi bi-x-lg text-white fw-2"></i>
+                            </button>
+                        </div>
+                        <div class="modal-body m-2 p-0">
+                            <swiper style="--swiper-navigation-color: #fff;--swiper-pagination-color: #fff" [spaceBetween]="5" [navigation]="true" [thumbs]="{ swiper: thumbsSwiper }" class="mySwiper2">
+                                <ng-template swiperSlide *ngFor="let item of imageModal">
+                                    <img src="{{imageUrl}}{{item}}" class="imageModal" />
+                                </ng-template>
+                            </swiper>
+                            <swiper (swiper)="thumbsSwiper = $event" [spaceBetween]="5" [slidesPerView]="5" [freeMode]="true" [watchSlidesProgress]="false" class="mySwiper">
+                                <ng-template swiperSlide *ngFor="let item of imageModal">
+                                    <img src="{{imageUrl}}{{item}}" class="imageSlideModal" />
+                                </ng-template>
+                            </swiper>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn " data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="col-lg-2"></div>
     </div>

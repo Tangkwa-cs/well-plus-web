@@ -1,3 +1,4 @@
+@import '../../../../node_modules/swiper/swiper.scss';
 .font_swiper {
     font-size: medium;
     color: white;
@@ -170,6 +171,16 @@
 
 .isotope2 {
     height: auto!important;
+}
+
+.imageModal {
+    width: auto;
+    height: 50vh;
+}
+
+.imageSlideModal {
+    height: 13vh;
+    width: auto;
 }
 
 
