@@ -20,10 +20,22 @@
 @media (max-width: 575.98px) {
     #phone {
         width: auto;
-        height: 5vw;
+        height: 7.3vw;
     }
     .img_logo {
         width: auto;
         height: 40px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1199.98px) {
+    #phone {
+        width: auto;
+        height: 5.5vw;
+    }
+    .img_logo {
+        width: auto;
+        height: 50px;
+        margin: auto;
     }
 }

@@ -96,10 +96,10 @@
 
 @keyframes slidein {
     0% {
-        margin-left: -800px;
+        margin-left: -400px;
     }
     20% {
-        margin-left: -800px;
+        margin-left: -400px;
     }
     35% {
         margin-left: 0px;
@@ -161,6 +161,10 @@
 
 /* font head */
 
+.head {
+    font-size: 3vw;
+}
+
 .text_head {
     font-size: 8vh;
     color: white;
@@ -203,7 +207,7 @@
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);
+        transform: translate(-45%, -50%);
         filter: brightness(100%);
     }
     @keyframes slidein {
@@ -253,6 +257,13 @@
         transform: scale(0.94);
         animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
     }
+    .head {
+        font-size: 5vw;
+        font-weight: 400;
+    }
+    .font_swiper {
+        font-size: 3.5vw;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 1199.98px) {
@@ -260,7 +271,7 @@
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-90%, -30%);
+        transform: translate(-65%, -30%);
         filter: brightness(100%);
     }
     @keyframes slidein {
@@ -287,14 +298,14 @@
             width: 0px;
         }
         30% {
-            width: 350px;
+            width: 400px;
         }
         80% {
             opacity: 1;
         }
         100% {
             opacity: 0;
-            width: 350px;
+            width: 400px;
         }
     }
     .img_swiper {
