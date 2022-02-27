@@ -13,7 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { DetailComponent } from './page/detail/detail.component';
 import { NavcomponentComponent } from './component/navcomponent/navcomponent.component';
 import { SwiperModule } from 'swiper/angular';
-
+import { NgCircleProgressModule } from 'ng-circle-progress';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +31,15 @@ import { SwiperModule } from 'swiper/angular';
     AppRoutingModule,
     RouterModule,
     HttpClientModule,
-    SwiperModule
+    SwiperModule,
+    NgCircleProgressModule.forRoot({
+      // set defaults here
+      radius: 100,
+      outerStrokeWidth: 16,
+      innerStrokeWidth: 8,
+      outerStrokeColor: "#78C000",
+      animationDuration: 300,
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

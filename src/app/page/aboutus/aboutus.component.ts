@@ -1,12 +1,13 @@
 import { NavigationEnd, Router } from '@angular/router';
 import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
-
 @Component({
   selector: 'app-aboutus',
   templateUrl: './aboutus.component.html',
   styleUrls: ['./aboutus.component.css']
 })
 export class AboutusComponent implements OnInit {
+  percen1 :any;
+  percen2 :any;
   imageRef = ["คลีนิค นิติพล.jfif","คลีนิค ลัคชัวรี่.png","คอนโด โนเบิล.png","คอนโด IVY.png",
     "คอนโด the pillar condo.jfif","รพ.กรุงเทพ-พิดโลก.png","รพ.กรุงเทพ.jfif","รพ.เกษมราษฏร์.png","รพ.จุฬา.jfif",
     "รพ.ธรรมศาตร์รังสิต.png","รพ.เปาโล สมุทรปราการ.png","รพ.เปาโล.jfif","รพ.พญาไท.png",
@@ -22,17 +23,19 @@ export class AboutusComponent implements OnInit {
   
   constructor(
     private detecChange:ChangeDetectorRef,
-    private router:Router
+    private router:Router,
   ) { }
 
   ngOnInit(): void {
     // this.loadScript();
+    this.percen1 = 0.87;
+    this.percen2 = 0.99;
+    this.detecChange.detectChanges();
     this.countImg = this.imageRef.length;
-    this.router.navigateByUrl('/aboutus', { skipLocationChange: false }).then(() => {
+    this.router.navigateByUrl('/aboutus', { skipLocationChange: true }).then(() => {
       this.router.navigate(['/aboutus']);
   }); 
   }
- 
   public loadScript(){
     let body = <HTMLDivElement> document.body;
     let script = document.createElement('script');

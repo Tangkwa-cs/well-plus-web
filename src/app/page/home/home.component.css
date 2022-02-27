@@ -339,3 +339,50 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+
+/* // X-Large devices (large desktops, 1200px and up) */
+
+@media (min-width: 1400px) {
+    .centered {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-80%, -30%);
+        filter: brightness(100%);
+    }
+    @keyframes slidein {
+        0% {
+            margin-left: -500px;
+        }
+        20% {
+            margin-left: -500px;
+        }
+        35% {
+            margin-left: 0px;
+        }
+        100% {
+            margin-left: 0px;
+        }
+    }
+    @keyframes reveal {
+        0% {
+            opacity: 0;
+            width: 0px;
+        }
+        20% {
+            opacity: 1;
+            width: 0px;
+        }
+        30% {
+            width: 800px;
+        }
+        80% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+            width: 800px;
+        }
+    }
+}
