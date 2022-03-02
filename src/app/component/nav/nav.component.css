@@ -33,4 +33,8 @@
         width: auto;
         height: 7vw;
     }
+    .img_logo {
+        width: auto;
+        height: 50px;
+    }
 }

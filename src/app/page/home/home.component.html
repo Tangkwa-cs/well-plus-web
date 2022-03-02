@@ -118,7 +118,7 @@
                         <ul class="isotope-filters-list {{getActive()}}" id="isotope-8">
                             <li><a #click1 href="#" class="active a_click" data-isotope-filter="ALL" data-isotope-group="gallery" (click)="test(1)">All</a></li>
                             <li><a #click2 href="#" class="a_click" data-isotope-filter="INTERIOR" data-isotope-group="gallery" (click)="test(2)">INTERIOR</a></li>
-                            <li><a #click3 href="#" class="a_click" data-isotope-filter="3D" data-isotope-group="gallery" (click)="test(3)">3D</a></li>
+                            <li><a #click3 href="#" class="a_click" data-isotope-filter="Interior-3D" data-isotope-group="gallery" (click)="test(3)">3D</a></li>
                             <li><a #click4 href="#" class="a_click" data-isotope-filter="CONSTRUCTION" data-isotope-group="gallery" (click)="test(4)">CONSTRUCTION</a></li>
                             <li><a #click5 href="#" class="a_click" data-isotope-filter="DECORATION" data-isotope-group="gallery" (click)="test(5)">DECORATION</a></li>
                         </ul>
@@ -133,7 +133,7 @@
                                     <a class="icon fl-bigmug-line-zoom60" data-bs-toggle="modal" (click)="modalImage(item.id,item.url)" href="#modalImageSwiper">
                                         <img src="{{item.img}}" alt="" width="270" height="300" />
                                     </a>
-                                    <h6 class="thumbnail-mary-title">
+                                    <h6 class="thumbnail-mary-title fontfilter">
                                         <a class="a_click" (click)="changeRoute('/detail',item.id,item.url,item.text,item.type)">{{item.text}}</a>
                                     </h6>
                                 </div>
@@ -148,13 +148,13 @@
                                     <a class="icon fl-bigmug-line-zoom60" data-bs-toggle="modal" (click)="modalImage(item.id,item.url)" href="#modalImageSwiper">
                                         <img src="{{item.img}}" alt="" width="270" height="300" />
                                     </a>
-                                    <h5 class="thumbnail-mary-title">
+                                    <h6 class="thumbnail-mary-title fontfilter">
                                         <a class="a_click" (click)="changeRoute('/detail',item.id,item.url,item.text,item.type)">{{item.text}}</a>
-                                    </h5>
+                                    </h6>
                                 </div>
                             </article>
                         </div>
-                        <div class="col-sm-4 col-lg-4 col-xxl-3 isotope-item mb-4" *ngFor="let item of tempImageFilter3; index as i" data-filter='3D'>
+                        <div class="col-sm-4 col-lg-4 col-xxl-3 isotope-item mb-4" *ngFor="let item of tempImageFilter3; index as i" data-filter='Interior-3D'>
                             <article *ngIf="i < id" class="thumbnail thumbnail-mary thumbnail-xs">
                                 <div class="thumbnail-mary-figure">
                                     <img src="{{item.img}}" alt="" width="auto" height="300px" />
@@ -163,9 +163,9 @@
                                     <a class="icon fl-bigmug-line-zoom60" data-bs-toggle="modal" (click)="modalImage(item.id,item.url)" href="#modalImageSwiper">
                                         <img src="{{item.img}}" alt="" width="270" height="300" />
                                     </a>
-                                    <h5 class="thumbnail-mary-title">
+                                    <h6 class="thumbnail-mary-title fontfilter">
                                         <a class="a_click" (click)="changeRoute('/detail',item.id,item.url,item.text,item.type)">{{item.text}}</a>
-                                    </h5>
+                                    </h6>
                                 </div>
                             </article>
                         </div>
@@ -178,9 +178,9 @@
                                     <a class="icon fl-bigmug-line-zoom60" data-bs-toggle="modal" (click)="modalImage(item.id,item.url)" href="#modalImageSwiper">
                                         <img src="{{item.img}}" alt="" width="270" height="300" />
                                     </a>
-                                    <h5 class="thumbnail-mary-title">
+                                    <h6 class="thumbnail-mary-title fontfilter">
                                         <a class="a_click" (click)="changeRoute('/detail',item.id,item.url,item.text,item.type)">{{item.text}}</a>
-                                    </h5>
+                                    </h6>
                                 </div>
                             </article>
                         </div>
@@ -193,9 +193,9 @@
                                     <a class="icon fl-bigmug-line-zoom60" data-bs-toggle="modal" (click)="modalImage(item.id,item.url)" href="#modalImageSwiper">
                                         <img src="{{item.img}}" alt="" width="270" height="300" />
                                     </a>
-                                    <h5 class="thumbnail-mary-title">
+                                    <h6 class="thumbnail-mary-title fontfilter">
                                         <a class="a_click" (click)="changeRoute('/detail',item.id,item.url,item.text,item.type)">{{item.text}}</a>
-                                    </h5>
+                                    </h6>
                                 </div>
                             </article>
                         </div>
@@ -212,7 +212,7 @@
             <!-- About us section start -->
             <section class="section section-sm bg-default">
                 <div class="container justify-content-center m-auto">
-                    <div class="headingTitle">
+                    <div class="headingTitle m-md-0 m-2">
                         <h1>About <span> us</span></h1>
                         <p>ดำเนินธุรกิจมายาวนาน เกี่ยวกับการออกแบบตกแต่งภายในและรับเหมาครบวงจรจบในที่เดียว รับให้บริการตั้งแต่ การออกแบบ การประเมินราคา งานก่อสร้าง ต่อเติม งานตกแต่งภายใน เฟอร์นิเจอร์บิ้วอิน ตลอดจน ผ้าม่าน วอลเปเปอร์ "ดีลที่เดียวจบ ครบ ไม่ปวดหัว"</p>
                     </div>
@@ -261,7 +261,7 @@
                 <div class="modal-dialog modal-dialog-centered modal-lg">
                     <div class="modal-content">
                         <div class="modal-header" style="background-color:#A58838" *ngFor="let data of arrImageModal">
-                            <h5 class="modal-title text-white" id="exampleModalToggleLabel">{{data.type}} {{data.text}}</h5>
+                            <p class="modal-title text-white fontHeadModal" id="exampleModalToggleLabel">{{data.type}} {{data.text}}</p>
                             <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">
                                 <i class="bi bi-x-lg text-white fw-2"></i>
                             </button>

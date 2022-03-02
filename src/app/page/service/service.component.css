@@ -1,3 +1,7 @@
+.tagA {
+    color: black;
+}
+
 .font_head {
     /* font-size: large; */
     color: #A58838;
@@ -6,4 +10,45 @@
 .img_service {
     width: auto;
     height: 200px;
+}
+
+.fontDetail {
+    font-size: 1.4vw;
+    color: black;
+    line-height: 1.2;
+}
+
+.fontTitle {
+    line-height: 1.25;
+    font-size: 3vw;
+    color: white;
+    text-shadow: black 0.1em 0.1em 0.2em;
+}
+
+@media (max-width: 991.98px) {
+    .fontDetail {
+        font-size: 3vw;
+        color: black;
+        line-height: 1.2;
+    }
+    .fontTitle {
+        line-height: 1.25;
+        font-size: 5vw;
+        color: white;
+        text-shadow: black 0.1em 0.1em 0.2em;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .fontDetail {
+        font-size: 5vw;
+        color: black;
+        line-height: 1.2;
+    }
+    .fontTitle {
+        line-height: 1.25;
+        font-size: 5.5vw;
+        color: white;
+        text-shadow: black 0.1em 0.1em 0.2em;
+    }
 }
