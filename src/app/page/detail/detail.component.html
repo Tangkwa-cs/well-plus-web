@@ -3,10 +3,10 @@
 <section class="breadcrumbs-custom-inset">
     <div class="breadcrumbs-custom context-dark">
         <div class="container">
-            <h3 class="breadcrumbs-custom-title">{{imageDetail.text}}</h3>
+            <p class="breadcrumbs-custom-title fontTitle">{{imageDetail.text}}</p>
             <ul class="breadcrumbs-custom-path">
-                <li><a href="index.html">Home</a></li>
-                <li class="active">{{imageDetail.type}}</li>
+                <li class="shadow"><a href="">Home</a></li>
+                <li class="active shadow">{{imageDetail.type}}</li>
             </ul>
         </div>
         <div class="box-position" style="background-image: url({{imageDetail.path+imageDetail.image[0]}});"></div>
@@ -28,15 +28,14 @@
                         </div>
                     </div>
                     <div class="col-md-10 col-lg-6 col-xl-5">
-                        <div class="single-project">
-                            <h4>{{imageDetail.type}} {{imageDetail.text}}</h4>
-                            <p class="text-gray-500">Observare inciviliter ducunt ad noster assimilatio. Medicinas peregrinationes in teres rugensis civitas! Ubi est talis spatii? Azureus historia inciviliter examinares deus est. Poetas ire in brema! Secundus, azureus parmas
-                                aegre fallere de emeritis, alter genetrix.</p>
+                        <div class="single-project" *ngFor="let data of project;let i = index">
+                            <p class="fontHead"> {{data.text}}</p>
+                            <p class="text-gray-500">{{data.detail}}</p>
                             <div class="divider divider-30"></div>
                             <ul class="list list-description d-inline-block d-md-block">
-                                <li><span>Client:</span><span>Valley Accommodation Ltd.</span></li>
-                                <li><span>Year:</span><span>2013</span></li>
-                                <li><span>Location:</span><span>{{imageDetail.text}}</span></li>
+                                <!-- <li><span>Client:</span><span>Valley Accommodation Ltd.</span></li> -->
+                                <li><span>Year:</span><span>{{data.year}}</span></li>
+                                <li><span>Location:</span><span>{{data.place}}</span></li>
                                 <li><span>Categories:</span><span>{{imageDetail.type}}</span></li>
                             </ul>
                             <div class="divider divider-30"></div>
