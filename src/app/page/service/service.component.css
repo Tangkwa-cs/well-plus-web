@@ -20,9 +20,15 @@
 
 .fontTitle {
     line-height: 1.25;
+    text-transform: uppercase;
     font-size: 3vw;
     color: white;
     text-shadow: black 0.1em 0.1em 0.2em;
+}
+
+.fontfilter {
+    color: #A58838;
+    font-size: 1.4vw;
 }
 
 @media (max-width: 991.98px) {
@@ -37,6 +43,10 @@
         color: white;
         text-shadow: black 0.1em 0.1em 0.2em;
     }
+    .fontfilter {
+        color: #A58838;
+        font-size: 3vw;
+    }
 }
 
 @media (max-width: 575.98px) {
@@ -50,5 +60,9 @@
         font-size: 5.5vw;
         color: white;
         text-shadow: black 0.1em 0.1em 0.2em;
+    }
+    .fontfilter {
+        color: #A58838;
+        font-size: 4vw;
     }
 }

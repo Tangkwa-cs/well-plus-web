@@ -127,13 +127,16 @@ export class DetailComponent implements OnInit {
       this.imageDetail = history.state;
       localStorage.setItem("dataDetail",JSON.stringify(this.imageDetail))
       this.idProject = this.imageDetail.idProject;
-      console.log(this.idProject);
       this.project = this.imageFilter.filter(x =>x.id === this.idProject) //วิธีฟิลเตอร์
+      console.log( this.imageDetail);
+      console.log(this.imageDetail.path+this.imageDetail.image[0]);
+      
     }else{
       this.imageDetail = JSON.parse(localStorage["dataDetail"]);
       this.idProject = this.imageDetail.idProject;
-      console.log(this.idProject);
       this.project = this.imageFilter.filter(x =>x.id === this.idProject) //วิธีฟิลเตอร์
+      console.log( this.imageDetail);
+      console.log(this.imageDetail.path+this.imageDetail.image[0]);
     }
     this.loadScript();
   }

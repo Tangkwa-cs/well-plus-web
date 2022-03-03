@@ -3,7 +3,7 @@
 <section class="breadcrumbs-custom-inset">
     <div class="breadcrumbs-custom context-dark">
         <div class="container">
-            <p class="breadcrumbs-custom-title fontTitle">SERVICE</p>
+            <p class="breadcrumbs-custom-title fontTitle">{{title}}</p>
             <ul class="breadcrumbs-custom-path">
                 <li><a href="index.html">Home</a></li>
                 <li class="active">Service</li>
@@ -16,8 +16,98 @@
     <div class="col-2"></div>
     <div class="col-lg-8">
         <!-- Grid blog-->
-        <h2 class="font_head mt-4 mb-0 p-0">{{title}}</h2>
-        <section class="section section-sm bg-default text-md-left m-0">
+        <!-- tab Decoration -->
+        <section class="section bg-default text-center isotope-wrap pt-4" *ngIf="title == 'DECORATION';">
+            <div class="container p-0 m-0">
+                <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button (click)="decorate('rock')" class="nav-link active fontfilter" id="rock-tab" data-bs-toggle="tab" data-bs-target="#rock" type="button" role="tab" aria-controls="rock" aria-selected="true">ท๊อปหิน</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button (click)="decorate('tile')" class="nav-link fontfilter" id="tile-tab" data-bs-toggle="tab" data-bs-target="#tile" type="button" role="tab" aria-controls="tile" aria-selected="false">กระเบื้องยาง</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button (click)="decorate('wall')" class="nav-link fontfilter" id="wall-tab" data-bs-toggle="tab" data-bs-target="#wall" type="button" role="tab" aria-controls="wall" aria-selected="false">วอลเปเปอร์และผ้าม่าน</button>
+                    </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="rock" role="tabpanel" aria-labelledby="rock-tab">
+                        <section class="section bg-default text-md-left p-4">
+                            <div class="container">
+                                <div class="row row-30">
+                                    <div class="col-sm-6 col-lg-4 col-xxl-4" *ngFor="let rock of projectDecorate;let i = index">
+                                        <!-- Post Modern-->
+                                        <article class="post post-modern text-center">
+                                            <a class="post-modern-figure a_click" (click)="changeRoute('/detail',rock.id,rock.url,rock.text,rock.type)"><img src="{{rock.img}}" alt="" class="img_service" width="370" height="307" />
+                                                <div class="post-modern-time">
+                                                    <time datetime="2018-07-04"><span class="post-modern-time-number">{{i+1}}</span></time>
+                                                </div>
+                                            </a>
+                                        </article>
+                                        <div class="row text-start">
+                                            <div class="col-12">
+                                                <p class="post-modern-title fontDetail"><a class="a_click tagA" (click)="changeRoute('/detail',rock.id,rock.url,rock.text,rock.type)">{{rock.text}}</a></p>
+                                                <p class="post-modern-text">{{rock.detail}}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="tab-pane fade" id="tile" role="tabpanel" aria-labelledby="tile-tab">
+                        <section class="section bg-default text-md-left p-4">
+                            <div class="container">
+                                <div class="row row-30">
+                                    <div class="col-sm-6 col-lg-4 col-xxl-4" *ngFor="let tile of projectDecorate;let i = index">
+                                        <!-- Post Modern-->
+                                        <article class="post post-modern text-center">
+                                            <a class="post-modern-figure a_click" (click)="changeRoute('/detail',tile.id,tile.url,tile.text,tile.type)"><img src="{{tile.img}}" alt="" class="img_service" width="370" height="307" />
+                                                <div class="post-modern-time">
+                                                    <time datetime="2018-07-04"><span class="post-modern-time-number">{{i+1}}</span></time>
+                                                </div>
+                                            </a>
+                                        </article>
+                                        <div class="row text-start">
+                                            <div class="col-12">
+                                                <p class="post-modern-title fontDetail"><a class="a_click tagA" (click)="changeRoute('/detail',tile.id,tile.url,tile.text,tile.type)">{{tile.text}}</a></p>
+                                                <p class="post-modern-text">{{tile.detail}}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="tab-pane fade" id="wall" role="tabpanel" aria-labelledby="wall-tab">
+                        <section class="section bg-default text-md-left p-4">
+                            <div class="container">
+                                <div class="row row-30">
+                                    <div class="col-sm-6 col-lg-4 col-xxl-4" *ngFor="let wall of projectDecorate;let i = index">
+                                        <!-- Post Modern-->
+                                        <article class="post post-modern text-center">
+                                            <a class="post-modern-figure a_click" (click)="changeRoute('/detail',wall.id,wall.url,wall.text,wall.type)"><img src="{{wall.img}}" alt="" class="img_service" width="370" height="307" />
+                                                <div class="post-modern-time">
+                                                    <time datetime="2018-07-04"><span class="post-modern-time-number">{{i+1}}</span></time>
+                                                </div>
+                                            </a>
+                                        </article>
+                                        <div class="row text-start">
+                                            <div class="col-12">
+                                                <p class="post-modern-title fontDetail"><a class="a_click tagA" (click)="changeRoute('/detail',wall.id,wall.url,wall.text,wall.type)">{{wall.text}}</a></p>
+                                                <p class="post-modern-text">{{wall.detail}}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ยกเว้น decoration -->
+        <section class="section bg-default text-md-left p-4" *ngIf="title != 'DECORATION';">
             <div class="container">
                 <div class="row row-30">
                     <div class="col-sm-6 col-lg-4 col-xxl-4" *ngFor="let image of project;let i = index">
@@ -37,18 +127,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- <div class="pagination-wrap">
-                    <nav aria-label="Page navigation">
-                        <ul class="pagination">
-                            <li class="page-item page-item-control disabled"><a class="page-link" href="#" aria-label="Previous"><span class="icon" aria-hidden="true"></span></a></li>
-                            <li class="page-item active"><span class="page-link">1</span></li>
-                            <li class="page-item"><a class="page-link" href="#">2</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item"><a class="page-link" href="#">4</a></li>
-                            <li class="page-item page-item-control"><a class="page-link" href="#" aria-label="Next"><span class="icon" aria-hidden="true"></span></a></li>
-                        </ul>
-                    </nav>
-                </div> -->
             </div>
         </section>
     </div>
