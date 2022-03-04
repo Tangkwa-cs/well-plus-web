@@ -5,7 +5,9 @@
 
 .fontHead {
     line-height: 1.25;
-    font-size: 1.6vw;
+    font-size: 1.7vw;
+    color: #A58838;
+    font-weight: bold;
 }
 
 .fontTitle {

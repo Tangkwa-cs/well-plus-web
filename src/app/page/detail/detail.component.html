@@ -14,36 +14,38 @@
 </section>
 <div class="row m-0 p-0" style="background-color:#F5F5F5">
     <div class="row m-0 p-0">
-        <!-- <div class="col-sm-2"></div>
-        <div class="col-sm-8"> -->
-        <section class="section section-sm bg-default">
-            <div class="container">
-                <div class="row row-50 justify-content-center align-items-xl-center">
-                    <div class="col-md-10 col-lg-6 col-xl-7">
-                        <div class="offset-right-xl-15">
-                            <!-- Owl Carousel-->
-                            <div class="owl-carousel owl-dots-white" data-items="1" data-dots="true" data-autoplay="true" data-animation-in="fadeIn" data-animation-out="fadeOut">
-                                <img *ngFor="let item of imageDetail.image" src="{{imageDetail.path+item}}" alt="" id="imageSlide" />
+        <div class="col-sm-1"></div>
+        <div class="col-sm-10">
+            <section class="section section-sm bg-default">
+                <div class="container">
+                    <div class="row row-50 justify-content-center align-items-xl-center">
+                        <div class="col-md-10 col-lg-6 col-xl-7">
+                            <div class="offset-right-xl-15">
+                                <!-- Owl Carousel-->
+                                <div class="owl-carousel owl-dots-white" data-items="1" data-dots="true" data-autoplay="true" data-animation-in="fadeIn" data-animation-out="fadeOut">
+                                    <img *ngFor="let item of imageDetail.image" src="{{imageDetail.path+item}}" alt="" id="imageSlide" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-10 col-lg-6 col-xl-5">
+                            <div class="single-project" *ngFor="let data of project;let i = index">
+                                <p class="fontHead"> {{data.text}}</p>
+                                <p class="text-gray-500">{{data.detail}}</p>
+                                <div class="divider divider-30"></div>
+                                <ul class="list list-description d-inline-block d-md-block">
+                                    <!-- <li><span>Client:</span><span>Valley Accommodation Ltd.</span></li> -->
+                                    <li><span>Year:</span><span>{{data.year}}</span></li>
+                                    <li><span>Location:</span><span>{{data.place}}</span></li>
+                                    <li><span>Categories:</span><span>{{imageDetail.type}}</span></li>
+                                </ul>
+                                <div class="divider divider-30"></div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-10 col-lg-6 col-xl-5">
-                        <div class="single-project" *ngFor="let data of project;let i = index">
-                            <p class="fontHead"> {{data.text}}</p>
-                            <p class="text-gray-500">{{data.detail}}</p>
-                            <div class="divider divider-30"></div>
-                            <ul class="list list-description d-inline-block d-md-block">
-                                <!-- <li><span>Client:</span><span>Valley Accommodation Ltd.</span></li> -->
-                                <li><span>Year:</span><span>{{data.year}}</span></li>
-                                <li><span>Location:</span><span>{{data.place}}</span></li>
-                                <li><span>Categories:</span><span>{{imageDetail.type}}</span></li>
-                            </ul>
-                            <div class="divider divider-30"></div>
-                        </div>
-                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </div>
+        <div class="col-sm-1"></div>
     </div>
 </div>
 <app-footer></app-footer>

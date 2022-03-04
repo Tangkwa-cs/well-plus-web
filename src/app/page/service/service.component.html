@@ -21,13 +21,13 @@
             <div class="container p-0 m-0">
                 <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
                     <li class="nav-item" role="presentation">
-                        <button (click)="decorate('rock')" class="nav-link active fontfilter" id="rock-tab" data-bs-toggle="tab" data-bs-target="#rock" type="button" role="tab" aria-controls="rock" aria-selected="true">ท๊อปหิน</button>
+                        <button #rock (click)="decorate('rock')" class="nav-link active fontfilter" id="rock-tab" data-bs-toggle="tab" data-bs-target="#rock" type="button" role="tab" aria-controls="rock" aria-selected="true">ท๊อปหิน</button>
                     </li>
                     <li class="nav-item" role="presentation">
-                        <button (click)="decorate('tile')" class="nav-link fontfilter" id="tile-tab" data-bs-toggle="tab" data-bs-target="#tile" type="button" role="tab" aria-controls="tile" aria-selected="false">กระเบื้องยาง</button>
+                        <button #tile (click)="decorate('tile')" class="nav-link fontfilter" id="tile-tab" data-bs-toggle="tab" data-bs-target="#tile" type="button" role="tab" aria-controls="tile" aria-selected="false">กระเบื้องยาง</button>
                     </li>
                     <li class="nav-item" role="presentation">
-                        <button (click)="decorate('wall')" class="nav-link fontfilter" id="wall-tab" data-bs-toggle="tab" data-bs-target="#wall" type="button" role="tab" aria-controls="wall" aria-selected="false">วอลเปเปอร์และผ้าม่าน</button>
+                        <button #wall (click)="decorate('wall')" class="nav-link fontfilter" id="wall-tab" data-bs-toggle="tab" data-bs-target="#wall" type="button" role="tab" aria-controls="wall" aria-selected="false">วอลเปเปอร์และผ้าม่าน</button>
                     </li>
                 </ul>
                 <div class="tab-content" id="myTabContent">
@@ -47,7 +47,7 @@
                                         <div class="row text-start">
                                             <div class="col-12">
                                                 <p class="post-modern-title fontDetail"><a class="a_click tagA" (click)="changeRoute('/detail',rock.id,rock.url,rock.text,rock.type)">{{rock.text}}</a></p>
-                                                <p class="post-modern-text">{{rock.detail}}</p>
+                                                <p class="post-modern-text text-truncate">{{rock.detail}}</p>
                                             </div>
                                         </div>
                                     </div>
@@ -71,7 +71,7 @@
                                         <div class="row text-start">
                                             <div class="col-12">
                                                 <p class="post-modern-title fontDetail"><a class="a_click tagA" (click)="changeRoute('/detail',tile.id,tile.url,tile.text,tile.type)">{{tile.text}}</a></p>
-                                                <p class="post-modern-text">{{tile.detail}}</p>
+                                                <p class="post-modern-text text-truncate">{{tile.detail}}</p>
                                             </div>
                                         </div>
                                     </div>
@@ -95,7 +95,7 @@
                                         <div class="row text-start">
                                             <div class="col-12">
                                                 <p class="post-modern-title fontDetail"><a class="a_click tagA" (click)="changeRoute('/detail',wall.id,wall.url,wall.text,wall.type)">{{wall.text}}</a></p>
-                                                <p class="post-modern-text">{{wall.detail}}</p>
+                                                <p class="post-modern-text text-truncate">{{wall.detail}}</p>
                                             </div>
                                         </div>
                                     </div>
@@ -122,7 +122,7 @@
                         <div class="row text-start">
                             <div class="col-12">
                                 <p class="post-modern-title fontDetail"><a class="a_click tagA" (click)="changeRoute('/detail',image.id,image.url,image.text,image.type)">{{image.text}}</a></p>
-                                <p class="post-modern-text">{{image.detail}}</p>
+                                <p class="post-modern-text text-truncate">{{image.detail}}</p>
                             </div>
                         </div>
                     </div>

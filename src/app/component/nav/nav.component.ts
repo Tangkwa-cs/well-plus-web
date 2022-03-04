@@ -139,7 +139,12 @@ export class NavComponent implements OnInit {
     body.appendChild(script);
   }
   clickRoute(url:any,title:any){
+    if (title != 'DECORATION') {
+      this.router.navigate([url], { queryParams: { title:title} });
 
-     this.router.navigate([url], { queryParams: { title} });
+    }else{
+      this.router.navigate([url], { queryParams: { title:title , type:'rock'} });
+
+    }
   }
 }
