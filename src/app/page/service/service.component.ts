@@ -348,7 +348,6 @@ export class ServiceComponent implements OnInit {
     }
      this.router.navigate(
        [url], { state: { image: imageProject,path,text,type,idProject } });
-       console.log(type);
        
   }
   public loadScript(){
