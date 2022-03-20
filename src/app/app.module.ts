@@ -39,7 +39,7 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
       innerStrokeWidth: 8,
       outerStrokeColor: "#78C000",
       animationDuration: 300,
-    })
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]
