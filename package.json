@@ -23,6 +23,7 @@
     "file-system": "^2.2.2",
     "jquery": "^3.6.0",
     "ng-circle-progress": "^1.6.0",
+    "ngx-isotope": "^0.1.7",
     "rxjs": "~7.4.0",
     "sweetalert2": "^11.4.0",
     "swiper": "^8.0.3",
