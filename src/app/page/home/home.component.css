@@ -13,7 +13,10 @@
     font-size: 1.5vw;
 }
 
-
+.imgDetail{
+    width: 370px;
+    height: 240px;
+}
 /* Image swiper */
 
 .container {
